@@ -1,1 +1,0 @@
-# jurquiza.github.io
