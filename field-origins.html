@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plant Synthetic Genomics in Europe: Origins at HHU Düsseldorf | Uriel Urquiza-García</title>
+<meta name="description" content="A documented historical account of Plant Synthetic Genomics in Europe, tracing its origins to Heinrich Heine University Düsseldorf in November 2022 — before the emergence of the ARIA Synthetic Plants programme.">
+<meta name="keywords" content="Plant Synthetic Genomics Europe origins, Uriel Urquiza-Garcia, HHU Düsseldorf, CEPLAS, synthetic chromosome, Physcomitrium patens, November 2022, ARIA Synthetic Plants, before ARIA">
+<meta name="author" content="Uriel Urquiza-García">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jurquiza.github.io/field-origins.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Plant Synthetic Genomics in Europe: Origins at HHU Düsseldorf",
+  "description": "Historical documentation of Plant Synthetic Genomics origins in Europe, November 2022, HHU Düsseldorf",
+  "author": {"@type": "Person", "name": "Uriel Urquiza-García", "affiliation": "Heinrich Heine University Düsseldorf"},
+  "datePublished": "2022-11-25",
+  "keywords": "Plant Synthetic Genomics, HHU Düsseldorf, CEPLAS, synthetic chromosome, Physcomitrium patens"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f4f0e8;
+  --ink: #1a1810;
+  --ink-mid: #3c3830;
+  --ink-dim: #7a7060;
+  --ink-ghost: #b0a898;
+  --rule: rgba(26,24,16,0.1);
+  --moss: #2c5c38;
+  --moss-pale: #e6eeea;
+  --moss-mid: #4a8060;
+  --gold: #8a6020;
+  --gold-pale: #f6eede;
+  --gold-mid: #b88028;
+  --night: #111008;
+  --night-mid: #1a180e;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.78;
+  overflow-x: hidden;
+}
+
+/* ── MASTHEAD ── */
+.masthead {
+  background: var(--night);
+  padding: 56px 60px 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.masthead-kicker {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--moss-mid);
+  margin-bottom: 22px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards 0.2s;
+}
+
+.masthead-title {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4.5vw, 54px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: #ede8de;
+  max-width: 760px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.35s;
+}
+
+.masthead-sub {
+  margin-top: 20px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #6a6458;
+  max-width: 580px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.55s;
+}
+
+.masthead-meta {
+  margin-top: 36px;
+  display: flex;
+  gap: 36px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards 0.75s;
+}
+
+.meta-item { }
+
+.meta-value {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--gold-mid);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.meta-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #3a3828;
+  margin-top: 4px;
+}
+
+/* ── BODY ── */
+.body-wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 72px 48px 96px;
+}
+
+/* ── SECTION ── */
+.section {
+  margin-bottom: 64px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.section:nth-child(1) { animation-delay: 0.1s; }
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.3s; }
+.section:nth-child(4) { animation-delay: 0.4s; }
+.section:nth-child(5) { animation-delay: 0.5s; }
+.section:nth-child(6) { animation-delay: 0.6s; }
+.section:nth-child(7) { animation-delay: 0.7s; }
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.section-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-ghost);
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(19px, 2.8vw, 26px);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.section-body {
+  font-size: 17px;
+  line-height: 1.82;
+  color: var(--ink-mid);
+}
+
+.section-body p { margin-bottom: 16px; }
+.section-body p:last-child { margin-bottom: 0; }
+.section-body strong { color: var(--ink); font-weight: 700; }
+
+/* ── PRIMARY SOURCE BLOCK ── */
+.source-block {
+  margin: 24px 0;
+  padding: 18px 22px;
+  border: 1px solid rgba(44,92,56,0.25);
+  border-left: 3px solid var(--moss);
+  background: var(--moss-pale);
+}
+
+.source-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin-bottom: 8px;
+}
+
+.source-text {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--ink-mid);
+}
+
+.source-text strong { color: var(--ink); font-weight: 700; }
+.source-text a { color: var(--moss); text-decoration: none; border-bottom: 1px solid rgba(44,92,56,0.3); }
+
+/* ── CHRONOLOGY TABLE ── */
+.chron-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+.chron-table thead tr {
+  border-bottom: 2px solid var(--ink);
+}
+
+.chron-table th {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  padding: 8px 14px 8px 0;
+  text-align: left;
+  font-weight: 400;
+}
+
+.chron-table td {
+  padding: 11px 14px 11px 0;
+  vertical-align: top;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink-mid);
+  line-height: 1.5;
+}
+
+.chron-table tr:last-child td { border-bottom: none; }
+.chron-table td strong { color: var(--ink); font-weight: 700; }
+.chron-table td.date-col {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--ink-dim);
+  white-space: nowrap;
+}
+
+.chron-table tr.highlight td {
+  background: var(--gold-pale);
+}
+
+.chron-table tr.highlight td.date-col {
+  color: var(--gold);
+}
+
+/* ── STUDENT TABLE ── */
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 16px 0;
+}
+
+.student-table thead tr { border-bottom: 2px solid var(--ink); }
+
+.student-table th {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  padding: 7px 12px 7px 0;
+  text-align: left;
+  font-weight: 400;
+}
+
+.student-table td {
+  padding: 10px 12px 10px 0;
+  vertical-align: top;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink-mid);
+  line-height: 1.45;
+}
+
+.student-table tr:last-child td { border-bottom: none; }
+.student-table td strong { color: var(--ink); }
+.student-table td.date-col {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--ink-dim);
+  white-space: nowrap;
+}
+
+.student-table tr.syngen td { background: var(--moss-pale); }
+
+/* ── COMPETITOR TABLE ── */
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 16px 0;
+}
+
+.comp-table thead tr { border-bottom: 2px solid var(--ink); }
+
+.comp-table th {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  padding: 7px 10px 7px 0;
+  text-align: left;
+  font-weight: 400;
+}
+
+.comp-table td {
+  padding: 11px 10px 11px 0;
+  vertical-align: top;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink-mid);
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+.comp-table tr:last-child td { border-bottom: none; }
+.comp-table td strong { color: var(--ink); }
+.comp-table td em { color: var(--ink-ghost); font-size: 12px; }
+.comp-table tr.this-programme td { background: var(--moss-pale); }
+.comp-table tr.this-programme td strong { color: var(--moss); }
+
+/* ── CONCLUSION BOX ── */
+.conclusion {
+  margin-top: 60px;
+  padding: 40px 44px;
+  background: var(--night-mid);
+  border-top: 3px solid var(--ink);
+}
+
+.conclusion-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--moss-mid);
+  margin-bottom: 18px;
+}
+
+.conclusion-text {
+  font-family: var(--serif);
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.75;
+  color: #ccc8be;
+}
+
+.conclusion-text strong { color: #9abeaa; font-weight: 700; }
+
+/* ── FOOTER ── */
+.site-footer {
+  border-top: 2px solid var(--ink);
+  padding: 18px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-id {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--ink-ghost);
+  text-transform: uppercase;
+}
+
+.footer-links { display: flex; gap: 18px; }
+
+.footer-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--moss);
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(44,92,56,0.3);
+  padding-bottom: 1px;
+  transition: opacity 0.2s;
+}
+
+.footer-link:hover { opacity: 0.6; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 620px) {
+  .masthead { padding: 40px 24px 36px; }
+  .body-wrap { padding: 48px 24px 72px; }
+  .conclusion { padding: 32px 24px; }
+  .site-footer { padding: 16px 24px; }
+  .masthead-meta { gap: 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav style="position:sticky;top:0;width:100%;z-index:100;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(58,90,64,0.08);box-shadow:0 1px 20px rgba(0,0,0,0.04);">
+  <div style="max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:60px;">
+    <a href="index.html" style="font-family:'Source Serif 4',Georgia,serif;font-weight:600;font-size:1.05rem;color:#3a5a40;text-decoration:none;">Uriel Urquiza-García</a>
+    <div style="display:flex;gap:1.5rem;align-items:center;">
+      <a href="index.html" style="text-decoration:none;color:#4a4a4a;font-size:0.85rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;">Home</a>
+      <a href="field-origins.html" style="text-decoration:none;color:#3a5a40;font-size:0.85rem;font-weight:600;font-family:'DM Sans',system-ui,sans-serif;border-bottom:2px solid #3a5a40;padding-bottom:2px;">Origins</a>
+      <a href="evidence-timeline.html" style="text-decoration:none;color:#4a4a4a;font-size:0.85rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;">Evidence</a>
+      <a href="activities-timeline.html" style="text-decoration:none;color:#4a4a4a;font-size:0.85rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;">Activities</a>
+    </div>
+  </div>
+</nav>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-kicker">Historical record · Plant Synthetic Genomics in Europe</div>
+  <div class="masthead-title">Plant Synthetic Genomics in Europe: origins at HHU Düsseldorf</div>
+  <div class="masthead-sub">A factual account of when, where, and by whom Plant Synthetic Genomics was established as a named research programme in Europe — documented before ARIA's Synthetic Plants programme existed.</div>
+  <div class="masthead-meta">
+    <div class="meta-item">
+      <div class="meta-value">25 Nov 2022</div>
+      <div class="meta-label">Founding date · CEPLAS award</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-value">22 months</div>
+      <div class="meta-label">Before ARIA call opened</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-value">16 students</div>
+      <div class="meta-label">Trained · 2021–2025</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-value">3 grants</div>
+      <div class="meta-label">Independent sources · awarded</div>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="body-wrap">
+
+  <!-- 1: PURPOSE OF THIS DOCUMENT -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">1 —</span>
+      <span class="section-title">Purpose of this record</span>
+    </div>
+    <div class="section-body">
+      <p>In 2024 and 2025, Plant Synthetic Genomics emerged as a recognised field in Europe, with the UK ARIA agency committing £62.4M to the Synthetic Plants programme across nine funded teams. The narrative that will attach to this field — who started it, where, when, and on what intellectual basis — is not yet settled. This document provides a factual account, grounded in primary source documents with verifiable dates, tracing the origins of Plant Synthetic Genomics as an active research programme in Europe to <strong>Heinrich Heine University Düsseldorf</strong>, where it was founded by Dr Uriel Urquiza-García in <strong>November 2022</strong>.</p>
+      <p>The account does not argue that Düsseldorf is the only place where relevant work is happening. It documents, with primary sources, that a named, funded, institutionally recognised programme called "Plant Synthetic Genomics" was operating here before the field had a name in any funding agency or national programme. That temporal fact matters for the historical record. If it is not documented, it will not be part of the record.</p>
+    </div>
+  </div>
+
+  <!-- 2: THE FOUNDING DOCUMENT -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">2 —</span>
+      <span class="section-title">The founding document and its date</span>
+    </div>
+    <div class="section-body">
+      <p>On <strong>11 November 2022</strong>, Dr Uriel Urquiza-García submitted a grant application to the CEPLAS Steering Committee at HHU Düsseldorf. The application was titled <em>"Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in Physcomitrium patens."</em> Budget: €23,602. It was awarded by the steering committee on <strong>25 November 2022</strong>.</p>
+      <p>This application contains the earliest known institutional use of the phrase "Plant Synthetic Genomics" as the name of a funded research programme in Europe. The three work packages — establishing genomic and synthetic biology tools in the chosen model organism, characterising the chromosomal elements required for artificial chromosome construction, and assembling and testing a synthetic chromosome body — describe the same core technical challenges that ARIA's Synthetic Plants programme would organise a national consortium to address twenty-two months later.</p>
+
+      <div class="source-block">
+        <div class="source-label">Primary source · Verified · CEPLAS Steering Committee</div>
+        <div class="source-text">
+          <strong>Document:</strong> CEPLAS Seed Fund Application, submitted 11 November 2022, awarded 25 November 2022.<br>
+          <strong>Title:</strong> "Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in Physcomitrium patens."<br>
+          <strong>PI:</strong> Dr Uriel Urquiza-García, Institute of Synthetic Biology, HHU Düsseldorf.<br>
+          <strong>Budget:</strong> €23,602.<br>
+          <strong>Institution:</strong> Heinrich Heine University Düsseldorf / CEPLAS (Cluster of Excellence on Plant Sciences).<br>
+          <strong>Significance:</strong> Earliest known European institutional use of "Plant Synthetic Genomics" as a named, funded research programme.
+        </div>
+      </div>
+
+      <p>The application also contains a career narrative section explicitly stating: <em>"I identified synthetic genomics as a promising area in which I could develop a competitive line of research... Synthetic genomics is in an early stage in higher eukaryotes, especially bottom-up approaches. The seed fund will allow pioneer work in the area."</em> This is a contemporaneous, verified claim of pioneer status — written in November 2022 and awarded by an independent committee.</p>
+    </div>
+  </div>
+
+  <!-- 3: TIMELINE OF KEY EVENTS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">3 —</span>
+      <span class="section-title">Chronology of key events</span>
+    </div>
+    <div class="section-body">
+      <p>The following table places the Düsseldorf programme in relation to other significant events in the field, with verified dates where available.</p>
+
+      <table class="chron-table">
+        <thead>
+          <tr>
+            <th style="width:18%">Date</th>
+            <th>Event</th>
+            <th style="width:22%">Source / evidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight">
+            <td class="date-col">11 Nov 2022</td>
+            <td><strong>CEPLAS Seed Fund submitted</strong> — "Plant Synthetic Genomics" named and funded at HHU Düsseldorf. PI: Dr Uriel Urquiza-García.</td>
+            <td>CEPLAS application document</td>
+          </tr>
+          <tr class="highlight">
+            <td class="date-col">25 Nov 2022</td>
+            <td><strong>CEPLAS Seed Fund awarded</strong> by steering committee. Plant Synthetic Genomics becomes an active, funded programme.</td>
+            <td>CEPLAS award record</td>
+          </tr>
+          <tr>
+            <td class="date-col">26 Jan 2024</td>
+            <td>Dai group (Shenzhen/Beijing) and Yuling Jiao (PKU) publish SynMoss in <em>Nature Plants</em> — first synthetic chromosome fragment in a plant. Replaces 155 kb of chromosome 18 arm with redesigned synthetic sequence using yeast assembly and recoding paradigm.</td>
+            <td>Chen et al., Nat Plants 2024</td>
+          </tr>
+          <tr class="highlight">
+            <td class="date-col">27 Jan 2024</td>
+            <td><strong>Correspondence initiated with Yuling Jiao and Junbiao Dai</strong> — email sent from HHU mailbox to yuling.jiao@pku.edu.cn (Subject: "Plant synthetic genomics") the day after SynMoss published, identifying shared direction and proposing collaboration. Yuling Jiao replied same day (16:02), CC'ing Junbiao Dai: <em>"We are indeed heading into the same direction... It will be great to joint force with you."</em> Dai replied 28 January: <em>"we have a small consortium now and would love to expand the collaboration... would love to invite you to join."</em> Dai subsequently issued a Letter of Invitation (2024-LOI-Uriel.pdf) to support CEPLAS travel funding.</td>
+            <td>HHU sent-mail archive · email chain archived as PDF</td>
+          </tr>
+          <tr>
+            <td class="date-col">3 Feb 2024</td>
+            <td>Follow-up correspondence with Dai — discussion of planned Plant Synthetic Genomics symposium in Düsseldorf (CEPLAS-CRAG Barcelona collaboration), circadian clock paper in preparation, and note that the Düsseldorf programme was focused on <em>"what content to put in the genome apart from recoding."</em> Dai recognises Edinburgh/Millar connection.</td>
+            <td>Email chain · 3 Feb 2024</td>
+          </tr>
+          <tr>
+            <td class="date-col">3 Jun 2024</td>
+            <td>Further correspondence proposing online meeting on European consortium organisation for <em>P. patens</em> synthetic genomics — names German participants: Heidelberg synthetic genomics centre, MPI Plant Breeding Cologne, University of Cologne, University of Düsseldorf.</td>
+            <td>Email chain · 3 Jun 2024</td>
+          </tr>
+          <tr>
+            <td class="date-col">13 Jun 2024</td>
+            <td>Online meeting with Yuling Jiao via WebEx — discussion of <em>P. patens</em> synthetic genomics collaboration and consortium coordination.</td>
+            <td>Email chain · WebEx meeting record</td>
+          </tr>
+          <tr>
+            <td class="date-col">3 Sep 2024</td>
+            <td><strong>Volkswagen Stiftung application S144719</strong> submitted with co-applicant Dr André Marques (MPI Plant Breeding Research, Cologne) — "Engineering of Programmable Neocentromeres for Higher Eukaryotes." €1,299,400 over 48 months. Not awarded. Timestamp: the centromere programmability problem independently identified as a standalone fundable question before ARIA announced awards.</td>
+            <td>VW Stiftung application S144719</td>
+          </tr>
+          <tr>
+            <td class="date-col">4 Sep 2024</td>
+            <td>ARIA opens Synthetic Plants call — £62.4M. First UK national programme for plant synthetic genomics. Opens 22 months after CEPLAS seed fund award.</td>
+            <td>aria.org.uk</td>
+          </tr>
+          <tr>
+            <td class="date-col">Sep 2024</td>
+            <td><strong>GCSB 2024, Regensburg</strong> — German Conference on Synthetic Biology. Talk: "Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in Physcomitrium patens." Organised by GASB, DECHEMA, DBG, GBM, VAAM, GDCh.</td>
+            <td>gcsb2024.de · conference programme</td>
+          </tr>
+          <tr>
+            <td class="date-col">16 Oct 2025</td>
+            <td><strong>JTF grant formally approved</strong> by John Templeton Foundation — Grant ID 63576, "Bottling Time: Reconstructing a Moss's Inner Clock Through Synthetic Genomics." Sent to HHU Kanzler for institutional signature.</td>
+            <td>JTF approval communication · Oct 2025</td>
+          </tr>
+          <tr>
+            <td class="date-col">Oct 2025 –<br>late Jan 2026</td>
+            <td><strong>JTF–HHU legal negotiations</strong> — institutional legal review and negotiation between John Templeton Foundation and HHU to resolve contractual requirements. Duration approximately three months.</td>
+            <td>Institutional correspondence</td>
+          </tr>
+          <tr>
+            <td class="date-col">Late Jan 2026</td>
+            <td><strong>Final signature of JTF grant agreement</strong> — grant formally executed following completion of legal review.</td>
+            <td>Grant execution record</td>
+          </tr>
+          <tr>
+            <td class="date-col">Feb 2025</td>
+            <td><strong>RepTiles preprint</strong> posted to bioRxiv — first published methodology for large-DNA assembly in <em>P. patens</em> from community-standard parts (Phytobricks), without yeast intermediary. First author: Viktoria Petrova (BSc). Co-authors include Dejan Andrejic and Tobias Finkenrath (BSc alumni of the programme).</td>
+            <td><a href="https://doi.org/10.1101/2025.02.28.640145" target="_blank" rel="noopener">doi.org/10.1101/2025.02.28.640145</a></td>
+          </tr>
+          <tr>
+            <td class="date-col">4 Mar 2025</td>
+            <td>Follow-up online meeting with Yuling Jiao and Junbiao Dai — continuation of collaboration discussions on <em>P. patens</em> synthetic genomics. Scheduling documented in email chain Feb–Mar 2025.</td>
+            <td>Email chain · 25 Feb 2025 · meeting 4 Mar 2025</td>
+          </tr>
+          <tr>
+            <td class="date-col">25 Mar 2025</td>
+            <td><strong>euMOSS Meeting, Wageningen</strong> — European bryophyte research community meeting. Talk: "Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in Physcomitrium patens." Attendance documented by @reskilab (Reski lab, Freiburg) on Instagram.</td>
+            <td>@reskilab · Instagram · 25 Mar 2025</td>
+          </tr>
+          <tr>
+            <td class="date-col">2 Feb 2026</td>
+            <td><strong>HHU Rektorat congratulatory letter</strong> (Zuwendungsbescheid F-2025/2948) — signed by Prof. Dr. Dr. Dr. Andrea Icks, Prorektorin für Forschung und Transfer. Official address line reads "Synthetic Biology – Plant Synthetic Genomics" — institutional ratification of the field name at HHU.</td>
+            <td>HHU Rektorat letter · 2 Feb 2026</td>
+          </tr>
+          <tr>
+            <td class="date-col">21 Jul 2025</td>
+            <td><strong>HHU SFF presentation</strong> — formal presentation to the Strategic Research Fund (Strategischer Forschungsfonds, SFF) committee (Beirat), Gebäude 16.11, HHU Düsseldorf. Prior external evaluation already positive. Presentation advised to emphasise programme potential for external funding (Drittmittel), specifically ERC.</td>
+            <td>HHU Dezernat 4 email · 14 Jul 2025</td>
+          </tr>
+          <tr>
+            <td class="date-col">31 Jul 2025</td>
+            <td><strong>HHU Rektorat approves SFF grant</strong> — 718. Rektoratssitzung, agenda item "Bewilligungen im Strategischen Forschungsfonds (SFF)." Formal Rektorat-level decision awarding the Strategic Research Fund to the Plant Synthetic Genomics programme.</td>
+            <td>Beschlussinformation · 8 Aug 2025 · Patricia Nitsch, HHU Dezernat Forschung & Transfer</td>
+          </tr>
+          <tr>
+            <td class="date-col">Jun 2025</td>
+            <td>ARIA awards £8.5M to James + Cai consortium (Manchester / JIC / Earlham) for synPACs; £6.6M to Jake Harris (Cambridge) for nuclear synthetic chromosome technology. Both working in potato.</td>
+            <td>aria.org.uk · meet-the-creators</td>
+          </tr>
+          <tr>
+            <td class="date-col">Apr 2026</td>
+            <td><strong>42 kb synthetic chromosome body</strong> in antibiotic selection at Pp108 locus in <em>P. patens</em> — assembled directly without yeast intermediary. ~50 fluorescent colonies confirmed. Nanopore junction confirmation imminent.</td>
+            <td>Lab record · HHU Düsseldorf</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 4: INTELLECTUAL ORIGINS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">4 —</span>
+      <span class="section-title">Intellectual origins of the programme</span>
+    </div>
+    <div class="section-body">
+      <p>The scientific question that organises the programme — whether the circadian clock is modular with respect to genomic context, or whether its function depends on its native chromosomal architecture — was formulated during a PhD under Prof. Andrew Millar at the University of Edinburgh. The quantitative framework developed during that PhD, including absolute protein quantification of clock components using bioluminescence-based reporters, was published in <em>Molecular Systems Biology</em> in 2025 (Urquiza-García, Molina, Halliday & Millar).</p>
+      <p>The choice of <em>Physcomitrium patens</em> as the experimental chassis was made after two years of attempting alternative assembly strategies that proved insufficient for the technical requirements of the project. The moss was selected because its native homologous recombination efficiency — unusually high among plants — makes large-DNA integration tractable in a way it is not in other plant species. This insight preceded the broader community's recognition of moss as a suitable chassis for synthetic genomics work.</p>
+      <p>The programme therefore has two traceable intellectual lineages: Edinburgh (quantitative clock biology, absolute protein quantification) and Düsseldorf (synthetic chromosome assembly, light-inducible control systems, centromere engineering). The JTF grant "Bottling Time" is the document that formally connects them under a single research programme and a single falsifiable hypothesis.</p>
+    </div>
+  </div>
+
+  <!-- 5: STUDENT TRAINING RECORD -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">5 —</span>
+      <span class="section-title">Student training record: 2021–2025</span>
+    </div>
+    <div class="section-body">
+      <p>Between August 2021 and December 2025, 16 BSc and MSc students were supervised in the programme across two research pillars: precision molecular control (light-inducible gene regulation) and synthetic chromosome engineering. The two pillars are connected — control tools developed in the first pillar became instruments used in the second.</p>
+      <p>The table below lists all students with their thesis title, type, and document date.</p>
+
+      <table class="student-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Student</th>
+            <th>Title</th>
+            <th>Type</th>
+            <th>Pillar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="date-col">26 Aug 2021</td>
+            <td><strong>Sascha Ferraro</strong></td>
+            <td>Characterization of Programmable Synthetic Transcription Factors for Creating a Non-cooperative Bistable Toggle Switch</td>
+            <td>MSc</td>
+            <td>Control</td>
+          </tr>
+          <tr>
+            <td class="date-col">16 Oct 2021</td>
+            <td><strong>Christoph Wagner</strong></td>
+            <td>Engineering adaptation: Combining Systems Biology, Synthetic Biology and Bioinformatics to control a plant's phenotype</td>
+            <td>MSc</td>
+            <td>Control</td>
+          </tr>
+          <tr>
+            <td class="date-col">3 Jun 2023</td>
+            <td><strong>Lars Broeker</strong></td>
+            <td>Optogenetic regulation of Arabidopsis DELLA genes</td>
+            <td>Lab rotation</td>
+            <td>Control</td>
+          </tr>
+          <tr>
+            <td class="date-col">18 Sep 2023</td>
+            <td><strong>Sebastian Kusnik</strong></td>
+            <td>Optogenetic Control of Prime Editing and Flowering in Plants</td>
+            <td>BSc</td>
+            <td>Control</td>
+          </tr>
+          <tr class="syngen">
+            <td class="date-col">Sep 2023</td>
+            <td><strong>Luca Weber</strong></td>
+            <td>Synthetic Genomics: Establishment of Molecular Techniques and Laboratory Infrastructure</td>
+            <td>BSc</td>
+            <td>Synthetic genomics</td>
+          </tr>
+          <tr>
+            <td class="date-col">15 Nov 2023</td>
+            <td><strong>Tobias Falkenburg</strong></td>
+            <td>Optogenetics in Time</td>
+            <td>BSc</td>
+            <td>Control</td>
+          </tr>
+          <tr>
+            <td class="date-col">Jun 2024</td>
+            <td><strong>Armando Teixeira</strong></td>
+            <td>Quantitative optogenetic control of gene expression and genetics in plants</td>
+            <td>MSc</td>
+            <td>Control</td>
+          </tr>
+          <tr class="syngen">
+            <td class="date-col">19 Jul 2024</td>
+            <td><strong>Dejan Andrejic</strong></td>
+            <td>Establishing a standardized, computationally aided toolkit for neo-centromere synthesis in Physcomitrium patens</td>
+            <td>BSc</td>
+            <td>Synthetic genomics</td>
+          </tr>
+          <tr class="syngen">
+            <td class="date-col">18 Dec 2024</td>
+            <td><strong>Malik Trippensee</strong></td>
+            <td>Building a programmable CRISPR based system for seeding CENH3 in Physcomitrium patens</td>
+            <td>BSc</td>
+            <td>Synthetic genomics</td>
+          </tr>
+          <tr class="syngen">
+            <td class="date-col">Jan 2025</td>
+            <td><strong>Viktoria Petrova</strong></td>
+            <td>From Reusable Modular Biological Parts to Plant Synthetic Genomics Driven by Biodesign Automation</td>
+            <td>BSc</td>
+            <td>Synthetic genomics</td>
+          </tr>
+          <tr>
+            <td class="date-col">Feb 2025</td>
+            <td><strong>Francisco Pirichinsky</strong></td>
+            <td>Optogenetic control of plant metabolic pathways through modulation of gene expression</td>
+            <td>MSc</td>
+            <td>Control</td>
+          </tr>
+          <tr>
+            <td class="date-col">2025</td>
+            <td><strong>Kevin Dietrich</strong></td>
+            <td>Optogenetic Systems in Plants</td>
+            <td>BSc (review)</td>
+            <td>Control</td>
+          </tr>
+          <tr>
+            <td class="date-col">11 Jun 2025</td>
+            <td><strong>Benjamin Zinkler</strong></td>
+            <td>Optogenetic control and orthogonal reconstruction of photoperiodic regulators</td>
+            <td>MSc</td>
+            <td>Control</td>
+          </tr>
+          <tr class="syngen">
+            <td class="date-col">14 Jul 2025</td>
+            <td><strong>Tobias Finkenrath</strong></td>
+            <td>Studying the recombinogenic capacity of Golden Braid assembled DNA in Saccharomyces cerevisiae and Physcomitrium patens</td>
+            <td>BSc</td>
+            <td>Synthetic genomics</td>
+          </tr>
+          <tr class="syngen">
+            <td class="date-col">6 Nov 2025</td>
+            <td><strong>Sarah Otto</strong></td>
+            <td>Investigating CRISPR-induced CenH3 tagging in Physcomitrium patens</td>
+            <td>BSc</td>
+            <td>Synthetic genomics</td>
+          </tr>
+          <tr class="syngen">
+            <td class="date-col">1 Dec 2025</td>
+            <td><strong>Elisaveta Lobkis</strong></td>
+            <td>Synthetic Chromosome Stability: Establishing a Bottom-up Approach for Synthetic Telomeres</td>
+            <td>BSc</td>
+            <td>Synthetic genomics</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top:14px; font-size:13px; color:var(--ink-dim);">Rows highlighted in green indicate Plant Synthetic Genomics pillar. The seven highlighted theses collectively cover: genomic infrastructure; standardised part library; programmable chromosome identity targeting; large-DNA assembly methodology and design automation; large-DNA integration into the <em>P. patens</em> genome; centromere histone tagging and quantification; synthetic telomere design. Three of the seven students (Andrejic, Finkenrath, Petrova) are co-authors on the RepTiles preprint (bioRxiv, Feb 2025), with Petrova as first author.</p>
+    </div>
+  </div>
+
+  <!-- 6: DISSEMINATION -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">6 —</span>
+      <span class="section-title">Public dissemination record</span>
+    </div>
+    <div class="section-body">
+      <p>The following presentations and publications constitute the dissemination record of the programme, with documented dates and venues.</p>
+
+      <table class="chron-table">
+        <thead>
+          <tr>
+            <th style="width:16%">Date</th>
+            <th>Event / output</th>
+            <th style="width:24%">Evidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="date-col">27 Jan 2024</td>
+            <td><strong>Correspondence with Yuling Jiao (PKU) and Junbiao Dai (CAAS Shenzhen)</strong> — initiated the day after SynMoss published. Extended email exchange January–June 2024 covering shared direction, potential European–Chinese consortium for <em>P. patens</em> synthetic genomics, Letter of Invitation from Dai, and discussion of Düsseldorf programme scope. Online meeting 13 June 2024 with Yuling Jiao.</td>
+            <td>Email chain archived · HHU mailbox · PDF document</td>
+          </tr>
+          <tr>
+            <td class="date-col">Sep 2024</td>
+            <td><strong>GCSB 2024, Regensburg</strong> — German Conference on Synthetic Biology. Talk title: "Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in Physcomitrium patens." Organised by GASB, DECHEMA, DBG, GBM, VAAM, GDCh.</td>
+            <td>gcsb2024.de · conference programme</td>
+          </tr>
+          <tr>
+            <td class="date-col">Feb 2025</td>
+            <td><strong>RepTiles preprint</strong> — Petrova V, Andrejic D, Finkenrath T, Grewer J, Zurbriggen MD & Urquiza-García U. bioRxiv. First published methodology for plant synthetic chromosome assembly from Phytobricks, without yeast intermediary. First author: BSc student Viktoria Petrova.</td>
+            <td><a href="https://doi.org/10.1101/2025.02.28.640145" target="_blank" rel="noopener">doi.org/10.1101/2025.02.28.640145</a></td>
+          </tr>
+          <tr>
+            <td class="date-col">4 Mar 2025</td>
+            <td><strong>Online meeting with Yuling Jiao and Junbiao Dai</strong> — follow-up to 2024 correspondence. Discussion of collaboration on <em>P. patens</em> synthetic genomics. Scheduling documented in email chain 22–25 February 2025.</td>
+            <td>Email chain · 22–25 Feb 2025 · meeting 4 Mar 2025</td>
+          </tr>
+          <tr>
+            <td class="date-col">25 Mar 2025</td>
+            <td><strong>euMOSS Meeting, Wageningen</strong> — European bryophyte research community meeting. Talk: "Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in Physcomitrium patens." Attendance documented by @reskilab (Reski lab, Freiburg) on Instagram.</td>
+            <td>@reskilab · Instagram · 25 Mar 2025</td>
+          </tr>
+          <tr>
+            <td class="date-col">2025</td>
+            <td><strong>UNAM Frontiers in Genomics Seminar</strong>, Mexico City — invited seminar at alma mater (UNAM, BSc Genomic Sciences).</td>
+            <td>LinkedIn post</td>
+          </tr>
+          <tr>
+            <td class="date-col">Jul–Aug 2026</td>
+            <td><strong>Cold Spring Harbor Asia Synthetic Biology Course, Suzhou</strong> — invited as faculty (not participant). Organised by Junbiao Dai and Daniel Schindler. 26 July – 9 August 2026. The faculty invitation from Dai follows over two years of correspondence and collaboration discussions initiated in January 2024.</td>
+            <td>Course invitation · confirmed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 7: COMPETITIVE CONTEXT -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">7 —</span>
+      <span class="section-title">Competitive context in Europe and internationally</span>
+    </div>
+    <div class="section-body">
+      <p>The following table summarises the groups now working in adjacent areas, their approach, organism, and publicly stated goals, alongside the Düsseldorf programme.</p>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th style="width:20%">Group / programme</th>
+            <th style="width:16%">Approach</th>
+            <th style="width:14%">Organism</th>
+            <th style="width:22%">Stated goal</th>
+            <th style="width:28%">Key distinction from Düsseldorf</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>SynMoss · Dai group</strong><br>Shenzhen / Beijing<br><em>Nat Plants Jan 2024</em></td>
+            <td>Recoding — replacing existing chromosomal sequence with redesigned synthetic sequence</td>
+            <td><em>P. patens</em></td>
+            <td>Synthesise the complete <em>P. patens</em> genome within 10 years; explore potential of artificial genomes for "various applications"</td>
+            <td>Recodes existing chromosome rather than building a new one. No specific falsifiable biological question stated. Uses yeast assembly intermediary. Goal is whole-genome synthesis, not a neochromosome with defined function.</td>
+          </tr>
+          <tr>
+            <td><strong>Jake Harris · Cambridge</strong><br>ARIA £6.6M · Jun 2025</td>
+            <td>"From prototype to production" — implementing existing synthetic chromosome technology in crops</td>
+            <td>Potato</td>
+            <td>Crop improvement</td>
+            <td>Funded 43 months after Düsseldorf programme founded. Potato is tetraploid with low HDR efficiency — fundamentally different experimental constraints. Prototype transferred from non-plant system. No fundamental biological question stated.</td>
+          </tr>
+          <tr>
+            <td><strong>James + Cai · Manchester / JIC / Earlham</strong><br>ARIA £8.5M · Jun 2025</td>
+            <td>Synthetic plant artificial chromosomes assembled via intermediary steps, transferred to potato</td>
+            <td>Potato</td>
+            <td>Crop improvement; synthetic chromosome technology for agriculture</td>
+            <td>Funded 43 months after Düsseldorf programme founded. Uses yeast assembly philosophy. Potato biology constrains iteration speed. No fundamental biological question stated. Three-year ARIA mandate to demonstrate in crop.</td>
+          </tr>
+          <tr>
+            <td><strong>ARIA chloroplast teams ×6</strong><br>Jun 2025</td>
+            <td>Synthetic chloroplast genomes</td>
+            <td>Potato and solanaceous crops</td>
+            <td>Crop improvement via synthetic plastid genomes</td>
+            <td>Different cellular compartment. Not nuclear chromosome engineering.</td>
+          </tr>
+          <tr class="this-programme">
+            <td><strong>Urquiza-García · HHU Düsseldorf / CEPLAS</strong><br>Founded 25 Nov 2022</td>
+            <td>De novo synthetic neochromosome assembled directly in plant — no yeast intermediary</td>
+            <td><em>P. patens</em> — selected for native HDR efficiency enabling rapid iteration</td>
+            <td><strong>Test whether the circadian clock is modular with respect to genomic context.</strong> Specific, falsifiable hypothesis predating platform by approximately eight years.</td>
+            <td><strong>Founded November 2022</strong> — 14 months before SynMoss published, 22 months before ARIA call opened, 43 months before ARIA awarded Cambridge and Manchester. Community-standard Phytobricks assembly throughout. Original inducible centromere formation strategy — unpublished, no equivalent globally. Three independent funding sources.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CONCLUSION -->
+  <div class="conclusion">
+    <div class="conclusion-label">Summary · April 2026</div>
+    <div class="conclusion-text">
+      Plant Synthetic Genomics as a named, funded, and institutionally recognised research programme in Europe can be traced to <strong>Heinrich Heine University Düsseldorf</strong>, where it was established on 25 November 2022 with the award of a CEPLAS Seed Fund to Dr Uriel Urquiza-García. The programme predates the UK ARIA Synthetic Plants programme — Europe's largest funded initiative in the field — by 22 months. It has trained 16 students across two research pillars, published the first European methodology preprint for plant synthetic chromosome assembly, secured three independent funding sources, and currently has a 42 kb synthetic chromosome body in antibiotic selection assembled directly in the model plant <em>Physcomitrium patens</em> without a yeast intermediary. <strong>This record is provided so that the origins of the field in Europe are documented with verifiable primary sources, rather than reconstructed after the fact.</strong>
+    </div>
+  </div>
+
+</div><!-- end body-wrap -->
+
+<footer class="site-footer">
+  <div class="footer-id">Uriel Urquiza-García · HHU Düsseldorf · CEPLAS · Plant Synthetic Genomics · Founded November 2022</div>
+  <div class="footer-links">
+    <a class="footer-link" href="evidence-timeline.html">Evidence record</a>
+    <a class="footer-link" href="activities-timeline.html">Activities</a>
+    <a class="footer-link" href="https://doi.org/10.1101/2025.02.28.640145" target="_blank" rel="noopener">RepTiles</a>
+    <a class="footer-link" href="https://jurquiza.github.io">jurquiza.github.io</a>
+    <a class="footer-link" href="https://orcid.org/0000-0002-7975-5013" target="_blank" rel="noopener">ORCID</a>
+  </div>
+</footer>
+
+</body>
+</html>

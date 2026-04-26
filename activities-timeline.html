@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field-Building Activities — Plant Synthetic Genomics | Uriel Urquiza-García</title>
+<meta name="description" content="Talks, student graduations, conferences, and community activities in Plant Synthetic Genomics by Dr Uriel Urquiza-García, HHU Düsseldorf.">
+<meta name="keywords" content="Plant Synthetic Genomics, Uriel Urquiza-Garcia, GCSB 2024, euMOSS 2025, Wageningen, Regensburg, plant artificial chromosome, Physcomitrium patens, synthetic biology talks">
+<meta name="author" content="Uriel Urquiza-García">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jurquiza.github.io/activities-timeline.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:         #ffffff;
+  --ink:        #1a1a1a;
+  --muted:      #4a4a4a;
+  --faint:      #8a8a8a;
+  --rule:       rgba(58,90,64,0.1);
+  --moss:       #3a5a40;
+  --moss-bg:    #f4f7f2;
+  --moss-mid:   #4a7c59;
+  --gold:       #8b6914;
+  --gold-bg:    #f9f3e6;
+  --blue:       #1a4a8a;
+  --blue-bg:    #edf2fa;
+  --purple:     #5a2878;
+  --purple-bg:  #f4edfb;
+  --red:        #8c2020;
+  --red-bg:     #fdf0f0;
+  --teal:       #1a6a60;
+  --teal-bg:    #e8f6f4;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Source Serif 4', serif;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* ── HEADER ── */
+.site-header {
+  background: var(--ink);
+  padding: 52px 48px 44px;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 20%, rgba(61,107,74,0.15) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.header-kicker {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--moss-mid);
+  margin-bottom: 14px;
+}
+
+.header-title {
+  font-family: 'Source Serif 4', serif;
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.header-title em { font-style: italic; color: #a8c8b0; }
+
+.header-sub {
+  font-family: 'Source Serif 4', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #8a8480;
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+.header-counts {
+  display: flex;
+  gap: 28px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.count-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.count-num {
+  font-family: 'Source Serif 4', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--moss-mid);
+  line-height: 1;
+}
+
+.count-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5a5550;
+}
+
+/* ── TABS ── */
+.tab-bar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(250,248,245,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+  padding: 0 48px;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+}
+
+.tab-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 18px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+  margin-bottom: -1px;
+}
+
+.tab-btn:hover { color: var(--ink); }
+.tab-btn.active { color: var(--moss); border-bottom-color: var(--moss); }
+
+/* ── PAGE ── */
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 52px 48px 80px;
+}
+
+/* ── SECTION ── */
+.section {
+  margin-bottom: 60px;
+  display: none;
+}
+
+.section.active { display: block; }
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 28px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.section-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--faint);
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: 'Source Serif 4', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* ── ACTIVITY ROW ── */
+.activity {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 0 24px;
+  margin-bottom: 2px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.activity:nth-child(1) { animation-delay: 0.05s; }
+.activity:nth-child(2) { animation-delay: 0.1s; }
+.activity:nth-child(3) { animation-delay: 0.15s; }
+.activity:nth-child(4) { animation-delay: 0.2s; }
+.activity:nth-child(5) { animation-delay: 0.25s; }
+.activity:nth-child(6) { animation-delay: 0.3s; }
+.activity:nth-child(7) { animation-delay: 0.35s; }
+.activity:nth-child(8) { animation-delay: 0.4s; }
+.activity:nth-child(9) { animation-delay: 0.45s; }
+.activity:nth-child(10) { animation-delay: 0.5s; }
+.activity:nth-child(n+11) { animation-delay: 0.55s; }
+
+.act-left {
+  padding: 16px 12px 16px 0;
+  text-align: right;
+  border-right: 1px solid var(--rule);
+  position: relative;
+}
+
+.act-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.act-dot {
+  position: absolute;
+  right: -5px;
+  top: 20px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--faint);
+  border: 2px solid var(--bg);
+}
+
+.act-dot.moss { background: var(--moss); }
+.act-dot.gold { background: var(--gold); }
+.act-dot.blue { background: var(--blue); }
+.act-dot.purple { background: var(--purple); }
+.act-dot.teal { background: var(--teal); }
+.act-dot.future { background: var(--bg); border-color: var(--faint); }
+
+.act-right {
+  padding: 14px 0 14px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.activity:last-child .act-right { border-bottom: none; }
+
+.act-tag {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 2px;
+  margin-bottom: 5px;
+}
+
+.tag-talk { background: var(--blue-bg); color: var(--blue); }
+.tag-student { background: var(--moss-bg); color: var(--moss); }
+.tag-invited { background: var(--gold-bg); color: var(--gold); }
+.tag-community { background: var(--teal-bg); color: var(--teal); }
+.tag-outreach { background: var(--purple-bg); color: var(--purple); }
+.tag-future { background: #f0f0f0; color: #888; }
+.tag-award { background: var(--red-bg); color: var(--red); }
+
+.act-title {
+  font-family: 'Source Serif 4', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.act-body {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.act-body strong { color: var(--ink); font-weight: 600; }
+.act-body em { color: var(--moss); font-style: italic; }
+
+.act-evidence {
+  margin-top: 6px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: #aaa;
+  letter-spacing: 0.06em;
+}
+
+.act-evidence a {
+  color: var(--moss);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(61,107,74,0.3);
+}
+
+/* ── STUDENT CARD ── */
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.student-card {
+  padding: 16px 18px;
+  background: var(--moss-bg);
+  border: 1px solid rgba(61,107,74,0.15);
+  border-radius: 3px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.student-card:nth-child(1) { animation-delay: 0.05s; }
+.student-card:nth-child(2) { animation-delay: 0.1s; }
+.student-card:nth-child(3) { animation-delay: 0.15s; }
+.student-card:nth-child(4) { animation-delay: 0.2s; }
+.student-card:nth-child(5) { animation-delay: 0.25s; }
+.student-card:nth-child(6) { animation-delay: 0.3s; }
+.student-card:nth-child(n+7) { animation-delay: 0.35s; }
+
+.student-degree {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin-bottom: 6px;
+}
+
+.student-name {
+  font-family: 'Source Serif 4', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.student-topic {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+.student-outcome {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--moss);
+  letter-spacing: 0.06em;
+}
+
+.student-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--faint);
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+}
+
+/* ── NOTE BOX ── */
+.note-box {
+  margin-top: 32px;
+  padding: 18px 22px;
+  background: var(--gold-bg);
+  border-left: 3px solid var(--gold);
+  font-size: 14px;
+  color: #7a5a20;
+  line-height: 1.7;
+}
+
+.note-box strong { color: var(--gold); }
+
+/* ── FOOTER ── */
+footer {
+  margin-top: 48px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-text {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+}
+
+.footer-links { display: flex; gap: 18px; }
+
+.footer-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--moss);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .site-header { padding: 36px 20px 28px; }
+  .tab-bar { padding: 0 20px; }
+  .page { padding: 36px 20px 60px; }
+  .activity { grid-template-columns: 72px 1fr; gap: 0 16px; }
+  .header-counts { gap: 18px; }
+}
+</style>
+</head>
+<body>
+
+<nav style="position:sticky;top:0;width:100%;z-index:100;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(58,90,64,0.08);box-shadow:0 1px 20px rgba(0,0,0,0.04);">
+  <div style="max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:60px;">
+    <a href="index.html" style="font-family:'Source Serif 4',Georgia,serif;font-weight:600;font-size:1.05rem;color:#3a5a40;text-decoration:none;">Uriel Urquiza-García</a>
+    <div style="display:flex;gap:1.5rem;align-items:center;">
+      <a href="index.html" style="text-decoration:none;color:#4a4a4a;font-size:0.85rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;">Home</a>
+      <a href="field-origins.html" style="text-decoration:none;color:#4a4a4a;font-size:0.85rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;">Origins</a>
+      <a href="evidence-timeline.html" style="text-decoration:none;color:#4a4a4a;font-size:0.85rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;">Evidence</a>
+      <a href="activities-timeline.html" style="text-decoration:none;color:#3a5a40;font-size:0.85rem;font-weight:600;font-family:'DM Sans',system-ui,sans-serif;border-bottom:2px solid #3a5a40;padding-bottom:2px;">Activities</a>
+    </div>
+  </div>
+</nav>
+
+<header class="site-header">
+  <div class="header-kicker">Field-Building Activities · Plant Synthetic Genomics · 2022–2026</div>
+  <div class="header-title">Dissemination,<br>Training & <em>Community</em></div>
+  <div class="header-sub">A record of talks, student supervision, conference participation, and community-building activities in Plant Synthetic Genomics by Dr Uriel Urquiza-García, HHU Düsseldorf.</div>
+  <div class="header-counts">
+    <div class="count-item">
+      <div class="count-num">3</div>
+      <div class="count-label">Field talks</div>
+    </div>
+    <div class="count-item">
+      <div class="count-num">16</div>
+      <div class="count-label">Students supervised (2021–2025)</div>
+    </div>
+    <div class="count-item">
+      <div class="count-num">7</div>
+      <div class="count-label">Plant Synthetic Genomics theses</div>
+    </div>
+    <div class="count-item">
+      <div class="count-num">9</div>
+      <div class="count-label">Plant optogenetics theses</div>
+    </div>
+    <div class="count-item">
+      <div class="count-num">1</div>
+      <div class="count-label">CSHL Asia faculty slot</div>
+    </div>
+  </div>
+</header>
+
+<!-- TABS -->
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="all">All</button>
+  <button class="tab-btn" data-tab="talks">Talks</button>
+  <button class="tab-btn" data-tab="students">Students</button>
+  <button class="tab-btn" data-tab="community">Community</button>
+  <button class="tab-btn" data-tab="upcoming">Upcoming</button>
+</div>
+
+<main class="page">
+
+<!-- ═══════════════════════════════ ALL TAB ═══════════════════════════════ -->
+<div class="section active" id="tab-all">
+
+  <div class="section-header">
+    <span class="section-num">Full record —</span>
+    <span class="section-title">All field-building activities</span>
+  </div>
+
+  <!-- GCSB 2024 -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">Sep<br>2024</div>
+      <div class="act-dot blue"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-talk">Talk</span>
+      <div class="act-title">GCSB 2024 — German Conference on Synthetic Biology, Regensburg</div>
+      <div class="act-body">
+        Talk titled <strong>"Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in <em>Physcomitrium patens</em>"</strong> — the same title as the November 2022 CEPLAS seed fund founding document. Presented at the <strong>German Conference on Synthetic Biology 2024 (GCSB 2024)</strong>, 18–20 September 2024, Regensburg. Jointly organised by GASB (German Association for Synthetic Biology) and the Joint Subject Division on Synthetic Biology (DBG, DECHEMA, GBM, VAAM, GDCh). Keynote speakers included Martin Fussenegger (ETH Zürich), Henrike Niederholtmeyer (TU Munich), and Pablo Ivan Nikel (DTU). Presenting the plant synthetic genomics programme to the core German synthetic biology community for the first time.
+      </div>
+      <div class="act-evidence">📍 Regensburg, Germany · 18–20 September 2024 · <a href="https://gcsb2024.de/" target="_blank" rel="noopener">gcsb2024.de →</a></div>
+    </div>
+  </div>
+
+  <!-- euMOSS 2025 -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">Mar<br>2025</div>
+      <div class="act-dot moss"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-talk">Talk</span>
+      <div class="act-title">euMOSS Meeting 2025 — Wageningen, Netherlands</div>
+      <div class="act-body">
+        Talk titled <strong>"Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in <em>Physcomitrium patens</em>"</strong>. Presented at the <strong>euMOSS meeting</strong>, Wageningen, March 2025 — the primary European community meeting for bryophyte researchers. Attended by leading P. patens scientists including <strong>Prof. Ralf Reski</strong> (Freiburg), whose lab documented the meeting on Instagram (post dated 25 March 2025, @reskilab). Reski is the most senior figure in the global P. patens research community. Presence and participation documented by third-party photographic evidence.
+      </div>
+      <div class="act-evidence">📍 Wageningen, Netherlands · March 2025 · Evidence: @reskilab Instagram post, 25 March 2025</div>
+    </div>
+  </div>
+
+  <!-- SynBioUK 2025 -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">2025</div>
+      <div class="act-dot blue"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-community">Conference</span>
+      <div class="act-title">SynBioUK 2025 — attendance</div>
+      <div class="act-body">
+        Attended SynBioUK 2025. LinkedIn post confirms participation: <em>"It was really great fun to attend #SynBioUK2025 over the last two days."</em> The UK's flagship synthetic biology conference — connects German plant synthetic genomics programme with the UK synthetic biology community where the ARIA Synthetic Plants programme is headquartered.
+      </div>
+      <div class="act-evidence">📍 UK · 2025 · Evidence: LinkedIn post</div>
+    </div>
+  </div>
+
+  <!-- UNAM Frontiers -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">2025</div>
+      <div class="act-dot teal"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-talk">Invited seminar</span>
+      <div class="act-title">Frontiers in Genomics Seminar — UNAM, Mexico City</div>
+      <div class="act-body">
+        Invited seminar at <strong>UNAM (Universidad Nacional Autónoma de México)</strong>, alma mater. LinkedIn post confirms: <em>"I had a wonderful time with the genomics undergrad students from #UNAM (my alma mater). Last week I participated in the Frontiers in Genomics seminar."</em> Disseminating plant synthetic genomics to the next generation of genomics researchers in Mexico — a community building move connecting the Latin American scientific community to the field.
+      </div>
+      <div class="act-evidence">📍 Mexico City, Mexico · 2025 · Evidence: LinkedIn post</div>
+    </div>
+  </div>
+
+  <!-- Christoph Wagner MSc -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">Dec<br>2022</div>
+      <div class="act-dot gold"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-student">MSc graduation</span>
+      <div class="act-title">Christoph S. Wagner — MSc — December 2022</div>
+      <div class="act-body">
+        First MSc graduation under supervision in the Plant Synthetic Genomics programme at HHU Düsseldorf. Graduated December 2022 — the same month the CEPLAS seed fund was active. Marks the beginning of formal student training in plant synthetic genomics.
+      </div>
+      <div class="act-evidence">📍 HHU Düsseldorf · December 2022 · Source: HHU Synthetic Biology group page</div>
+    </div>
+  </div>
+
+  <!-- Luca Weber BSc -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">Sep<br>2023</div>
+      <div class="act-dot moss"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-student">BSc graduation</span>
+      <div class="act-title">Luca Weber — BSc — September 2023</div>
+      <div class="act-body">
+        BSc thesis building foundational infrastructure for the programme. Four contributions: (1) <strong>Draft Oxford Nanopore genome of <em>P. patens</em></strong> with statistics comparable to the reference genome; (2) <strong>DIY PFGE chamber</strong> for chromosome-scale DNA visualisation; (3) <strong>reliable protoplast isolation protocol</strong> — the rate-limiting experimental step for all transformation work; (4) investigation of <strong>histone-directed centromeric DNA deoxyadenosine methylation</strong> — the epigenetic centromere question that resurfaces in the GreenBITs KTS application three years later. Also explored <strong>synthetic DNA as a data storage medium</strong> — which appears in GreenBITs WP2. The centromere methylation thread from this BSc thesis in 2023 directly anticipates the synthetic epigenomics programme of 2026.
+      </div>
+      <div class="act-evidence">📍 HHU Düsseldorf · 29 September 2023</div>
+    </div>
+  </div>
+
+  <!-- Dejan Andrejic BSc -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">Jun<br>2024</div>
+      <div class="act-dot moss"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-student">BSc graduation</span>
+      <div class="act-title">Dejan Andrejic — BSc — June 2024</div>
+      <div class="act-body">
+        BSc thesis directly addressing the centromere boot-up problem. Two core contributions: (1) <strong>comprehensive random DNA fragment library</strong> for neocentromere formation — the physical toolbox for testing whether epigenetic marking drives centromere specification in higher eukaryotes, which became the centromere body substrate in the JTF programme; (2) <strong>computational tool for multiplexed genomic targeting</strong> of natural P. patens chromosomes, enabling more efficient homologous recombination for inserting long stretches of synthetic random DNA — directly enabling the pSwAP-In iterative integration system. Also continued DIY PFGE chamber development. Abstract framing: <em>"Here we try to build a fully synthetic neo-chromosome with a focus on neocentromere formation from scratch."</em> Subsequently <strong>co-authored the RepTiles preprint</strong>.
+      </div>
+      <div class="act-evidence">📍 HHU Düsseldorf · June 2024 · Co-author: RepTiles preprint doi.org/10.1101/2025.02.28.640145</div>
+    </div>
+  </div>
+
+  <!-- Tobias Finkenrath BSc -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">Feb<br>2025</div>
+      <div class="act-dot moss"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-student">BSc graduation</span>
+      <div class="act-title">Tobias Finkenrath — BSc — February 2025</div>
+      <div class="act-body">
+        BSc thesis executing the full three-pronged experimental foundation of the 42 kb knock-in experiment. Three projects: <strong>(A)</strong> Assembled chunk six of the ~100 kb centromere body — 8 × 1.7 kb random DNA mini-chunks into a 20,558 bp plasmid (pUU5194) using Golden Braid in <em>E. coli</em> — the RepTiles pipeline in direct execution. <strong>(B)</strong> Added pp108 recombination arms, mCherry fluorescence marker, and NptII kanamycin resistance to create the integration fragment for chromosome 20 of <em>P. patens</em> at the Pp108 locus — <strong>the direct predecessor of the 42 kb three-fragment knock-in currently in antibiotic selection</strong>. <strong>(C)</strong> Built and tested the TAR cloning vector in <em>S. cerevisiae</em> (ARS1max, histidine selection, VL6-48N strain) for assembly of the full ~100 kb fragment from chunks. Also a <strong>co-author on the RepTiles preprint</strong>. His thesis makes the mechanistic logic explicit: regional centromeres in plants are epigenetically driven by CENH3, not sequence-defined like yeast — and therefore the dCas9-FUS/FUS-Venus-CENH3 strategy is the correct approach for a non-repetitive synthetic centromere body.
+      </div>
+      <div class="act-evidence">📍 HHU Düsseldorf · February 2025 · Co-author: RepTiles preprint doi.org/10.1101/2025.02.28.640145</div>
+    </div>
+  </div>
+
+  <!-- Malik Trippensee BSc -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">Dec<br>2024</div>
+      <div class="act-dot moss"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-student">BSc graduation</span>
+      <div class="act-title">Malik Trippensee — BSc — December 2024</div>
+      <div class="act-body">
+        BSc thesis in Plant Synthetic Genomics at HHU Düsseldorf. Graduated December 2024.
+      </div>
+      <div class="act-evidence">📍 HHU Düsseldorf · December 2024 · Source: HHU Synthetic Biology group page</div>
+    </div>
+  </div>
+
+  <!-- Viktoria Petrova BSc -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">Feb<br>2025</div>
+      <div class="act-dot moss"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-student">BSc graduation</span>
+      <div class="act-title">Viktoria Petrova — BSc — February 2025</div>
+      <div class="act-body">
+        BSc thesis in Plant Synthetic Genomics at HHU Düsseldorf. <strong>First author on the RepTiles preprint</strong> (Petrova, Andrejic et al., bioRxiv 2025) — the foundational methodology paper for plant synthetic chromosome assembly. An undergraduate student becoming first author on the field's first methodology paper is a direct demonstration of the training pipeline translating into research output.
+      </div>
+      <div class="act-evidence">📍 HHU Düsseldorf · February 2025 · First author: RepTiles preprint doi.org/10.1101/2025.02.28.640145</div>
+    </div>
+  </div>
+
+  <!-- Sarah Otto BSc -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">2025</div>
+      <div class="act-dot moss"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-student">BSc graduation</span>
+      <div class="act-title">Sarah Otto — BSc — 2025</div>
+      <div class="act-body">
+        BSc thesis: <strong>CRISPR/Cas9-mediated tagging of PpCENH3 with NanoLUC-3FLAG-10xHis in <em>P. patens</em></strong>. The donor construct — 10×His, 3×FLAG, NanoLUC, Glycine-Serine linker — enables bioluminescence detection and immunoprecipitation of the centromere histone. Cas9 + gRNA induced DSBs via transient transformation, integrated by HDR. <strong>Two clones confirmed NanoLUC expression</strong> by bioluminescence measurement. This is the <em>exact same NanoLUC fusion approach</em> from the MSB 2025 clock protein quantification paper — now applied to PpCENH3 in the synthetic chromosome chassis. Connects the Edinburgh quantitative biology lineage (absolute protein quantification) directly to the centromere boot-up programme in Düsseldorf.
+      </div>
+      <div class="act-evidence">📍 HHU Düsseldorf · 2025</div>
+    </div>
+  </div>
+
+  <!-- Lisa Lobkis BSc -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">2025</div>
+      <div class="act-dot moss"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-student">BSc graduation</span>
+      <div class="act-title">Lisa Lobkis — BSc — 2025</div>
+      <div class="act-body">
+        BSc thesis: <strong>synthetic telomere strategy for the plant artificial chromosome in <em>P. patens</em></strong>. Addresses the second essential chromosomal boundary element after the centromere — telomeres are required for genomic stability of any linear synthetic chromosome. Investigates whether prior findings in chromosome biology are sufficient to build functional artificial telomeres in a plant system. With Sarah Otto's centromere work and the existing centromere body assembly work (Andrejic, Finkenrath), the programme now has BSc theses covering <strong>every essential structural component</strong> of the synthetic chromosome: centromere body (random DNA) → centromere protein tagging → centromere histone quantification → telomere strategy → chromosome body assembly → integration methodology.
+      </div>
+      <div class="act-evidence">📍 HHU Düsseldorf · 2025</div>
+    </div>
+  </div>
+
+  <!-- EMBL Organoids -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">2025</div>
+      <div class="act-dot teal"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-community">Conference</span>
+      <div class="act-title">EMBL Symposium "Organoids" — Heidelberg</div>
+      <div class="act-body">
+        Attended EMBL symposium on organoids, Heidelberg. LinkedIn post confirms: <em>"In Heidelberg-Germany attending the EMBL symposium 'Organoids: modelling organ development and disease in 3D'. In full alignment with JTF philosophy."</em> Demonstrates the intellectual breadth of the programme — connecting synthetic chromosome biology to 3D organoid approaches, consistent with the JTF philosophy of big questions at disciplinary boundaries.
+      </div>
+      <div class="act-evidence">📍 Heidelberg, Germany · 2025 · Evidence: LinkedIn post</div>
+    </div>
+  </div>
+
+  <!-- Edinburgh Gifford Lectures -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">2025</div>
+      <div class="act-dot teal"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-community">Community</span>
+      <div class="act-title">Autumn Gifford Lectures — University of Edinburgh</div>
+      <div class="act-body">
+        Attended the new series "Autumn Gifford Lectures: Beyond…" at the University of Edinburgh. LinkedIn post confirms attendance. Return to the institution where the biological question at the heart of Plant Synthetic Genomics was formed — and where ARIA's Edinburgh socioethical team is now embedded in the same field.
+      </div>
+      <div class="act-evidence">📍 University of Edinburgh · 2025 · Evidence: LinkedIn post</div>
+    </div>
+  </div>
+
+  <!-- YRSPP -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">2025</div>
+      <div class="act-dot teal"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-community">Community</span>
+      <div class="act-title">YRSPP — Young Researchers in Plant Physiology</div>
+      <div class="act-body">
+        Engagement with YRSPP (biennial symposium for early-career plant researchers). LinkedIn confirms: <em>"YRSPP is now on LinkedIn! YRSPP is a biennial symposium dedicated to platforming the work of early-career researchers (ECRs) studying plant…"</em> Community building with the next generation of plant scientists who will become the field's future practitioners.
+      </div>
+      <div class="act-evidence">📍 2025 · Evidence: LinkedIn post</div>
+    </div>
+  </div>
+
+  <!-- Wiehe Stiftung Prize -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">2026</div>
+      <div class="act-dot gold"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-award">Prize nomination</span>
+      <div class="act-title">Förderpreis der Horst Wiehe-Stiftung 2026 — self-nominated</div>
+      <div class="act-body">
+        Self-nomination submitted for the <strong>Förderpreis der Horst Wiehe-Stiftung 2026</strong> for the <em>Molecular Systems Biology</em> (2025) paper on absolute circadian clock protein quantification (Urquiza-García, Molina, Halliday & Millar). Demonstrates active engagement with recognition mechanisms for the programme's scientific output.
+      </div>
+      <div class="act-evidence">📍 HHU Düsseldorf · 2026</div>
+    </div>
+  </div>
+
+  <!-- CSHL Asia — UPCOMING -->
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">Jul–Aug<br>2026</div>
+      <div class="act-dot future"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-future">Upcoming</span>
+      <div class="act-title">Cold Spring Harbor Asia Synthetic Biology Course — Faculty</div>
+      <div class="act-body">
+        Invited as <strong>faculty</strong> to CSHL Asia Synthetic Biology Course, Suzhou, 26 July – 9 August 2026. Organised by Junbiao Dai (one of the central figures in plant synthetic genomics) and Daniel Schindler (Heidelberg). Teaching, not attending. The course faculty list will associate Plant Synthetic Genomics and the Urquiza Group permanently with the canonical synthetic biology curriculum in Asia.
+      </div>
+      <div class="act-evidence">📍 Suzhou, China · 26 July – 9 August 2026</div>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <strong>Note on completeness:</strong> This record covers confirmed activities with documentary evidence. Additional talks, poster presentations, seminars, student theses, and outreach activities will be added as records are compiled. If you presented or supervised work that is not listed here, please contact urquizag@hhu.de.
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════ TALKS TAB ═══════════════════════════════ -->
+<div class="section" id="tab-talks">
+  <div class="section-header">
+    <span class="section-num">Talks —</span>
+    <span class="section-title">Conference presentations & invited seminars</span>
+  </div>
+
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">Sep<br>2024</div>
+      <div class="act-dot blue"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-talk">Talk · GCSB 2024</span>
+      <div class="act-title">"Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in <em>Physcomitrium patens</em>"</div>
+      <div class="act-body">
+        German Conference on Synthetic Biology 2024, Regensburg, 18–20 September 2024. The founding title of the field — same as the November 2022 CEPLAS seed fund — presented publicly at Germany's national synthetic biology conference, organised by GASB and DECHEMA. First major public presentation of the plant synthetic genomics programme to the German synthetic biology community.
+      </div>
+      <div class="act-evidence"><a href="https://gcsb2024.de/" target="_blank" rel="noopener">gcsb2024.de →</a> · Regensburg, Germany</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">Mar<br>2025</div>
+      <div class="act-dot moss"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-talk">Talk · euMOSS 2025</span>
+      <div class="act-title">"Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in <em>Physcomitrium patens</em>"</div>
+      <div class="act-body">
+        euMOSS Meeting 2025, Wageningen, March 2025. Primary European P. patens community meeting. Presented to the world's leading bryophyte researchers including Prof. Ralf Reski (Freiburg). Third-party evidence: @reskilab Instagram post, 25 March 2025. This is the most targeted audience for the platform — the people who understand the P. patens chassis most deeply.
+      </div>
+      <div class="act-evidence">Wageningen, Netherlands · Evidence: @reskilab Instagram, 25 March 2025</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">2025</div>
+      <div class="act-dot teal"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-talk">Invited seminar · UNAM</span>
+      <div class="act-title">Frontiers in Genomics Seminar — UNAM, Mexico City</div>
+      <div class="act-body">
+        Invited to present at the Frontiers in Genomics seminar at UNAM, Mexico City — alma mater (BSc Genomic Sciences). Connecting the Latin American genomics community to the emerging field of plant synthetic genomics.
+      </div>
+      <div class="act-evidence">Mexico City, Mexico · 2025 · Evidence: LinkedIn post</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">Jul–Aug<br>2026</div>
+      <div class="act-dot future"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-future">Upcoming · CSHL Asia</span>
+      <div class="act-title">Cold Spring Harbor Asia Synthetic Biology Course — Faculty</div>
+      <div class="act-body">
+        Faculty invitation to teach at CSHL Asia Synthetic Biology Course, Suzhou, 26 July – 9 August 2026. Organised by Junbiao Dai and Daniel Schindler. Teaching role — not participant — at one of the most prestigious synthetic biology training programmes in the world.
+      </div>
+      <div class="act-evidence">Suzhou, China · July–August 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ STUDENTS TAB ═══════════════════════════════ -->
+<div class="section" id="tab-students">
+  <div class="section-header">
+    <span class="section-num">Students —</span>
+    <span class="section-title">Graduations in Plant Synthetic Genomics</span>
+  </div>
+
+  <p style="font-size:13px; color:var(--muted); margin-bottom:20px; font-style:italic;">The programme has two pillars that are not separate: plant optogenetics (molecular control layer) and plant synthetic genomics (chromosome engineering layer). The UV-B optogenetic system tested in Arabidopsis by Kusnik became the dose-control mechanism for centromere seeding in moss by Petrova. The synthetic transcription factor logic of Ferraro became the conceptual predecessor of the dCas9-FUS targeting strategy. Falkenburg's CCA1 optogenetic work bridges clock biology directly to the JTF clock modularity hypothesis.</p>
+
+  <div style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--moss);">Pillar I — Plant Optogenetics (2021–2025)</div>
+
+  <div class="student-grid">
+
+    <div class="student-card">
+      <div class="student-degree">MSc · August 2021</div>
+      <div class="student-name">Sascha Ferraro</div>
+      <div class="student-topic">Programmable synthetic transcription factors for a non-cooperative bistable toggle switch — synthetic zinc fingers, dCas9-based activation/repression, multiplexed PTGs, UUSFp synthetic operator, auxin and blue-light-inducible degradation</div>
+      <div class="student-outcome">→ Synthetic TF logic → predecessor of dCas9-FUS centromere seeding strategy</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">MSc · October 2021</div>
+      <div class="student-name">Christoph S. Wagner</div>
+      <div class="student-topic">Engineering adaptation: combining systems biology, synthetic biology and bioinformatics to control a plant's phenotype</div>
+      <div class="student-outcome">First MSc supervised at HHU Düsseldorf</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">Lab rotation · June 2023</div>
+      <div class="student-name">Lars Broeker</div>
+      <div class="student-topic">PULSE optogenetic control of DELLA genes in <em>Arabidopsis</em> — SDRX-domain domestication, PTG design, dCas9-based transcriptional regulation of gibberellin signalling pathway</div>
+      <div class="student-outcome">→ PULSE system extension to hormone signalling</div>
+    </div>
+
+    <div class="student-card" style="border-color: rgba(61,107,74,0.3);">
+      <div class="student-degree">BSc · September 2023 ★</div>
+      <div class="student-name">Sebastian Kusnik</div>
+      <div class="student-topic">Optogenetic control of Prime Editing and flowering in plants — UV-B-induced CRISPR activation, UV-B-induced Prime Editing in <em>Arabidopsis</em> protoplasts, stable UV-B-inducible FT lines, intronized codon-optimised Cas9 variants</div>
+      <div class="student-outcome">→ UV-B optogenetic system → centromere seeding dose-control in JTF programme</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc · November 2023</div>
+      <div class="student-name">Tobias Falkenburg</div>
+      <div class="student-topic">Optogenetics in time — UVR8/PULSE temporal behaviour, optogenetic CCA1 control (circadian clock gene), YUC4 experiments in <em>Arabidopsis</em> and <em>N. benthamiana</em>, leaf movement and flowering time assays</div>
+      <div class="student-outcome">→ CCA1 optogenetic control → direct bridge to JTF clock modularity hypothesis</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc/MSc · June 2024</div>
+      <div class="student-name">Armando Teixeira</div>
+      <div class="student-topic">Quantitative optogenetic control of gene expression and genetics in plants</div>
+      <div class="student-outcome">→ Quantitative optogenetic characterisation pipeline</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc · February 2025</div>
+      <div class="student-name">Francisco Pirichinsky</div>
+      <div class="student-topic">Optogenetic control of plant metabolic pathways through modulation of gene expression</div>
+      <div class="student-outcome">→ Optogenetics applied to metabolic pathway control</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc · 2025</div>
+      <div class="student-name">Kevin Dietrich</div>
+      <div class="student-topic">Optogenetic systems in plants</div>
+      <div class="student-outcome">HHU Düsseldorf · 2025</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc · June 2025</div>
+      <div class="student-name">Benjamin Zinkler</div>
+      <div class="student-topic">Optogenetic control and orthogonal reconstruction of photoperiodic regulators — connecting optogenetics to the same photoperiod biology regulated by the circadian clock</div>
+      <div class="student-outcome">→ Photoperiodic regulators → connects to JTF clock programme</div>
+    </div>
+
+  </div>
+
+  <div style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--moss);">Pillar II — Plant Synthetic Genomics (2023–2025)</div>
+
+  <div class="student-grid">
+
+    <div class="student-card">
+      <div class="student-degree">MSc · December 2022</div>
+      <div class="student-name">Christoph S. Wagner</div>
+      <div class="student-topic">Plant Synthetic Genomics — first MSc in the programme at HHU Düsseldorf</div>
+      <div class="student-outcome">First supervised MSc in the field</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc · September 2023</div>
+      <div class="student-name">Luca Weber</div>
+      <div class="student-topic">Foundational infrastructure: ONT draft genome of <em>P. patens</em> · DIY PFGE chamber · protoplast isolation protocol · histone-directed centromeric DNA deoxyadenosine methylation · synthetic DNA as data storage</div>
+      <div class="student-outcome">→ Built genomic and protoplast infrastructure enabling all subsequent work</div>
+      <div class="student-date">Centromere methylation thread → GreenBITs 2026 · Data storage thread → GreenBITs WP2</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc · June 2024</div>
+      <div class="student-name">Dejan Andrejic</div>
+      <div class="student-topic">Random DNA fragment library for neocentromere formation · computational tool for multiplexed genomic targeting of <em>P. patens</em> chromosomes · DIY PFGE chamber (continued)</div>
+      <div class="student-outcome">→ Co-author, RepTiles preprint (bioRxiv 2025)</div>
+      <div class="student-date">Fragment library → JTF centromere body · Targeting tool → pSwAP-In integration</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc · December 2024</div>
+      <div class="student-name">Malik Trippensee</div>
+      <div class="student-topic">Plant Synthetic Genomics · <em>P. patens</em> synthetic chromosome platform</div>
+      <div class="student-outcome">HHU Düsseldorf</div>
+    </div>
+
+    <div class="student-card" style="border-color: rgba(61,107,74,0.3);">
+      <div class="student-degree">BSc · February 2025 ★</div>
+      <div class="student-name">Tobias Finkenrath</div>
+      <div class="student-topic">Three-project thesis: (A) Golden Braid assembly of 14 kb chunk from 8×1.7 kb random DNA in <em>E. coli</em> (pUU5194); (B) Integration fragment with pp108 recombination arms + mCherry + NptII for <em>P. patens</em> Pp108 locus — <strong>direct predecessor of the 42 kb knock-in</strong>; (C) TAR cloning vector in <em>S. cerevisiae</em> for 100 kb assembly</div>
+      <div class="student-outcome">→ Co-author, RepTiles preprint (bioRxiv 2025)</div>
+      <div class="student-date">Project B → 42 kb experiment in selection Apr 2026</div>
+    </div>
+
+    <div class="student-card" style="border-color: rgba(61,107,74,0.4); background: #dff0e4; grid-column: 1 / -1;">
+      <div class="student-degree">BSc · February 2025 ★ Field-defining output</div>
+      <div class="student-name">Viktoria Petrova</div>
+      <div class="student-topic">RepTiles: Golden Braid extension for plant synthetic genomics — 52 chemically synthesised 1.7 kb Phytobrick mini-chunks · web application for automated hierarchical assembly design · demonstration of 14 kb random DNA integration at Pp108 locus</div>
+      <div class="student-outcome">→ First author, RepTiles preprint (bioRxiv 2025) — the field's first methodology paper</div>
+      <div class="student-date">Undergraduate student as first author on the founding methodology paper of Plant Synthetic Genomics</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc · 2025</div>
+      <div class="student-name">Sarah Otto</div>
+      <div class="student-topic">CRISPR/Cas9 tagging of PpCENH3 with NanoLUC-3FLAG-10xHis in <em>P. patens</em> — two confirmed clones with bioluminescence expression. Donor construct enables centromere protein quantification and ChIP-seq by immunoprecipitation</div>
+      <div class="student-outcome">→ PpCENH3-NanoLUC lines: centromere protein quantification tool for JTF programme</div>
+      <div class="student-date">NanoLUC approach from MSB 2025 clock paper → now applied to centromere histone in moss</div>
+    </div>
+
+    <div class="student-card" style="grid-column: 1 / -1; border-color: rgba(61,107,74,0.3);">
+      <div class="student-degree">BSc · 2025 · Telomere component</div>
+      <div class="student-name">Lisa Lobkis</div>
+      <div class="student-topic">Synthetic telomere strategy for the plant artificial chromosome in <em>P. patens</em> — the second essential chromosomal boundary element. Investigates whether prior chromosome biology findings are sufficient to build functional artificial telomeres in a plant system</div>
+      <div class="student-outcome">→ Completes the structural component coverage of the synthetic chromosome programme</div>
+      <div class="student-date">Centromere (multiple theses) + Telomere (Lobkis) + Body assembly (Finkenrath/Petrova) = all essential components covered by BSc theses</div>
+    </div>
+
+  </div>
+
+  <div class="note-box" style="margin-top: 28px;">
+    <strong>Two pillars, one programme:</strong> 16 students supervised across two pillars — 9 in plant optogenetics and 7 in plant synthetic genomics — from August 2021 to December 2025. The pillars are not separate: the UV-B optogenetic system developed by Kusnik (September 2023) became the dose-control mechanism for centromere seeding applied by Petrova (January 2025). Falkenburg's CCA1 optogenetic work (November 2023) bridges clock biology to the JTF clock modularity hypothesis. Ferraro's synthetic transcription factor logic (August 2021) preceded and conceptually enabled the dCas9-FUS centromere targeting strategy. Together the 16 theses cover: <strong>synthetic TF circuits → optogenetic dose-control → Prime Editing → clock optogenetics → genome infrastructure → DNA part library → CRISPR targeting → assembly methodology → large DNA integration → centromere protein quantification → telomere strategy</strong>. This is not coincidence. It is a training programme structured to build, simultaneously, the molecular control layer and the chromosome engineering layer of a complete synthetic genomics platform.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ COMMUNITY TAB ═══════════════════════════════ -->
+<div class="section" id="tab-community">
+  <div class="section-header">
+    <span class="section-num">Community —</span>
+    <span class="section-title">Conferences, outreach & recognition</span>
+  </div>
+
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">Sep<br>2024</div>
+      <div class="act-dot blue"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-community">GCSB 2024</span>
+      <div class="act-title">German Conference on Synthetic Biology — Regensburg</div>
+      <div class="act-body">National synthetic biology community. Presented founding programme to GASB membership for the first time.</div>
+      <div class="act-evidence"><a href="https://gcsb2024.de/" target="_blank">gcsb2024.de →</a></div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">Mar<br>2025</div>
+      <div class="act-dot moss"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-community">euMOSS 2025</span>
+      <div class="act-title">euMOSS Meeting — Wageningen, with Ralf Reski</div>
+      <div class="act-body">European bryophyte research community. Documented by Reski lab Instagram. Core P. patens audience.</div>
+      <div class="act-evidence">@reskilab Instagram, 25 March 2025</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">2025</div>
+      <div class="act-dot blue"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-community">SynBioUK 2025</span>
+      <div class="act-title">SynBioUK 2025 — UK national synthetic biology conference</div>
+      <div class="act-body">UK synthetic biology community — same ecosystem as the ARIA Synthetic Plants programme. Establishing presence with the community that defines the field in the UK.</div>
+      <div class="act-evidence">LinkedIn post confirmation</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">2025</div>
+      <div class="act-dot teal"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-outreach">Outreach</span>
+      <div class="act-title">UNAM Frontiers in Genomics Seminar — Mexico City</div>
+      <div class="act-body">Disseminating plant synthetic genomics to Latin American genomics students at alma mater. Community building across continents.</div>
+      <div class="act-evidence">LinkedIn post confirmation</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">2025</div>
+      <div class="act-dot teal"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-community">EMBL Heidelberg</span>
+      <div class="act-title">EMBL Symposium — Organoids, Heidelberg</div>
+      <div class="act-body">Cross-disciplinary engagement connecting synthetic chromosome biology to 3D organoid approaches. JTF-aligned intellectual breadth.</div>
+      <div class="act-evidence">LinkedIn post confirmation</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">2026</div>
+      <div class="act-dot gold"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-award">Prize nomination</span>
+      <div class="act-title">Förderpreis der Horst Wiehe-Stiftung 2026 — self-nominated</div>
+      <div class="act-body">Self-nomination for the MSB 2025 paper on absolute clock protein quantification. Active engagement with recognition infrastructure.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ UPCOMING TAB ═══════════════════════════════ -->
+<div class="section" id="tab-upcoming">
+  <div class="section-header">
+    <span class="section-num">Upcoming —</span>
+    <span class="section-title">Confirmed future activities</span>
+  </div>
+
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">Jul–Aug<br>2026</div>
+      <div class="act-dot future"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-future">Faculty · CSHL Asia</span>
+      <div class="act-title">Cold Spring Harbor Asia Synthetic Biology Course</div>
+      <div class="act-body">
+        Invited faculty, Suzhou, 26 July – 9 August 2026. Organised by <strong>Junbiao Dai</strong> (Shenzhen — leading figure in plant synthetic genomics) and <strong>Daniel Schindler</strong> (Heidelberg — proposed reviewer for GreenBITs KTS application). Teaching Plant Synthetic Genomics at one of the most prestigious synthetic biology courses in the world — before the major papers are published. The invitation itself is a community judgment that the programme is at the frontier.
+      </div>
+      <div class="act-evidence">Suzhou, China · 26 July – 9 August 2026</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">2026<br>target</div>
+      <div class="act-dot future"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-future">Publication · NatBiotech</span>
+      <div class="act-title">Nature Biotechnology — 42 kb knock-in paper</div>
+      <div class="act-body">
+        Submission planned on approximately two-month timeline from April 2026. First major corresponding-author paper in plant synthetic genomics. Will generate invitations to speak — this is the paper that converts the founding narrative into the public record.
+      </div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left">
+      <div class="act-date">2027</div>
+      <div class="act-dot future"></div>
+    </div>
+    <div class="act-right">
+      <span class="act-tag tag-future">Grant · ERC</span>
+      <div class="act-title">ERC Starting Grant application — 2027 call</div>
+      <div class="act-body">
+        The grant that will scale the programme — full synthetic neo-chromosome platform, centromere boot-up, clock modularity hypothesis — with the NatBiotech paper as the cornerstone of the track record section.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-text">Uriel Urquiza-García · HHU Düsseldorf · Plant Synthetic Genomics · 2022–</div>
+  <div class="footer-links">
+    <a class="footer-link" href="https://jurquiza.github.io">Website</a>
+    <a class="footer-link" href="evidence-timeline.html">Evidence record</a>
+    <a class="footer-link" href="https://scholar.google.com/citations?user=nOKvWX0AAAAJ">Scholar</a>
+    <a class="footer-link" href="https://orcid.org/0000-0002-7975-5013">ORCID</a>
+  </div>
+</footer>
+
+</main>
+
+<script>
+// Tab switching
+const tabBtns = document.querySelectorAll('.tab-btn');
+const sections = document.querySelectorAll('.section');
+
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.tab;
+
+    tabBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    sections.forEach(s => {
+      s.classList.remove('active');
+      if (s.id === 'tab-' + target) {
+        s.classList.add('active');
+        // Re-trigger animations
+        s.querySelectorAll('.activity, .student-card').forEach(el => {
+          el.style.animation = 'none';
+          el.offsetHeight; // reflow
+          el.style.animation = '';
+        });
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>

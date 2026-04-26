@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plant Synthetic Genomics — Evidence Record | Uriel Urquiza-García</title>
+<meta name="description" content="Primary source evidence for the founding of Plant Synthetic Genomics as a research field by Dr Uriel Urquiza-García, HHU Düsseldorf, November 2022.">
+<meta name="keywords" content="Plant Synthetic Genomics, Uriel Urquiza-Garcia, synthetic chromosome, Physcomitrium patens, RepTiles, neocentromere, JTF Bottling Time, CEPLAS, HHU Düsseldorf">
+<meta name="author" content="Uriel Urquiza-García">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jurquiza.github.io/evidence-timeline.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchProject",
+  "name": "Plant Synthetic Genomics",
+  "description": "Research field founded by Dr Uriel Urquiza-García at HHU Düsseldorf, November 2022",
+  "founder": {"@type": "Person", "name": "Uriel Urquiza-García"},
+  "foundingDate": "2022-11-25"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --void:       #1a1a1a;
+  --deep:       #2a2a2a;
+  --panel:      #f4f7f2;
+  --border:     rgba(58,90,64,0.12);
+  --border-lit: rgba(58,90,64,0.25);
+  --text:       #1a1a1a;
+  --text-dim:   #4a4a4a;
+  --text-faint: #8a8a8a;
+  --moss:       #3a5a40;
+  --moss-glow:  rgba(58,90,64,0.1);
+  --moss-dim:   #dde8d6;
+  --gold:       #8b6914;
+  --gold-glow:  rgba(139,105,20,0.1);
+  --gold-dim:   #f9f3e6;
+  --red:        #8c2020;
+  --red-glow:   rgba(140,32,32,0.08);
+  --blue:       #1a4a8a;
+  --blue-glow:  rgba(26,74,138,0.08);
+  --purple:     #5a2878;
+  --purple-glow:rgba(90,40,120,0.08);
+  --future:     #6a6a6a;
+  --bg:         #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: #ffffff;
+  color: #1a1a1a;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── CURSOR LINE ── */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(74,143,95,0.04), transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── HEADER ── */
+.site-header {
+  position: relative;
+  padding: 56px 48px 48px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(to bottom, var(--deep), var(--void));
+  z-index: 1;
+}
+
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 20% 50%, rgba(74,143,95,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.header-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin-bottom: 16px;
+}
+
+.header-title {
+  font-family: 'Source Serif 4', serif;
+  font-size: clamp(32px, 5vw, 58px);
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.header-title em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--moss);
+}
+
+.header-subtitle {
+  font-size: 15px;
+  color: var(--text-dim);
+  max-width: 540px;
+  margin-top: 14px;
+  line-height: 1.65;
+}
+
+.header-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  border-left: 2px solid var(--moss-dim);
+  padding-left: 14px;
+}
+
+.stat-value {
+  font-family: 'Source Serif 4', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--moss);
+  line-height: 1;
+}
+
+.stat-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+/* ── FILTER BAR ── */
+.filter-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(12,12,16,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 48px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-right: 4px;
+}
+
+.filter-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  border-color: var(--moss);
+  color: var(--moss);
+  background: var(--moss-glow);
+}
+
+.filter-btn[data-filter="funding"].active { border-color: var(--gold); color: var(--gold); background: var(--gold-glow); }
+.filter-btn[data-filter="publication"].active { border-color: var(--blue); color: var(--blue); background: var(--blue-glow); }
+.filter-btn[data-filter="field"].active { border-color: var(--red); color: var(--red); background: var(--red-glow); }
+.filter-btn[data-filter="experiment"].active { border-color: var(--purple); color: var(--purple); background: var(--purple-glow); }
+.filter-btn[data-filter="attempted"].active { border-color: #9090a8; color: #9090a8; background: rgba(120,120,140,0.1); }
+
+/* ── MAIN ── */
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 56px 48px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── SECTION YEAR ── */
+.year-marker {
+  font-family: 'Source Serif 4', serif;
+  font-size: clamp(48px, 8vw, 80px);
+  font-weight: 900;
+  color: var(--text-faint);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: -8px;
+  user-select: none;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* ── EVIDENCE CARD ── */
+.evidence-card {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0 28px;
+  margin-bottom: 4px;
+  position: relative;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.evidence-card.hidden { display: none; }
+
+/* vertical connector */
+.evidence-card::before {
+  content: '';
+  position: absolute;
+  left: 140px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.card-left {
+  padding: 20px 16px 20px 0;
+  text-align: right;
+  position: relative;
+}
+
+.card-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.card-dot {
+  position: absolute;
+  right: -7px;
+  top: 24px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--panel);
+  border: 2px solid var(--moss);
+  z-index: 2;
+  transition: transform 0.2s;
+}
+
+.card-dot.gold { border-color: var(--gold); background: var(--gold); }
+.card-dot.founding { border-color: var(--gold); background: var(--gold); box-shadow: 0 0 12px var(--gold); }
+.card-dot.blue { border-color: var(--blue); }
+.card-dot.red { border-color: var(--red); }
+.card-dot.purple { border-color: var(--purple); }
+.card-dot.future { border-color: var(--future); background: #ffffff; }
+
+.card-right {
+  padding: 16px 0 28px 0;
+}
+
+.card-inner {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.card-inner:hover {
+  border-color: var(--border-lit);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+.card-inner.moss-card:hover { border-color: var(--moss-dim); box-shadow: 0 4px 24px var(--moss-glow); }
+.card-inner.gold-card { border-color: var(--gold-dim); }
+.card-inner.gold-card:hover { border-color: var(--gold); box-shadow: 0 4px 32px var(--gold-glow); }
+.card-inner.red-card:hover { border-color: #7a2020; box-shadow: 0 4px 24px var(--red-glow); }
+.card-inner.blue-card:hover { border-color: #1a5276; box-shadow: 0 4px 24px var(--blue-glow); }
+.card-inner.purple-card:hover { border-color: #4a2060; box-shadow: 0 4px 24px var(--purple-glow); }
+
+.card-top {
+  padding: 16px 20px 14px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.tag-founding { background: rgba(201,168,76,0.15); color: var(--gold); border: 1px solid var(--gold-dim); }
+.tag-funding { background: rgba(74,143,95,0.12); color: var(--moss); border: 1px solid var(--moss-dim); }
+.tag-publication { background: rgba(46,134,193,0.12); color: var(--blue); border: 1px solid #1a3a5a; }
+.tag-field { background: rgba(192,57,43,0.1); color: #e05540; border: 1px solid #5a2020; }
+.tag-experiment { background: rgba(125,60,152,0.12); color: #a060c0; border: 1px solid #4a2060; }
+.tag-future { background: rgba(64,64,72,0.3); color: var(--text-dim); border: 1px solid var(--border); }
+.tag-attempted { background: rgba(120,120,140,0.15); color: #9090a8; border: 1px solid rgba(120,120,140,0.3); }
+
+.card-evidence-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+  text-transform: uppercase;
+}
+
+.card-body {
+  padding: 16px 20px 18px;
+}
+
+.card-title {
+  font-family: 'Source Serif 4', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.card-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-dim);
+}
+
+.card-desc strong { color: #1a1a1a; font-weight: 500; }
+.card-desc em { color: var(--moss); font-style: italic; }
+
+/* ── DOCUMENT EVIDENCE ── */
+.card-evidence {
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+.evidence-header {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 10px;
+}
+
+.evidence-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.evidence-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+
+.evidence-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.icon-doc { background: rgba(201,168,76,0.15); }
+.icon-pub { background: rgba(46,134,193,0.15); }
+.icon-award { background: rgba(74,143,95,0.15); }
+.icon-preprint { background: rgba(125,60,152,0.15); }
+.icon-grant { background: rgba(192,57,43,0.1); }
+.icon-letter { background: rgba(201,168,76,0.1); }
+
+.evidence-content { flex: 1; }
+
+.evidence-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+
+.evidence-meta {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--text-faint);
+  line-height: 1.4;
+}
+
+.evidence-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--moss);
+  text-decoration: none;
+  border-bottom: 1px solid var(--moss-dim);
+  margin-top: 3px;
+  display: inline-block;
+  transition: opacity 0.2s;
+}
+
+.evidence-link:hover { opacity: 0.7; }
+
+/* ── CONTEXT NOTE ── */
+.context-note {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: rgba(201,168,76,0.06);
+  border-left: 2px solid var(--gold-dim);
+  font-size: 12px;
+  color: #8a7a50;
+  line-height: 1.6;
+}
+
+.context-note strong { color: var(--gold); }
+
+/* ── COMPETITIVE LANDSCAPE ── */
+.competitive-section {
+  margin: 48px 0;
+  padding: 28px 32px;
+  background: var(--deep);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--red);
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 2s;
+}
+
+.comp-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c07060;
+  margin-bottom: 16px;
+}
+
+.comp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.comp-item {
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+.comp-who {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 6px;
+}
+
+.comp-what {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.comp-what strong { color: #1a1a1a; }
+.comp-what em { color: #e05540; font-style: normal; font-weight: 500; }
+
+.comp-item.you-card {
+  border-color: var(--moss-dim);
+  background: var(--moss-glow);
+  grid-column: 1 / -1;
+}
+
+.comp-item.you-card .comp-what strong { color: var(--moss); }
+
+/* ── SUMMARY BOX ── */
+.summary-box {
+  margin-top: 52px;
+  padding: 32px 36px;
+  border: 1px solid var(--gold-dim);
+  background: var(--gold-glow);
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 2.2s;
+}
+
+.summary-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.summary-text {
+  font-family: 'Source Serif 4', serif;
+  font-style: italic;
+  font-size: clamp(16px, 2.2vw, 20px);
+  line-height: 1.55;
+  color: #1a1a1a;
+}
+
+.summary-text strong { font-style: normal; color: var(--gold); }
+
+/* ── FOOTER ── */
+footer {
+  margin-top: 52px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards 2.4s;
+}
+
+.footer-id {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+}
+
+.footer-links { display: flex; gap: 20px; }
+
+.footer-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--moss);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+}
+
+.footer-link:hover { opacity: 0.6; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.year-marker:nth-of-type(1) { animation-delay: 0.1s; }
+
+.evidence-card:nth-child(1) { animation-delay: 0.2s; }
+.evidence-card:nth-child(2) { animation-delay: 0.3s; }
+.evidence-card:nth-child(3) { animation-delay: 0.4s; }
+.evidence-card:nth-child(4) { animation-delay: 0.55s; }
+.evidence-card:nth-child(5) { animation-delay: 0.7s; }
+.evidence-card:nth-child(6) { animation-delay: 0.85s; }
+.evidence-card:nth-child(7) { animation-delay: 1.0s; }
+.evidence-card:nth-child(8) { animation-delay: 1.15s; }
+.evidence-card:nth-child(9) { animation-delay: 1.3s; }
+.evidence-card:nth-child(10) { animation-delay: 1.45s; }
+.evidence-card:nth-child(11) { animation-delay: 1.6s; }
+.evidence-card:nth-child(12) { animation-delay: 1.75s; }
+
+@media (max-width: 620px) {
+  .site-header { padding: 36px 20px 28px; }
+  .filter-bar { padding: 10px 20px; }
+  .page { padding: 40px 20px 60px; }
+  .evidence-card { grid-template-columns: 80px 1fr; gap: 0 16px; }
+  .evidence-card::before { left: 80px; }
+  .comp-grid { grid-template-columns: 1fr; }
+  .comp-item.you-card { grid-column: 1; }
+  .header-stats { gap: 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav style="position:sticky;top:0;width:100%;z-index:100;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(58,90,64,0.08);box-shadow:0 1px 20px rgba(0,0,0,0.04);">
+  <div style="max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:60px;">
+    <a href="index.html" style="font-family:'Source Serif 4',Georgia,serif;font-weight:600;font-size:1.05rem;color:#3a5a40;text-decoration:none;">Uriel Urquiza-García</a>
+    <div style="display:flex;gap:1.5rem;align-items:center;">
+      <a href="index.html" style="text-decoration:none;color:#4a4a4a;font-size:0.85rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;">Home</a>
+      <a href="field-origins.html" style="text-decoration:none;color:#4a4a4a;font-size:0.85rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;">Origins</a>
+      <a href="evidence-timeline.html" style="text-decoration:none;color:#3a5a40;font-size:0.85rem;font-weight:600;font-family:'DM Sans',system-ui,sans-serif;border-bottom:2px solid #3a5a40;padding-bottom:2px;">Evidence</a>
+      <a href="activities-timeline.html" style="text-decoration:none;color:#4a4a4a;font-size:0.85rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;">Activities</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-eyebrow">Primary Source Evidence Record · Plant Synthetic Genomics</div>
+  <div class="header-title">The founding of<br><em>Plant Synthetic Genomics</em></div>
+  <div class="header-subtitle">A compiled record of primary source documents establishing the founding of Plant Synthetic Genomics as a research field by Dr Uriel Urquiza-García, HHU Düsseldorf — with evidence predating the UK ARIA Synthetic Plants programme by 22 months.</div>
+  <div class="header-stats">
+    <div class="stat">
+      <div class="stat-value">Nov 2022</div>
+      <div class="stat-label">Field founded</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">22 mo.</div>
+      <div class="stat-label">Prior to ARIA call</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">3</div>
+      <div class="stat-label">Grants awarded</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">2</div>
+      <div class="stat-label">Applications not awarded</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">€2.1M+</div>
+      <div class="stat-label">Total applied (awarded + attempted)</div>
+    </div>
+  </div>
+</header>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <span class="filter-label">Filter:</span>
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="founding">Founding</button>
+  <button class="filter-btn" data-filter="funding">Funding</button>
+  <button class="filter-btn" data-filter="publication">Publication</button>
+  <button class="filter-btn" data-filter="field">Field context</button>
+  <button class="filter-btn" data-filter="experiment">Experiment</button>
+  <button class="filter-btn" data-filter="attempted">Not awarded</button>
+</div>
+
+<!-- MAIN -->
+<main class="page">
+
+<div class="year-marker">2022</div>
+
+<!-- CARD 1: CEPLAS Seed Fund submitted -->
+<div class="evidence-card" data-categories="founding funding">
+  <div class="card-left">
+    <div class="card-date">11 Nov<br>2022</div>
+    <div class="card-dot founding"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner gold-card">
+      <div class="card-top">
+        <span class="card-tag tag-founding">★ Founding document</span>
+        <span class="card-evidence-badge">Primary source</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">CEPLAS Seed Fund submitted — "Plant Synthetic Genomics" named</div>
+        <div class="card-desc">
+          Application submitted to the CEPLAS Steering Committee. Title: <strong>"Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in <em>Physcomitrium patens</em>."</strong> Three work packages: (1) tool validation in moss, (2) centromere characterisation by ChIP-seq and long-read sequencing, (3) neochromosome assembly, delivery and functional characterisation. Budget: <strong>€23,602</strong>. This is the earliest verifiable use of "Plant Synthetic Genomics" as a named, funded research programme.
+        </div>
+        <div class="card-evidence">
+          <div class="evidence-header">📄 Primary source documents</div>
+          <div class="evidence-item">
+            <div class="evidence-icon icon-doc">📋</div>
+            <div class="evidence-content">
+              <div class="evidence-title">CEPLAS Seed Fund Application</div>
+              <div class="evidence-meta">Submitted: 11 November 2022 · CEPLAS Steering Committee · HHU Düsseldorf</div>
+              <div class="evidence-meta">Title: "Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in Physcomitrium patens"</div>
+            </div>
+          </div>
+        </div>
+        <div class="context-note">
+          The three work packages of this €23,602 application anticipate the exact core technical challenges that the <strong>£62.4M ARIA Synthetic Plants programme</strong> (September 2024) would later organise a national consortium to address — 22 months later.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 2: CEPLAS awarded -->
+<div class="evidence-card" data-categories="founding funding">
+  <div class="card-left">
+    <div class="card-date">25 Nov<br>2022</div>
+    <div class="card-dot founding"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner gold-card">
+      <div class="card-top">
+        <span class="card-tag tag-founding">★ Award</span>
+        <span class="card-evidence-badge">Institutional record</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">CEPLAS Seed Fund awarded by steering committee</div>
+        <div class="card-desc">
+          The CEPLAS Steering Committee awards the seed fund at its scheduled meeting. Plant Synthetic Genomics becomes an <strong>institutionally funded research programme at HHU Düsseldorf</strong>. This is the founding date of the field as an active, resourced research programme.
+        </div>
+        <div class="card-evidence">
+          <div class="evidence-header">📄 Primary source</div>
+          <div class="evidence-item">
+            <div class="evidence-icon icon-award">🏛️</div>
+            <div class="evidence-content">
+              <div class="evidence-title">CEPLAS Steering Committee Award Decision</div>
+              <div class="evidence-meta">Awarded: 25 November 2022 · Cluster of Excellence on Plant Sciences (CEPLAS) · Heinrich Heine University Düsseldorf</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="year-marker" style="animation-delay:0.3s">2023 — 2024</div>
+
+<!-- CARD 3: Platform development -->
+<div class="evidence-card" data-categories="experiment">
+  <div class="card-left">
+    <div class="card-date">2023<br>–<br>2024</div>
+    <div class="card-dot purple"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner purple-card">
+      <div class="card-top">
+        <span class="card-tag tag-experiment">Platform build</span>
+        <span class="card-evidence-badge">Ongoing</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Two years of platform development — RepTiles, pSwAP-In, centromere seeding</div>
+        <div class="card-desc">
+          <strong>Assembly methodology:</strong> RepTiles developed as Golden Braid extension for plant synthetic genomics, built entirely on Phytobricks community standard parts. Direct synthesis + AQUA cloning — no Gibson assembly. pSwAP-In iterative integration system for sequential 14 kb "Assemblon" insertions with alternating positive/negative selection markers.<br><br>
+          <strong>Centromere strategy:</strong> dCas9-FUS / FUS-Venus-PpCENH3 optogenetic seeding system developed. UV-B (311nm) optogenetic dose control. Microdroplet formation in P. patens nuclei observed — preliminary evidence for CENH3 deposition at synthetic loci. LbCas12a-UL12 neotelomere formation strategy designed.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 4: VW Stiftung -->
+<div class="evidence-card" data-categories="funding">
+  <div class="card-left">
+    <div class="card-date">3 Sep<br>2024</div>
+    <div class="card-dot"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner moss-card">
+      <div class="card-top">
+        <span class="card-tag tag-funding">Grant application</span>
+        <span class="card-evidence-badge">Primary source · Not awarded</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Volkswagen Stiftung — Pioneering Research Exploration</div>
+        <div class="card-desc">
+          Pre-proposal submitted with co-applicant <strong>Dr André Marques</strong> (MPI Plant Breeding Research, Department of Chromosome Biology, Cologne). Application No. S144719. Title: <strong>"Engineering of Programmable Neocentromeres for Higher Eukaryotes."</strong> Budget: <strong>€1,299,400 over 48 months.</strong> Programme: Pioneering Research Exploration ("Unknowns Unknowns"). The holocentric chromosome angle — Marques' expertise — provides the evolutionary comparison for centromere specification requirements across eukaryotic diversity. Application not awarded but establishes the neocentromere problem as independently fundable at pioneering research scale, with the right cytogenetics collaborator, on the same day ARIA opened its call.
+        </div>
+        <div class="card-evidence">
+          <div class="evidence-header">📄 Primary source</div>
+          <div class="evidence-item">
+            <div class="evidence-icon icon-grant">📝</div>
+            <div class="evidence-content">
+              <div class="evidence-title">VW Stiftung Application No. S144719</div>
+              <div class="evidence-meta">Submitted: 3 September 2024 · VolkswagenStiftung Pioneering Research Exploration</div>
+              <div class="evidence-meta">Applicants: Dr Uriel Urquiza-García (HHU) + Dr André Marques (MPIPZ Cologne)</div>
+              <div class="evidence-meta">Status: Pre-proposal · Not awarded</div>
+            </div>
+          </div>
+        </div>
+        <div class="context-note">
+          Submitted the <strong>same month</strong> ARIA opened its Synthetic Plants call. Demonstrates independent identification of programmable neocentromeres as a frontier problem, with the right collaborator, before ARIA validated the space with £62.4M.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 5: ARIA -->
+<div class="evidence-card" data-categories="field">
+  <div class="card-left">
+    <div class="card-date">4 Sep<br>2024</div>
+    <div class="card-dot red"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner red-card">
+      <div class="card-top">
+        <span class="card-tag tag-field">Field validation</span>
+        <span class="card-evidence-badge">External — UK Government</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">ARIA opens Synthetic Plants call — £62.4M</div>
+        <div class="card-desc">
+          UK Advanced Research and Invention Agency opens first call for the Synthetic Plants programme. <strong>22 months after the CEPLAS seed fund founding.</strong> Nine teams funded: six chloroplast, one nuclear chromosome (James + Cai, Manchester; John Innes Centre; Earlham Institute — £8.5M using yeast/Gibson assembly in potato). Three socioethical teams including University of Edinburgh (£1.8M for "responsible innovation for plant synthetic genomics").<br><br>
+          The ARIA programme uses the phrase <strong>"plant synthetic genomics"</strong> in its TA2 socioethical brief — the same phrase coined in the November 2022 CEPLAS seed fund application.
+        </div>
+        <div class="card-evidence">
+          <div class="evidence-header">🔗 External sources</div>
+          <div class="evidence-item">
+            <div class="evidence-icon icon-pub">🌐</div>
+            <div class="evidence-content">
+              <div class="evidence-title">ARIA Synthetic Plants Programme</div>
+              <a class="evidence-link" href="https://aria.org.uk/opportunity-spaces/programmable-plants/synthetic-plants/" target="_blank" rel="noopener">aria.org.uk →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="year-marker" style="animation-delay:0.5s">2025</div>
+
+<!-- CARD 6: MSB paper -->
+<div class="evidence-card" data-categories="publication">
+  <div class="card-left">
+    <div class="card-date">2025<br>MSB</div>
+    <div class="card-dot blue"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner blue-card">
+      <div class="card-top">
+        <span class="card-tag tag-publication">Publication</span>
+        <span class="card-evidence-badge">Peer-reviewed</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Molecular Systems Biology 2025 — absolute clock protein quantification</div>
+        <div class="card-desc">
+          Urquiza-García U, Molina N, Halliday KJ & Millar AJ. <em>Molecular Systems Biology</em> (2025). <strong>First absolute quantification of transcription factor proteins in any plant system.</strong> NanoLUC translational fusions, ODE models in absolute units, sequence-to-affinity pipeline. Provides the quantitative readout infrastructure embedded into the JTF experimental logic — the measurement system built before the experiment it was designed to read.
+        </div>
+        <div class="card-evidence">
+          <div class="evidence-header">🔗 Published record</div>
+          <div class="evidence-item">
+            <div class="evidence-icon icon-pub">📰</div>
+            <div class="evidence-content">
+              <div class="evidence-title">Abundant clock proteins point to missing molecular regulation in the plant circadian clock</div>
+              <div class="evidence-meta">Molecular Systems Biology · 2025</div>
+              <a class="evidence-link" href="https://doi.org/10.1038/s44320-025-00086-5" target="_blank" rel="noopener">doi.org/10.1038/s44320-025-00086-5 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 7a: JTF Full Proposal Invitation -->
+<div class="evidence-card" data-categories="funding">
+  <div class="card-left">
+    <div class="card-date">2024<br>JTF<br>invite</div>
+    <div class="card-dot gold"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner gold-card">
+      <div class="card-top">
+        <span class="card-tag tag-founding">★ Competitive selection</span>
+        <span class="card-evidence-badge">Primary source · Email record</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">JTF invites full proposal — "Bottling Time"</div>
+        <div class="card-desc">
+          Email from <strong>Emanuela Sani, Program Officer Life Science, John Templeton Foundation</strong>, sending additional Life Science proposal guidelines and confirming invitation to submit a full proposal for the "Bottling Time" grant. JTF operates a two-stage process: pre-proposal screening followed by invitation-only full proposals. <strong>Being invited to the full proposal stage is a competitive selection event</strong> — the majority of pre-proposals do not advance. This email documents that JTF's Life Science programme assessed the clock modularity hypothesis as sufficiently compelling to invite full development.
+        </div>
+        <div class="card-evidence">
+          <div class="evidence-header">📄 Primary source</div>
+          <div class="evidence-item">
+            <div class="evidence-icon icon-letter">📬</div>
+            <div class="evidence-content">
+              <div class="evidence-title">Email: Emanuela Sani → Uriel Urquiza-García</div>
+              <div class="evidence-meta">Subject: "[Extern] Additional JTF Proposal Guidelines"</div>
+              <div class="evidence-meta">From: Emanuela Sani, Program Officer Life Science · John Templeton Foundation · 300 Conshohocken State Road, Suite 500, West Conshohocken PA 19428</div>
+              <div class="evidence-meta">Attachments: LS Guidelines 2024.docx · LS Outputs and Outcomes Guidelines</div>
+            </div>
+          </div>
+        </div>
+        <div class="context-note">
+          JTF Life Science grants are peer-reviewed by external scientists. Full proposal invitation signals that the pre-proposal passed scientific credibility review. The programme officer personally engaged confirms the grant was being actively managed — not just processed.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 7b: JTF Award -->
+<div class="evidence-card" data-categories="funding">
+  <div class="card-left">
+    <div class="card-date">2025<br>JTF</div>
+    <div class="card-dot gold"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner gold-card">
+      <div class="card-top">
+        <span class="card-tag tag-founding">★ Major grant awarded</span>
+        <span class="card-evidence-badge">Primary source · Awarded</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">John Templeton Foundation — "Bottling Time" — awarded</div>
+        <div class="card-desc">
+          Grant ID 63576. Title: <strong>"Bottling Time: Reconstructing a Moss's Inner Clock Through Synthetic Genomics."</strong> Hypothesis: <em>The circadian clock is a modular and genetically portable system whose function does not depend on its native genomic architecture or chromosomal context.</em> Four work packages: (1) systematic clock dissection in P. patens, (2) stepwise clock relocation to protoneochromosome locus, (3) centromere activation and clock neochromosome excision, (4) episomal TAR-assembled clock variants. JTF does not fund incremental science — award signals external, independent judgment that the question is genuinely foundational. This grant unifies the Edinburgh clock quantification lineage and the Düsseldorf synthetic chromosome lineage into a single programme.
+        </div>
+        <div class="card-evidence">
+          <div class="evidence-header">📄 Primary sources</div>
+          <div class="evidence-item">
+            <div class="evidence-icon icon-award">🏆</div>
+            <div class="evidence-content">
+              <div class="evidence-title">JTF Grant ID 63576 — Award</div>
+              <div class="evidence-meta">John Templeton Foundation · Life Science Programme · Awarded 2025</div>
+            </div>
+          </div>
+          <div class="evidence-item">
+            <div class="evidence-icon icon-letter">📬</div>
+            <div class="evidence-content">
+              <div class="evidence-title">HHU Rektorat Congratulatory Letter — Zuwendungsbescheid F-2025/2948</div>
+              <div class="evidence-meta">Signed: Prof. Dr. Dr. Dr. Andrea Icks, Prorektorin für Forschung und Transfer · 2 February 2026</div>
+              <div class="evidence-meta">Address line: <strong>"Synthetic Biology – Plant Synthetic Genomics"</strong> — institutional ratification of field name</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 7c: ERC Preparation -->
+<div class="evidence-card" data-categories="funding">
+  <div class="card-left">
+    <div class="card-date">2026<br>ERC<br>prep</div>
+    <div class="card-dot future"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner">
+      <div class="card-top">
+        <span class="card-tag tag-future">In preparation</span>
+        <span class="card-evidence-badge">2027 call</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">ERC Starting Grant — 2027 call — in active preparation</div>
+        <div class="card-desc">
+          ERC Starting Grant application in preparation for the 2027 call, coordinated with the HHU grants office. The full synthetic neo-chromosome platform — assembly methodology (RepTiles/pSwAP-In/Phytobricks), centromere boot-up (optogenetic dCas9-FUS/FUS-Venus-PpCENH3), clock modularity hypothesis — presented as the programme of a field founder with:<br><br>
+          <strong>Verifiable priority:</strong> CEPLAS seed fund November 2022, 22 months before ARIA.<br>
+          <strong>Independent funding stack:</strong> CEPLAS + JTF + HHU SFF — three sources, three independent judgments.<br>
+          <strong>Community recognition:</strong> CSHL Asia faculty invitation, JTF competitive selection, HHU institutional ratification.<br>
+          <strong>Technical distinction:</strong> No Gibson assembly, no yeast intermediary, Phytobricks throughout, original centromere strategy, original neotelomere strategy.<br>
+          <strong>Biological question:</strong> Clock modularity hypothesis predating platform by a decade — the question that made the platform necessary.
+        </div>
+        <div class="context-note">
+          The NatBiotech 42 kb paper, if published before the ERC submission deadline, transforms the application from a vision with preliminary data to a vision with a demonstrated platform. That paper is the single most important near-term milestone for the ERC case.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 8: HHU SFF -->
+<div class="evidence-card" data-categories="funding">
+  <div class="card-left">
+    <div class="card-date">2025<br>HHU</div>
+    <div class="card-dot"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner moss-card">
+      <div class="card-top">
+        <span class="card-tag tag-funding">Institutional funding</span>
+        <span class="card-evidence-badge">Awarded</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">HHU Strategic Research Fund — Plant Synthetic Genomics</div>
+        <div class="card-desc">
+          Heinrich Heine University Strategic Research Fund awarded in support of Plant Synthetic Genomics. Third independent institutional body to fund the programme — alongside CEPLAS (2022) and JTF (2025). Demonstrates convergent institutional validation from three independent sources before the ERC application.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 9: RepTiles -->
+<div class="evidence-card" data-categories="publication">
+  <div class="card-left">
+    <div class="card-date">Feb<br>2025</div>
+    <div class="card-dot blue"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner blue-card">
+      <div class="card-top">
+        <span class="card-tag tag-publication">Preprint</span>
+        <span class="card-evidence-badge">bioRxiv · Under review</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">RepTiles — Golden Braid assembly for plant synthetic genomics</div>
+        <div class="card-desc">
+          Petrova V, Andrejic D, Finkenrath T, Grewer J, Zurbriggen MD & <strong>Urquiza-García U</strong>. <em>bioRxiv</em> (February 2025). RepTiles: system for generating synthetic random DNA for plant synthetic genomics applications from <strong>Phytobricks community standard parts</strong>. 52 chemically synthesised 1.7 kb mini-chunks. Web application for automated hierarchical assembly design. Demonstrates 14 kb random DNA domestication and stable integration at the Pp108 locus in P. patens. <strong>First published methodology paper</strong> for the plant synthetic chromosome assembly platform.
+        </div>
+        <div class="card-evidence">
+          <div class="evidence-header">🔗 Published preprint</div>
+          <div class="evidence-item">
+            <div class="evidence-icon icon-preprint">🧬</div>
+            <div class="evidence-content">
+              <div class="evidence-title">Gearing up Golden Braid assembly for plant synthetic genomics with RepTiles</div>
+              <div class="evidence-meta">bioRxiv · Posted 2 March 2025</div>
+              <a class="evidence-link" href="https://doi.org/10.1101/2025.02.28.640145" target="_blank" rel="noopener">doi.org/10.1101/2025.02.28.640145 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="year-marker" style="animation-delay:0.8s">2026</div>
+
+<!-- CARD 10: 42kb experiment -->
+<div class="evidence-card" data-categories="experiment">
+  <div class="card-left">
+    <div class="card-date">Apr<br>2026</div>
+    <div class="card-dot purple"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner purple-card">
+      <div class="card-top">
+        <span class="card-tag tag-experiment">Active experiment</span>
+        <span class="card-evidence-badge">In progress</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">42 kb three-fragment knock-in — ~50 colonies in antibiotic selection</div>
+        <div class="card-desc">
+          Three-fragment 42 kb knock-in at the Pp108 locus in <em>P. patens</em>. Assembled <strong>directly in moss without yeast intermediary</strong> — key technical distinction from Manchester/ARIA synPAC approach which uses yeast assembly. ~50 mCherry-positive colonies in kanamycin selection. Oxford Nanopore sequencing planned for junction confirmation. <strong>Nature Biotechnology submission</strong> on approximately two-month timeline driven by competitive pressure from ARIA-funded SyncSol consortium.
+        </div>
+        <div class="context-note">
+          The Manchester synPAC consortium (£8.5M) uses <strong>yeast (Gibson) assembly</strong> to build synthetic chromosomes for transfer to potato. This 42 kb experiment was assembled <strong>directly in moss</strong> using RepTiles/pSwAP-In — demonstrating a technically distinct and superior approach for the P. patens chassis.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 10b: GreenBITs KTS — not awarded -->
+<div class="evidence-card" data-categories="funding attempted">
+  <div class="card-left">
+    <div class="card-date">2026<br>KTS</div>
+    <div class="card-dot future"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner">
+      <div class="card-top">
+        <span class="card-tag tag-attempted">Application · Not awarded</span>
+        <span class="card-evidence-badge">Primary source · KTS</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Klaus Tschira Stiftung — GreenBITs: Synthetic Epigenomics in <em>P. patens</em></div>
+        <div class="card-desc">
+          Application to Klaus Tschira Stiftung. Title: <strong>"GreenBITs: Programmable Epigenetic Pre-patterning and Loading of Large DNA in the Moss <em>Physcomitrium patens</em>."</strong> PI: Uriel Urquiza-García. Budget: <strong>€492,546 over 36 months</strong> (June 2026 – May 2029). Not awarded.<br><br>
+          Four work packages: <strong>WP1</strong> — Write→Integrate→Read: in vitro CpG methylation (M.SssI/DNMT1) on synthetic DNA, validated by Nanopore 5mC basecalling, persistence monitored across clonal and sexual propagation. <strong>WP2</strong> — Programmable Typesetting: epi-BITs on random DNA and synthetic promoters, ML design rules, in vivo epigenetic data storage. <strong>WP3</strong> — Neocentromere formation: 100 kb methylated DNA at Pp108 locus — directly tests whether pre-patterned methylation modulates CENH3 seeding efficiency. <strong>WP4</strong> — EpiCAD: open-source software and standards for biodesign automation of methylation states.<br><br>
+          <strong>Future vision:</strong> Epigenetic Design & Deployment Platform — EpiCAD computational design, a Foundry for enzymatic write/read/erase at 100 kb–1 Mb scale, and a parts registry annotated with epigenetic response curves.
+        </div>
+        <div class="card-evidence">
+          <div class="evidence-header">📄 Primary source · Proposed reviewers</div>
+          <div class="evidence-item">
+            <div class="evidence-icon icon-grant">📝</div>
+            <div class="evidence-content">
+              <div class="evidence-title">KTS Application — GreenBITs</div>
+              <div class="evidence-meta">Klaus Tschira Stiftung · Pioneering Research · PI: Dr Uriel Urquiza-García, HHU Düsseldorf</div>
+              <div class="evidence-meta">Budget: €492,546 · Duration: 36 months · Status: Not awarded</div>
+              <div class="evidence-meta">Proposed reviewers: Prof. Daniel Schindler (Heidelberg) · Prof. Kelly Dawe (Georgia) · Prof. Ian Henderson (Cambridge) · Prof. Ralf Reski (Freiburg)</div>
+            </div>
+          </div>
+        </div>
+        <div class="context-note">
+          <strong>Why this matters regardless of outcome:</strong> GreenBITs identifies <em>synthetic epigenomics</em> as the next layer of the plant synthetic chromosome programme — asking not just whether DNA can be inserted but whether its chromatin state can be pre-programmed before entry into the cell. WP3 directly addresses the most critical unknown in the centromere boot-up strategy: does pre-methylation of the synthetic centromere body increase CENH3 seeding efficiency? No other group in plant synthetic genomics is working at this layer. The reviewer list — Schindler, Dawe, Henderson, Reski — represents the four most relevant specialists globally.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 11: CSHL Asia -->
+<div class="evidence-card" data-categories="founding">
+  <div class="card-left">
+    <div class="card-date">Jul–Aug<br>2026</div>
+    <div class="card-dot gold"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner gold-card">
+      <div class="card-top">
+        <span class="card-tag tag-founding">Community recognition</span>
+        <span class="card-evidence-badge">Faculty invitation</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Cold Spring Harbor Asia Synthetic Biology Course — invited faculty</div>
+        <div class="card-desc">
+          Invited as <strong>faculty</strong> (not participant) to the CSHL Asia Synthetic Biology Course, Suzhou, 26 July – 9 August 2026. Organised by Junbiao Dai and Daniel Schindler. CSHL courses are highly curated; faculty slots represent a judgment by course organisers that the invitee is working at the frontier. Being invited before the major papers are published signals that the community is tracking based on trajectory, not just output — which is the ERC Starting Grant criterion.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 12: NatBiotech + ERC -->
+<div class="evidence-card" data-categories="publication funding">
+  <div class="card-left">
+    <div class="card-date">2026<br>–<br>2027</div>
+    <div class="card-dot future"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner">
+      <div class="card-top">
+        <span class="card-tag tag-future">Upcoming</span>
+        <span class="card-evidence-badge">In preparation</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Nature Biotechnology submission + ERC Starting Grant 2027</div>
+        <div class="card-desc">
+          <strong>Nature Biotechnology:</strong> First major plant synthetic genomics paper as corresponding author. 42 kb knock-in without yeast intermediary. Completes the public founding narrative — establishing the platform in the peer-reviewed record.<br><br>
+          <strong>ERC Starting Grant 2027 call:</strong> Full synthetic neo-chromosome platform — assembly, centromere boot-up, clock modularity hypothesis — presented as the programme of a field founder with verifiable priority (November 2022), Phytobricks community standard infrastructure, and independent funding from three sources before the field's largest national programme existed.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPETITIVE LANDSCAPE -->
+<div class="competitive-section">
+  <div class="comp-label">Competitive landscape — plant synthetic genomics, nuclear chromosomes · April 2026</div>
+  <div class="comp-grid">
+    <div class="comp-item">
+      <div class="comp-who">SynMoss · Dai Group · Shenzhen/Beijing</div>
+      <div class="comp-what"><strong>Nat Plants Jan 2024.</strong> Replaced 155 kb of chr18 short arm with redesigned synthetic sequence in P. patens — 55.8% reduction. Yeast TAR assembly. GenoDesigner platform. Goal: synthesise entire P. patens genome within 10 years. <em>Recoding paradigm (Sc2.0). Not a neochromosome — rewrites existing chromosome, does not create one. No centromere seeding strategy. Biological question vague: "explore the potential of creating artificial genomes for various applications." 10-year horizon with no specific falsifiable hypothesis.</em></div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-who">Jake Harris · Cambridge · ARIA £6.6M (Jun 2025)</div>
+      <div class="comp-what"><strong>"From Prototype to Production."</strong> Nuclear synthetic chromosome technology in crops. Potato focus (tetraploid, low HDR, months per cycle). <em>Framing implies transfer from non-plant prototype — not ground-up plant synthetic genomics. Three-year ARIA Phase One deadline in wrong chassis. No biological question stated. Crop improvement framing only. Potato biology makes the experiment fundamentally harder than P. patens.</em></div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-who">James + Cai · Manchester / JIC / Earlham · ARIA £8.5M (Jun 2025)</div>
+      <div class="comp-what"><strong>synPACs</strong> — yeast (Gibson) assembly → transfer to potato. <em>Potato tetraploidy and low HDR efficiency mean each integration cycle takes months. Three-year ARIA mandate incompatible with the iteration speed the experiment requires. No published centromere strategy. No Phytobricks foundation. Cai's expertise is yeast synthetic genomics — plant chromatin and epigenetic centromeres are a different problem entirely.</em></div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-who">ARIA chloroplast teams ×6</div>
+      <div class="comp-what">Dunkelmann/MPI-MP (SyncSol), Purton/UCL (Synplastome 2.0), Kelly+Licausi/Oxford (OPTIMiSE), Sarkisyan/Syntato, Karas/Western, plus Cambridge chloroplast strand. <em>Plastid genome — small, prokaryotic-like, fundamentally different problem from nuclear chromosome engineering. Not competitors in this space.</em></div>
+    </div>
+    <div class="comp-item you-card">
+      <div class="comp-who">Urquiza-García · HHU Düsseldorf / CEPLAS · Founded 25 Nov 2022</div>
+      <div class="comp-what"><strong>De novo synthetic neochromosome in P. patens — a chromosome that never existed before.</strong> Direct synthesis + AQUA cloning + Golden Braid + RepTiles — Phytobricks throughout, no Gibson assembly, no yeast intermediary, no recoding. <strong>Original optogenetic centromere seeding strategy</strong> (dCas9-FUS/FUS-Venus-PpCENH3, UV-B dose control, LbCas12a-UL12 neotelomere) — unpublished, no equivalent globally. <strong>Clock modularity hypothesis</strong> — specific, falsifiable biological question predating platform by a decade. Founded <strong>November 2022</strong>: 14 months before SynMoss published, 31 months before ARIA announced, 43 months before Cambridge and Manchester received funding. P. patens native HDR enables rapid iteration — weeks not months. 16 students trained across two pillars. 7 theses covering every essential chromosome component. <strong>42 kb knock-in in selection April 2026 — most advanced direct in-plant synthetic assembly without yeast intermediary.</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary-box">
+  <div class="summary-label">Evidentiary conclusion</div>
+  <div class="summary-text">
+    The primary source record establishes that Plant Synthetic Genomics as a named, funded, institutionally recognised research programme was initiated at HHU Düsseldorf on <strong>25 November 2022</strong> — 22 months before ARIA validated the field with £62.4M. Three grants have been awarded from independent sources (CEPLAS, JTF, HHU SFF). Two further applications — VW Stiftung (€1.3M, programmable neocentromeres) and Klaus Tschira Stiftung (€492K, synthetic epigenomics/GreenBITs) — were not awarded but serve as timestamps: they prove that the frontier problems of the field were being identified and formally articulated here before any other group had framed them. GreenBITs in particular demonstrates that the programme had already extended into <strong>synthetic epigenomics</strong> — pre-patterning the chromatin state of synthetic DNA before integration — a layer no other plant synthetic genomics group is currently working at.
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-id">Uriel Urquiza-García · HHU Düsseldorf · CEPLAS · Plant Synthetic Genomics · 2022—</div>
+  <div class="footer-links">
+    <a class="footer-link" href="https://jurquiza.github.io">Website</a>
+    <a class="footer-link" href="https://scholar.google.com/citations?user=nOKvWX0AAAAJ">Scholar</a>
+    <a class="footer-link" href="https://doi.org/10.1101/2025.02.28.640145">RepTiles</a>
+    <a class="footer-link" href="https://orcid.org/0000-0002-7975-5013">ORCID</a>
+  </div>
+</footer>
+
+</main>
+
+<script>
+// Filter functionality
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.evidence-card');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+
+    cards.forEach(card => {
+      if (filter === 'all') {
+        card.classList.remove('hidden');
+      } else {
+        const cats = card.dataset.categories || '';
+        if (cats.includes(filter)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
