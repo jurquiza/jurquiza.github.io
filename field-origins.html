@@ -25,27 +25,57 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --paper: #f4f0e8;
-  --ink: #1a1810;
-  --ink-mid: #3c3830;
-  --ink-dim: #7a7060;
-  --ink-ghost: #b0a898;
-  --rule: rgba(26,24,16,0.1);
-  --moss: #2c5c38;
-  --moss-pale: #e6eeea;
-  --moss-mid: #4a8060;
-  --gold: #8a6020;
-  --gold-pale: #f6eede;
-  --gold-mid: #b88028;
-  --night: #111008;
-  --night-mid: #1a180e;
+  /* ── BACKGROUND ── */
+  --sand:        #f5f0e8;   /* page background */
+  --white:       #ffffff;   /* card / panel background */
+  --moss-wash:   #f4f7f2;   /* very light green tint */
+
+  /* ── INK ── */
+  --ink:         #1a1a1a;   /* primary text */
+  --ink-light:   #4a4a4a;   /* secondary text */
+  --ink-faint:   #8a8a8a;   /* tertiary / labels */
+  --ink-ghost:   #b8b0a8;   /* very faint */
+
+  /* ── MOSS GREEN ── */
+  --moss:        #3a5a40;   /* primary brand */
+  --moss-light:  #4a7c59;   /* hover / mid */
+  --moss-pale:   #dde8d6;   /* pale green bg */
+  --moss-mid:    #4a7c59;   /* alias */
+
+  /* ── GOLD ACCENT ── */
+  --accent:      #8b6914;   /* gold accent */
+  --accent-pale: #f9f3e6;   /* pale gold bg */
+  --accent-mid:  #a07820;   /* mid gold */
+
+  /* ── SEMANTIC COLOURS ── */
+  --blue:        #1a4a8a;
+  --blue-pale:   #edf2fa;
+  --teal:        #1a6a60;
+  --teal-pale:   #e8f6f4;
+  --red:         #8c2020;
+  --red-pale:    #fdf0f0;
+  --future:      #6a6a6a;
+
+  /* ── RULES ── */
+  --rule:        rgba(58,90,64,0.10);
+  --rule-mid:    rgba(58,90,64,0.18);
+
+  /* ── NIGHT (dark panels) ── */
+  --night:       #1a1a1a;
+  --night-mid:   #2a2a2a;
+  --night-text:  #ede8de;
+  --night-dim:   #7a7a7a;
+
+  /* ── TYPOGRAPHY ── */
+  --serif:  'Source Serif 4', Georgia, serif;
+  --sans:   'DM Sans', system-ui, sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--paper);
+  background: var(--sand);
   color: var(--ink);
   font-family: var(--serif);
   font-weight: 400;
@@ -65,7 +95,7 @@ body {
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--moss-mid);
+  color: var(--moss-light);
   margin-bottom: 22px;
   opacity: 0;
   animation: fadeUp 0.6s ease forwards 0.2s;
@@ -110,7 +140,7 @@ body {
   font-family: var(--serif);
   font-size: 26px;
   font-weight: 400;
-  color: var(--gold-mid);
+  color: var(--accent-mid);
   line-height: 1;
   letter-spacing: -0.01em;
 }
@@ -175,7 +205,7 @@ body {
 .section-body {
   font-size: 17px;
   line-height: 1.82;
-  color: var(--ink-mid);
+  color: var(--ink-light);
 }
 
 .section-body p { margin-bottom: 16px; }
@@ -203,7 +233,7 @@ body {
 .source-text {
   font-size: 13px;
   line-height: 1.65;
-  color: var(--ink-mid);
+  color: var(--ink-light);
 }
 
 .source-text strong { color: var(--ink); font-weight: 700; }
@@ -226,7 +256,7 @@ body {
   font-size: 9px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ink-dim);
+  color: var(--ink-faint);
   padding: 8px 14px 8px 0;
   text-align: left;
   font-weight: 400;
@@ -236,7 +266,7 @@ body {
   padding: 11px 14px 11px 0;
   vertical-align: top;
   border-bottom: 1px solid var(--rule);
-  color: var(--ink-mid);
+  color: var(--ink-light);
   line-height: 1.5;
 }
 
@@ -246,16 +276,16 @@ body {
   font-family: 'DM Mono', monospace;
   font-size: 10px;
   letter-spacing: 0.06em;
-  color: var(--ink-dim);
+  color: var(--ink-faint);
   white-space: nowrap;
 }
 
 .chron-table tr.highlight td {
-  background: var(--gold-pale);
+  background: var(--accent-pale);
 }
 
 .chron-table tr.highlight td.date-col {
-  color: var(--gold);
+  color: var(--accent);
 }
 
 /* ── STUDENT TABLE ── */
@@ -273,7 +303,7 @@ body {
   font-size: 9px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ink-dim);
+  color: var(--ink-faint);
   padding: 7px 12px 7px 0;
   text-align: left;
   font-weight: 400;
@@ -283,7 +313,7 @@ body {
   padding: 10px 12px 10px 0;
   vertical-align: top;
   border-bottom: 1px solid var(--rule);
-  color: var(--ink-mid);
+  color: var(--ink-light);
   line-height: 1.45;
 }
 
@@ -292,7 +322,7 @@ body {
 .student-table td.date-col {
   font-family: 'DM Mono', monospace;
   font-size: 10px;
-  color: var(--ink-dim);
+  color: var(--ink-faint);
   white-space: nowrap;
 }
 
@@ -313,7 +343,7 @@ body {
   font-size: 9px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ink-dim);
+  color: var(--ink-faint);
   padding: 7px 10px 7px 0;
   text-align: left;
   font-weight: 400;
@@ -323,7 +353,7 @@ body {
   padding: 11px 10px 11px 0;
   vertical-align: top;
   border-bottom: 1px solid var(--rule);
-  color: var(--ink-mid);
+  color: var(--ink-light);
   line-height: 1.5;
   font-size: 13px;
 }
@@ -347,7 +377,7 @@ body {
   font-size: 9px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--moss-mid);
+  color: var(--moss-light);
   margin-bottom: 18px;
 }
 
@@ -430,7 +460,7 @@ body {
   }
 
   .chron-table tr.highlight {
-    background: var(--gold-pale);
+    background: var(--accent-pale);
     border-color: rgba(139,105,20,0.2);
   }
 
@@ -465,7 +495,7 @@ body {
     white-space: normal;
   }
 
-  .chron-table tr.highlight td.date-col { color: var(--gold); }
+  .chron-table tr.highlight td.date-col { color: var(--accent); }
 
   /* Student table — date as label */
   .student-table td.date-col {
@@ -879,7 +909,7 @@ body {
         </tbody>
       </table>
 
-      <p style="margin-top:14px; font-size:13px; color:var(--ink-dim);">Rows highlighted in green indicate Plant Synthetic Genomics pillar. The seven highlighted theses collectively cover: genomic infrastructure; standardised part library; programmable chromosome identity targeting; large-DNA assembly methodology and design automation; large-DNA integration into the <em>P. patens</em> genome; centromere histone tagging and quantification; synthetic telomere design. Three of the seven students (Andrejic, Finkenrath, Petrova) are co-authors on the RepTiles preprint (bioRxiv, Feb 2025), with Petrova as first author.</p>
+      <p style="margin-top:14px; font-size:13px; color:var(--ink-faint);">Rows highlighted in green indicate Plant Synthetic Genomics pillar. The seven highlighted theses collectively cover: genomic infrastructure; standardised part library; programmable chromosome identity targeting; large-DNA assembly methodology and design automation; large-DNA integration into the <em>P. patens</em> genome; centromere histone tagging and quantification; synthetic telomere design. Three of the seven students (Andrejic, Finkenrath, Petrova) are co-authors on the RepTiles preprint (bioRxiv, Feb 2025), with Petrova as first author.</p>
     </div>
   </div>
 

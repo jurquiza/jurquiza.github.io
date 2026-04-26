@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Field-Building Activities — Plant Synthetic Genomics | Uriel Urquiza-García</title>
-<meta name="description" content="Talks, student graduations, conferences, and community activities in Plant Synthetic Genomics by Dr Uriel Urquiza-García, HHU Düsseldorf.">
-<meta name="keywords" content="Plant Synthetic Genomics, Uriel Urquiza-Garcia, GCSB 2024, euMOSS 2025, Wageningen, Regensburg, plant artificial chromosome, Physcomitrium patens, synthetic biology talks">
-<meta name="author" content="Uriel Urquiza-García">
+<title>Activities & Training | Uriel Urquiza-García · Plant Synthetic Genomics</title>
+<meta name="description" content="Talks, student supervision, and community activities in Plant Synthetic Genomics by Dr Uriel Urquiza-García, HHU Düsseldorf.">
+<meta name="keywords" content="Plant Synthetic Genomics, Uriel Urquiza-Garcia, GCSB 2024, euMOSS 2025, Wageningen, student supervision">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://jurquiza.github.io/activities-timeline.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,463 +13,284 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg:         #ffffff;
-  --ink:        #1a1a1a;
-  --muted:      #4a4a4a;
-  --faint:      #8a8a8a;
-  --rule:       rgba(58,90,64,0.1);
-  --moss:       #3a5a40;
-  --moss-bg:    #f4f7f2;
-  --moss-mid:   #4a7c59;
-  --gold:       #8b6914;
-  --gold-bg:    #f9f3e6;
-  --blue:       #1a4a8a;
-  --blue-bg:    #edf2fa;
-  --purple:     #5a2878;
-  --purple-bg:  #f4edfb;
-  --red:        #8c2020;
-  --red-bg:     #fdf0f0;
-  --teal:       #1a6a60;
-  --teal-bg:    #e8f6f4;
+  /* ── BACKGROUND ── */
+  --sand:        #f5f0e8;   /* page background */
+  --white:       #ffffff;   /* card / panel background */
+  --moss-wash:   #f4f7f2;   /* very light green tint */
+
+  /* ── INK ── */
+  --ink:         #1a1a1a;   /* primary text */
+  --ink-light:   #4a4a4a;   /* secondary text */
+  --ink-faint:   #8a8a8a;   /* tertiary / labels */
+  --ink-ghost:   #b8b0a8;   /* very faint */
+
+  /* ── MOSS GREEN ── */
+  --moss:        #3a5a40;   /* primary brand */
+  --moss-light:  #4a7c59;   /* hover / mid */
+  --moss-pale:   #dde8d6;   /* pale green bg */
+  --moss-mid:    #4a7c59;   /* alias */
+
+  /* ── GOLD ACCENT ── */
+  --accent:      #8b6914;   /* gold accent */
+  --accent-pale: #f9f3e6;   /* pale gold bg */
+  --accent-mid:  #a07820;   /* mid gold */
+
+  /* ── SEMANTIC COLOURS ── */
+  --blue:        #1a4a8a;
+  --blue-pale:   #edf2fa;
+  --teal:        #1a6a60;
+  --teal-pale:   #e8f6f4;
+  --red:         #8c2020;
+  --red-pale:    #fdf0f0;
+  --future:      #6a6a6a;
+
+  /* ── RULES ── */
+  --rule:        rgba(58,90,64,0.10);
+  --rule-mid:    rgba(58,90,64,0.18);
+
+  /* ── NIGHT (dark panels) ── */
+  --night:       #1a1a1a;
+  --night-mid:   #2a2a2a;
+  --night-text:  #ede8de;
+  --night-dim:   #7a7a7a;
+
+  /* ── TYPOGRAPHY ── */
+  --serif:  'Source Serif 4', Georgia, serif;
+  --sans:   'DM Sans', system-ui, sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--bg);
+  background: var(--sand);
   color: var(--ink);
-  font-family: 'Source Serif 4', serif;
-  font-weight: 300;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-weight: 400;
   line-height: 1.7;
 }
 
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; width: 100%; z-index: 100;
+  background: rgba(245,240,232,0.96);
+  border-bottom: 1px solid rgba(58,90,64,0.1);
+  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+}
+.nav-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 1rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 52px; gap: 0.5rem;
+}
+.nav-brand {
+  font-family: 'Source Serif 4', Georgia, serif; font-weight: 600;
+  font-size: 0.95rem; color: var(--moss); text-decoration: none;
+  white-space: nowrap; flex-shrink: 0;
+}
+.nav-links {
+  display: flex; gap: 0; align-items: center;
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; flex-shrink: 1;
+}
+.nav-links a {
+  text-decoration: none; color: var(--ink-light); font-size: 0.78rem;
+  font-weight: 500; padding: 0 0.65rem; white-space: nowrap;
+}
+.nav-links a.active { color: var(--moss); font-weight: 700; border-bottom: 2px solid var(--moss); padding-bottom: 2px; }
+
 /* ── HEADER ── */
 .site-header {
-  background: var(--ink);
-  padding: 52px 48px 44px;
-  position: relative;
-  overflow: hidden;
+  background: var(--moss); color: #fff;
+  padding: 48px 48px 40px;
 }
-
-.site-header::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 80% 20%, rgba(61,107,74,0.15) 0%, transparent 55%);
-  pointer-events: none;
-}
-
 .header-kicker {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--moss-mid);
-  margin-bottom: 14px;
+  font-family: 'DM Sans', monospace; font-size: 10px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,0.6); margin-bottom: 14px;
 }
-
 .header-title {
-  font-family: 'Source Serif 4', serif;
-  font-size: clamp(30px, 5vw, 52px);
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  margin-bottom: 14px;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: clamp(28px,5vw,46px); font-weight: 600;
+  line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 12px;
 }
-
 .header-title em { font-style: italic; color: #a8c8b0; }
-
-.header-sub {
-  font-family: 'Source Serif 4', serif;
-  font-style: italic;
-  font-size: 16px;
-  color: #8a8480;
-  max-width: 560px;
-  line-height: 1.6;
-}
-
-.header-counts {
-  display: flex;
-  gap: 28px;
-  margin-top: 28px;
-  flex-wrap: wrap;
-}
-
-.count-item {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
+.header-sub { font-size: 15px; color: rgba(255,255,255,0.7); max-width: 560px; line-height: 1.6; }
+.header-counts { display: flex; gap: 28px; margin-top: 28px; flex-wrap: wrap; }
+.count-item { }
 .count-num {
-  font-family: 'Source Serif 4', serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--moss-mid);
-  line-height: 1;
+  font-family: 'Source Serif 4', Georgia, serif; font-size: 28px;
+  font-weight: 600; color: #a8c8b0; line-height: 1;
 }
-
 .count-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #5a5550;
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.4); margin-top: 4px;
 }
 
-/* ── TABS ── */
+/* ── TAB BAR ── */
 .tab-bar {
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  background: rgba(250,248,245,0.95);
-  backdrop-filter: blur(8px);
+  position: sticky; top: 52px; z-index: 40;
+  background: rgba(245,240,232,0.96); backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--rule);
-  padding: 0 48px;
-  display: flex;
-  gap: 0;
-  overflow-x: auto;
+  padding: 0 48px; display: flex; gap: 0; overflow-x: auto;
 }
-
 .tab-btn {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 14px 18px;
-  border: none;
-  background: transparent;
-  color: var(--muted);
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-  transition: all 0.2s;
-  white-space: nowrap;
-  margin-bottom: -1px;
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 14px 18px; border: none; background: transparent;
+  color: var(--ink-light); cursor: pointer;
+  border-bottom: 2px solid transparent; transition: all 0.2s;
+  white-space: nowrap; margin-bottom: -1px;
+  font-family: 'DM Sans', system-ui, sans-serif;
 }
-
 .tab-btn:hover { color: var(--ink); }
 .tab-btn.active { color: var(--moss); border-bottom-color: var(--moss); }
 
 /* ── PAGE ── */
-.page {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 52px 48px 80px;
-}
+.page { max-width: 900px; margin: 0 auto; padding: 52px 48px 80px; }
 
 /* ── SECTION ── */
-.section {
-  margin-bottom: 60px;
-  display: none;
-}
-
+.section { margin-bottom: 60px; display: none; }
 .section.active { display: block; }
-
 .section-header {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-  margin-bottom: 28px;
-  padding-bottom: 10px;
+  display: flex; align-items: baseline; gap: 14px;
+  margin-bottom: 28px; padding-bottom: 10px;
   border-bottom: 2px solid var(--ink);
 }
-
-.section-num {
-  font-family: 'DM Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 0.18em;
-  color: var(--faint);
-  text-transform: uppercase;
-}
-
+.section-num { font-size: 9px; letter-spacing: 0.18em; color: var(--ink-faint); text-transform: uppercase; }
 .section-title {
-  font-family: 'Source Serif 4', serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--ink);
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 22px; font-weight: 600; color: var(--ink);
 }
 
 /* ── ACTIVITY ROW ── */
 .activity {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 0 24px;
-  margin-bottom: 2px;
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
+  display: grid; grid-template-columns: 90px 1fr;
+  gap: 0 20px; margin-bottom: 2px;
 }
-
-.activity:nth-child(1) { animation-delay: 0.05s; }
-.activity:nth-child(2) { animation-delay: 0.1s; }
-.activity:nth-child(3) { animation-delay: 0.15s; }
-.activity:nth-child(4) { animation-delay: 0.2s; }
-.activity:nth-child(5) { animation-delay: 0.25s; }
-.activity:nth-child(6) { animation-delay: 0.3s; }
-.activity:nth-child(7) { animation-delay: 0.35s; }
-.activity:nth-child(8) { animation-delay: 0.4s; }
-.activity:nth-child(9) { animation-delay: 0.45s; }
-.activity:nth-child(10) { animation-delay: 0.5s; }
-.activity:nth-child(n+11) { animation-delay: 0.55s; }
-
 .act-left {
-  padding: 16px 12px 16px 0;
-  text-align: right;
-  border-right: 1px solid var(--rule);
-  position: relative;
+  padding: 14px 12px 14px 0; text-align: right;
+  border-right: 1px solid var(--rule); position: relative;
 }
-
-.act-date {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  line-height: 1.4;
-}
-
+.act-date { font-size: 10px; color: var(--ink-light); line-height: 1.4; }
 .act-dot {
-  position: absolute;
-  right: -5px;
-  top: 20px;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--faint);
-  border: 2px solid var(--bg);
+  position: absolute; right: -5px; top: 19px;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--ink-faint); border: 2px solid var(--sand);
 }
-
 .act-dot.moss { background: var(--moss); }
-.act-dot.gold { background: var(--gold); }
+.act-dot.gold { background: var(--accent); }
 .act-dot.blue { background: var(--blue); }
-.act-dot.purple { background: var(--purple); }
 .act-dot.teal { background: var(--teal); }
-.act-dot.future { background: var(--bg); border-color: var(--faint); }
-
-.act-right {
-  padding: 14px 0 14px 0;
-  border-bottom: 1px solid var(--rule);
-}
-
+.act-dot.future { background: var(--sand); border-color: var(--ink-faint); }
+.act-right { padding: 12px 0 14px; border-bottom: 1px solid var(--rule); }
 .activity:last-child .act-right { border-bottom: none; }
 
 .act-tag {
-  display: inline-block;
-  font-family: 'DM Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 2px 7px;
-  border-radius: 2px;
-  margin-bottom: 5px;
+  display: inline-block; font-size: 9px; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 2px 7px;
+  border-radius: 2px; margin-bottom: 5px;
 }
-
-.tag-talk { background: var(--blue-bg); color: var(--blue); }
-.tag-student { background: var(--moss-bg); color: var(--moss); }
-.tag-invited { background: var(--gold-bg); color: var(--gold); }
-.tag-community { background: var(--teal-bg); color: var(--teal); }
-.tag-outreach { background: var(--purple-bg); color: var(--purple); }
-.tag-future { background: #f0f0f0; color: #888; }
-.tag-award { background: var(--red-bg); color: var(--red); }
+.tag-talk    { background: var(--blue-pale); color: var(--blue); }
+.tag-student { background: var(--moss-pale); color: var(--moss); }
+.tag-invited { background: var(--accent-pale); color: var(--accent); }
+.tag-community { background: var(--teal-pale); color: var(--teal); }
+.tag-outreach  { background: #f4edfb; color: #5a2878; }
+.tag-future  { background: #f0f0f0; color: var(--future); }
+.tag-award   { background: #fdf0f0; color: var(--red); }
 
 .act-title {
-  font-family: 'Source Serif 4', serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--ink);
-  line-height: 1.3;
-  margin-bottom: 4px;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 16px; font-weight: 600; color: var(--ink);
+  line-height: 1.3; margin-bottom: 4px;
 }
-
-.act-body {
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--muted);
-}
-
-.act-body strong { color: var(--ink); font-weight: 600; }
-.act-body em { color: var(--moss); font-style: italic; }
-
+.act-body { font-size: 14px; line-height: 1.65; color: var(--ink-light); }
+.act-body strong { color: var(--ink); }
 .act-evidence {
-  margin-top: 6px;
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  color: #aaa;
-  letter-spacing: 0.06em;
+  font-size: 10px; color: var(--ink-faint); margin-top: 6px;
+  letter-spacing: 0.04em;
 }
+.act-evidence a { color: var(--moss); text-decoration: none; border-bottom: 1px solid rgba(58,90,64,0.3); }
 
-.act-evidence a {
-  color: var(--moss);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(61,107,74,0.3);
+/* ── STUDENT GRID ── */
+.pillar-label {
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--moss); margin: 24px 0 14px;
+  padding-bottom: 8px; border-bottom: 2px solid var(--moss-pale);
 }
-
-/* ── STUDENT CARD ── */
 .student-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 12px;
-  margin-top: 4px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+  gap: 10px; margin-bottom: 4px;
 }
-
 .student-card {
-  padding: 16px 18px;
-  background: var(--moss-bg);
-  border: 1px solid rgba(61,107,74,0.15);
-  border-radius: 3px;
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
+  padding: 14px 16px; background: var(--moss-pale);
+  border: 1px solid rgba(58,90,64,0.12); border-radius: 3px;
 }
-
-.student-card:nth-child(1) { animation-delay: 0.05s; }
-.student-card:nth-child(2) { animation-delay: 0.1s; }
-.student-card:nth-child(3) { animation-delay: 0.15s; }
-.student-card:nth-child(4) { animation-delay: 0.2s; }
-.student-card:nth-child(5) { animation-delay: 0.25s; }
-.student-card:nth-child(6) { animation-delay: 0.3s; }
-.student-card:nth-child(n+7) { animation-delay: 0.35s; }
-
-.student-degree {
-  font-family: 'DM Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--moss);
-  margin-bottom: 6px;
-}
-
+.student-card.star { border-color: rgba(58,90,64,0.35); background: #d8efdc; }
+.student-degree { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin-bottom: 5px; }
 .student-name {
-  font-family: 'Source Serif 4', serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: 4px;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 4px;
 }
-
-.student-topic {
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.5;
-  font-style: italic;
-  margin-bottom: 6px;
-}
-
-.student-outcome {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  color: var(--moss);
-  letter-spacing: 0.06em;
-}
-
-.student-date {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  color: var(--faint);
-  letter-spacing: 0.08em;
-  margin-top: 4px;
-}
+.student-title { font-size: 12px; color: var(--ink-light); font-style: italic; line-height: 1.5; margin-bottom: 6px; }
+.student-why { font-size: 12px; color: var(--ink-light); line-height: 1.5; }
+.student-why strong { color: var(--moss); }
 
 /* ── NOTE BOX ── */
 .note-box {
-  margin-top: 32px;
-  padding: 18px 22px;
-  background: var(--gold-bg);
-  border-left: 3px solid var(--gold);
-  font-size: 14px;
-  color: #7a5a20;
-  line-height: 1.7;
+  margin-top: 24px; padding: 16px 20px;
+  background: var(--accent-pale); border-left: 3px solid var(--accent);
+  font-size: 13px; color: #6a5010; line-height: 1.7;
 }
-
-.note-box strong { color: var(--gold); }
+.note-box strong { color: var(--accent); }
 
 /* ── FOOTER ── */
 footer {
-  margin-top: 48px;
-  padding-top: 18px;
+  margin-top: 48px; padding-top: 18px;
   border-top: 1px solid var(--rule);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
+  display: flex; justify-content: space-between;
+  align-items: center; flex-wrap: wrap; gap: 12px;
 }
-
-.footer-text {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  color: var(--faint);
-}
-
+.footer-text { font-size: 10px; letter-spacing: 0.08em; color: var(--ink-faint); }
 .footer-links { display: flex; gap: 18px; }
+.footer-link { font-size: 10px; color: var(--moss); text-decoration: none; text-transform: uppercase; }
 
-.footer-link {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.06em;
-  color: var(--moss);
-  text-decoration: none;
-  text-transform: uppercase;
-}
+@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 600px) {
+@media (max-width:600px) {
   .site-header { padding: 36px 20px 28px; }
   .tab-bar { padding: 0 20px; }
   .page { padding: 36px 20px 60px; }
-  .activity { grid-template-columns: 72px 1fr; gap: 0 16px; }
+  .activity { grid-template-columns: 68px 1fr; gap: 0 14px; }
   .header-counts { gap: 18px; }
+  .student-grid { grid-template-columns: 1fr; }
 }
-
 </style>
 </head>
 <body>
 
-<nav style="position:sticky;top:0;width:100%;z-index:100;background:rgba(255,255,255,0.97);border-bottom:1px solid rgba(58,90,64,0.1);box-shadow:0 1px 8px rgba(0,0,0,0.06);">
-  <div style="max-width:1100px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;height:52px;gap:0.5rem;">
-    <a href="index.html" style="font-family:'Source Serif 4',Georgia,serif;font-weight:600;font-size:0.95rem;color:#3a5a40;text-decoration:none;white-space:nowrap;flex-shrink:0;">U. Urquiza-García</a>
-    <div style="display:flex;gap:0;align-items:center;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex-shrink:1;">
-      <a href="index.html" style="text-decoration:none;color:#4a4a4a;font-size:0.78rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;padding:0 0.65rem;white-space:nowrap;">Home</a>
-      <a href="field-origins.html" style="text-decoration:none;color:#3a5a40;font-size:0.78rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;padding:0 0.65rem;white-space:nowrap;">Origins</a>
-      <a href="evidence-timeline.html" style="text-decoration:none;color:#4a4a4a;font-size:0.78rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;padding:0 0.65rem;white-space:nowrap;">Evidence</a>
-      <a href="activities-timeline.html" style="text-decoration:none;color:#4a4a4a;font-size:0.78rem;font-weight:700;font-family:'DM Sans',system-ui,sans-serif;padding:0 0.65rem;white-space:nowrap;border-bottom:2px solid #3a5a40;padding-bottom:2px;color:#3a5a40;">Activities</a>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">U. Urquiza-García</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="field-origins.html">Origins</a>
+      <a href="evidence-timeline.html">Evidence</a>
+      <a href="activities-timeline.html" class="active">Activities</a>
     </div>
   </div>
 </nav>
 
 <header class="site-header">
-  <div class="header-kicker">Field-Building Activities · Plant Synthetic Genomics · 2022–2026</div>
-  <div class="header-title">Dissemination,<br>Training & <em>Community</em></div>
-  <div class="header-sub">A record of talks, student supervision, conference participation, and community-building activities in Plant Synthetic Genomics by Dr Uriel Urquiza-García, HHU Düsseldorf.</div>
+  <div class="header-kicker">Field-Building Activities · Plant Synthetic Genomics · 2021–2026</div>
+  <div class="header-title">Training, Dissemination<br>&amp; <em>Community</em></div>
+  <div class="header-sub">Talks, student supervision, and community activities in Plant Synthetic Genomics — HHU Düsseldorf / CEPLAS.</div>
   <div class="header-counts">
-    <div class="count-item">
-      <div class="count-num">4</div>
-      <div class="count-label">Talks & keynotes</div>
-    </div>
-    <div class="count-item">
-      <div class="count-num">16</div>
-      <div class="count-label">Students supervised (2021–2025)</div>
-    </div>
-    <div class="count-item">
-      <div class="count-num">7</div>
-      <div class="count-label">Plant Synthetic Genomics theses</div>
-    </div>
-    <div class="count-item">
-      <div class="count-num">9</div>
-      <div class="count-label">Plant optogenetics theses</div>
-    </div>
-    <div class="count-item">
-      <div class="count-num">1</div>
-      <div class="count-label">CSHL Asia faculty slot</div>
-    </div>
+    <div class="count-item"><div class="count-num">5</div><div class="count-label">Talks & keynotes</div></div>
+    <div class="count-item"><div class="count-num">16</div><div class="count-label">Students supervised</div></div>
+    <div class="count-item"><div class="count-num">7</div><div class="count-label">Synthetic genomics theses</div></div>
+    <div class="count-item"><div class="count-num">1</div><div class="count-label">CSHL Asia faculty</div></div>
   </div>
 </header>
 
-<!-- TABS -->
 <div class="tab-bar">
   <button class="tab-btn active" data-tab="all">All</button>
   <button class="tab-btn" data-tab="talks">Talks</button>
@@ -481,44 +301,340 @@ footer {
 
 <main class="page">
 
-<!-- ═══════════════════════════════ ALL TAB ═══════════════════════════════ -->
+<!-- ALL -->
 <div class="section active" id="tab-all">
-
   <div class="section-header">
     <span class="section-num">Full record —</span>
     <span class="section-title">All field-building activities</span>
   </div>
 
-  <!-- GCSB 2024 -->
   <div class="activity">
-    <div class="act-left">
-      <div class="act-date">2025</div>
-      <div class="act-dot teal"></div>
-    </div>
+    <div class="act-left"><div class="act-date">Mar<br>2024</div><div class="act-dot teal"></div></div>
     <div class="act-right">
-      <span class="act-tag tag-talk">Keynote</span>
-      <div class="act-title">YRSPP — Young Researchers in Plant Physiology — Keynote speaker</div>
-      <div class="act-body">
-        Invited keynote speaker at YRSPP (Young Researchers in Plant Physiology), a biennial symposium dedicated to early-career researchers in plant science. Presented the plant synthetic genomics programme to the next generation of plant biologists.
-      </div>
-      <div class="act-evidence">📍 2025 · Keynote invitation</div>
+      <span class="act-tag tag-talk">Invited seminar</span>
+      <div class="act-title">University of Edinburgh — Hetherington lab seminar series</div>
+      <div class="act-body">Title: <em>"Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in Physcomitrium patens."</em> First international invited talk on the programme, given at the PhD alma mater where the scientific question was formed. 22 March 2024.</div>
     </div>
   </div>
 
   <div class="activity">
-    <div class="act-left">
-      <div class="act-date">2026</div>
-      <div class="act-dot gold"></div>
+    <div class="act-left"><div class="act-date">Sep<br>2024</div><div class="act-dot blue"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-talk">Talk</span>
+      <div class="act-title">GCSB 2024 — German Conference on Synthetic Biology, Regensburg</div>
+      <div class="act-body">Title: <em>"Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in Physcomitrium patens."</em> First presentation of the programme to the national German synthetic biology community. 18–20 September 2024.</div>
+      <div class="act-evidence"><a href="https://gcsb2024.de/" target="_blank" rel="noopener">gcsb2024.de →</a></div>
     </div>
-      <div class="act-right">
+  </div>
+
+  <div class="activity">
+    <div class="act-left"><div class="act-date">Mar<br>2025</div><div class="act-dot moss"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-talk">Talk</span>
+      <div class="act-title">euMOSS Meeting 2025 — Wageningen, Netherlands</div>
+      <div class="act-body">Title: <em>"Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in Physcomitrium patens."</em> European bryophyte research community meeting. Attendance documented by @reskilab (Reski lab, Freiburg) on Instagram, 25 March 2025.</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left"><div class="act-date">29 Jul<br>2024</div><div class="act-dot teal"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-talk">Invited seminar</span>
+      <div class="act-title">LIIGH Seminar — Laboratorio Internacional de Investigación sobre el Genoma Humano, Querétaro</div>
+      <div class="act-body">Invited seminar at LIIGH (UNAM), Querétaro, 29 July 2024. Organised by Dr María Avila Arcos. Plant synthetic genomics and the synthetic chromosome programme presented to genomics students and PIs, with discussion of potential collaboration opportunities including bioinformatics contributions and research stays for LCG students.</div>
+      <div class="act-evidence">📍 LIIGH · Querétaro, Mexico · 29 July 2024 · Invited by Dr María Avila Arcos</div>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="act-left"><div class="act-date">2025</div><div class="act-dot teal"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-talk">Keynote</span>
+      <div class="act-title">YRSPP — Young Researchers in Plant Photobiology</div>
+      <div class="act-body">Invited keynote speaker at YRSPP, the biennial symposium for early-career plant photobiology researchers. Plant synthetic genomics presented to the next generation of plant scientists.</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left"><div class="act-date">2026</div><div class="act-dot gold"></div></div>
+    <div class="act-right">
       <span class="act-tag tag-award">Prize nomination</span>
       <div class="act-title">Förderpreis der Horst Wiehe-Stiftung 2026 — self-nominated</div>
-      <div class="act-body">Self-nomination for the MSB 2025 paper on absolute clock protein quantification. Active engagement with recognition infrastructure.</div>
+      <div class="act-body">Self-nomination for the MSB 2025 paper on absolute protein quantification in the plant circadian clock (Urquiza-García, Molina, Halliday &amp; Millar).</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left"><div class="act-date">Jul–Aug<br>2026</div><div class="act-dot future"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-future">Upcoming · Faculty</span>
+      <div class="act-title">Cold Spring Harbor Asia Synthetic Biology Course — Invited Faculty</div>
+      <div class="act-body">Faculty invitation to CSHL Asia, Suzhou, 26 July – 9 August 2026. Organised by Junbiao Dai and Daniel Schindler. Faculty slot before major papers are published signals community recognition of the programme.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- TALKS -->
+<div class="section" id="tab-talks">
+  <div class="section-header">
+    <span class="section-num">Talks —</span>
+    <span class="section-title">Presentations, seminars &amp; keynotes</span>
+  </div>
+
+  <div class="activity">
+    <div class="act-left"><div class="act-date">Mar<br>2024</div><div class="act-dot teal"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-talk">Invited seminar · Edinburgh</span>
+      <div class="act-title">"Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in Physcomitrium patens"</div>
+      <div class="act-body">University of Edinburgh, Hetherington lab. Virtual. 22 March 2024.</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left"><div class="act-date">Sep<br>2024</div><div class="act-dot blue"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-talk">Talk · GCSB 2024</span>
+      <div class="act-title">"Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in Physcomitrium patens"</div>
+      <div class="act-body">German Conference on Synthetic Biology, Regensburg. 18–20 September 2024. <a href="https://gcsb2024.de/" target="_blank" rel="noopener" style="color:var(--moss);">gcsb2024.de →</a></div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left"><div class="act-date">Mar<br>2025</div><div class="act-dot moss"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-talk">Talk · euMOSS 2025</span>
+      <div class="act-title">"Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in Physcomitrium patens"</div>
+      <div class="act-body">euMOSS Meeting, Wageningen, March 2025. Documented @reskilab Instagram 25 Mar 2025.</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left"><div class="act-date">29 Jul<br>2024</div><div class="act-dot teal"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-talk">Invited seminar · LIIGH</span>
+      <div class="act-title">LIIGH Seminar — Querétaro, Mexico</div>
+      <div class="act-body">Laboratorio Internacional de Investigación sobre el Genoma Humano (UNAM). Organised by Dr María Avila Arcos. 29 July 2024.</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left"><div class="act-date">2025</div><div class="act-dot teal"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-talk">Keynote · YRSPP</span>
+      <div class="act-title">YRSPP — Young Researchers in Plant Photobiology</div>
+      <div class="act-body">Invited keynote. Biennial symposium for early-career plant photobiology researchers. 2025.</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left"><div class="act-date">Jul–Aug<br>2026</div><div class="act-dot future"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-future">Upcoming · CSHL Asia Faculty</span>
+      <div class="act-title">Cold Spring Harbor Asia Synthetic Biology Course</div>
+      <div class="act-body">Faculty invitation. Suzhou, 26 July – 9 August 2026. Organised by Junbiao Dai and Daniel Schindler.</div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════ UPCOMING TAB ═══════════════════════════════ -->
+<!-- STUDENTS -->
+<div class="section" id="tab-students">
+  <div class="section-header">
+    <span class="section-num">Students —</span>
+    <span class="section-title">Supervised theses 2021–2025</span>
+  </div>
+
+  <p style="font-size:13px;color:var(--ink-light);font-style:italic;margin-bottom:8px;">Two pillars: molecular control (9 students) and chromosome engineering (7 students, below). Control tools developed in the first pillar became instruments for the second.</p>
+
+  <div class="pillar-label">Pillar I — Molecular Control</div>
+  <div class="student-grid">
+
+    <div class="student-card">
+      <div class="student-degree">MSc · Aug 2021</div>
+      <div class="student-name">Sascha Ferraro</div>
+      <div class="student-title">Characterization of Programmable Synthetic Transcription Factors for Creating a Non-cooperative Bistable Toggle Switch</div>
+      <div class="student-why">Programmable gene circuit design — foundational logic for the synthetic genomics programme</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">MSc · Oct 2021</div>
+      <div class="student-name">Christoph Wagner</div>
+      <div class="student-title">Engineering adaptation: Combining Systems Biology, Synthetic Biology and Bioinformatics to control a plant's phenotype</div>
+      <div class="student-why">First MSc supervised at HHU Düsseldorf</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">Lab rotation · Jun 2023</div>
+      <div class="student-name">Lars Broeker</div>
+      <div class="student-title">Optogenetic regulation of Arabidopsis DELLA genes</div>
+      <div class="student-why">Light-inducible control of plant hormone signalling pathways</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc · Sep 2023</div>
+      <div class="student-name">Sebastian Kusnik</div>
+      <div class="student-title">Optogenetic Control of Prime Editing and Flowering in Plants</div>
+      <div class="student-why">Light-inducible precision genome editing and flowering control in plants</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc · Nov 2023</div>
+      <div class="student-name">Tobias Falkenburg</div>
+      <div class="student-title">Optogenetics in Time</div>
+      <div class="student-why">Temporal dynamics of light-inducible systems; light control of circadian and developmental processes</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">MSc · Jun 2024</div>
+      <div class="student-name">Armando Teixeira</div>
+      <div class="student-title">Quantitative optogenetic control of gene expression and genetics in plants</div>
+      <div class="student-why">Closed-loop quantitative control of gene expression with light</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">MSc · Feb 2025</div>
+      <div class="student-name">Francisco Pirichinsky</div>
+      <div class="student-title">Optogenetic control of plant metabolic pathways through modulation of gene expression</div>
+      <div class="student-why">Light-inducible control of plant metabolic pathway genes</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc · 2025</div>
+      <div class="student-name">Kevin Dietrich</div>
+      <div class="student-title">Optogenetic Systems in Plants</div>
+      <div class="student-why">Review and characterisation of plant optogenetic systems</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">MSc · Jun 2025</div>
+      <div class="student-name">Benjamin Zinkler</div>
+      <div class="student-title">Optogenetic control and orthogonal reconstruction of photoperiodic regulators</div>
+      <div class="student-why">Light-inducible control of photoperiodic and flowering time regulators</div>
+    </div>
+
+  </div>
+
+  <div class="pillar-label">Pillar II — Plant Synthetic Genomics</div>
+  <div class="student-grid">
+
+    <div class="student-card">
+      <div class="student-degree">BSc · Sep 2023</div>
+      <div class="student-name">Luca Weber</div>
+      <div class="student-title">Synthetic Genomics: Establishment of Molecular Techniques and Laboratory Infrastructure</div>
+      <div class="student-why">Built the experimental infrastructure — sequencing, transformation, large-DNA tools — that all subsequent synthetic genomics work depends on</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc · Jul 2024</div>
+      <div class="student-name">Dejan Andrejic</div>
+      <div class="student-title">Establishing a standardized, computationally aided toolkit for neo-centromere synthesis in Physcomitrium patens</div>
+      <div class="student-why">Standardised DNA part library and computational tools for synthetic chromosome construction · <strong>Co-author, RepTiles preprint 2025</strong></div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc · Dec 2024</div>
+      <div class="student-name">Malik Trippensee</div>
+      <div class="student-title">Building a programmable CRISPR based system for seeding CENH3 in Physcomitrium patens</div>
+      <div class="student-why">Programmable targeting system for directing chromosome identity to synthetic DNA in <em>P. patens</em></div>
+    </div>
+
+    <div class="student-card star">
+      <div class="student-degree">BSc · Jan 2025 ★</div>
+      <div class="student-name">Viktoria Petrova</div>
+      <div class="student-title">From Reusable Modular Biological Parts to Plant Synthetic Genomics Driven by Biodesign Automation</div>
+      <div class="student-why"><strong>First author, RepTiles preprint (bioRxiv 2025)</strong> — the field's first published methodology paper · Automated large-DNA assembly design platform from community-standard parts</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc · Jul 2025</div>
+      <div class="student-name">Tobias Finkenrath</div>
+      <div class="student-title">Studying the recombinogenic capacity of Golden Braid assembled DNA in Saccharomyces cerevisiae and Physcomitrium patens</div>
+      <div class="student-why">Large synthetic DNA assembly and stable integration into the <em>P. patens</em> genome — directly preceded the current synthetic chromosome body experiment · <strong>Co-author, RepTiles preprint 2025</strong></div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc · Nov 2025</div>
+      <div class="student-name">Sarah Otto</div>
+      <div class="student-title">Investigating CRISPR-induced CenH3 tagging in Physcomitrium patens</div>
+      <div class="student-why">Centromere protein tagging and quantification — confirmed functional lines for the JTF programme</div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-degree">BSc · Dec 2025</div>
+      <div class="student-name">Elisaveta Lobkis</div>
+      <div class="student-title">Synthetic Chromosome Stability: Establishing a Bottom-up Approach for Synthetic Telomeres</div>
+      <div class="student-why">Synthetic telomere strategy for the plant artificial chromosome — closes the last structural component gap in the programme</div>
+    </div>
+
+  </div>
+
+  <div class="note-box">
+    <strong>Field-building significance:</strong> Seven theses in the chromosome engineering pillar collectively address every essential structural component — infrastructure, parts library, targeting, assembly, integration, centromere protein quantification, telomere strategy. Three BSc alumni (Andrejic, Finkenrath, Petrova) are co-authors on the RepTiles preprint, with Petrova as first author.
+  </div>
+</div>
+
+<!-- COMMUNITY -->
+<div class="section" id="tab-community">
+  <div class="section-header">
+    <span class="section-num">Community —</span>
+    <span class="section-title">Conferences &amp; recognition</span>
+  </div>
+
+  <div class="activity">
+    <div class="act-left"><div class="act-date">Mar<br>2024</div><div class="act-dot teal"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-community">Edinburgh</span>
+      <div class="act-title">Invited seminar — University of Edinburgh</div>
+      <div class="act-body">Hetherington lab plant evolution and development series. PhD alma mater. 22 March 2024.</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left"><div class="act-date">Sep<br>2024</div><div class="act-dot blue"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-community">GCSB 2024</span>
+      <div class="act-title">German Conference on Synthetic Biology — Regensburg</div>
+      <div class="act-body">National synthetic biology community. <a href="https://gcsb2024.de/" target="_blank" rel="noopener" style="color:var(--moss);">gcsb2024.de →</a></div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left"><div class="act-date">Mar<br>2025</div><div class="act-dot moss"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-community">euMOSS 2025</span>
+      <div class="act-title">euMOSS Meeting — Wageningen</div>
+      <div class="act-body">European bryophyte research community, with Prof. Ralf Reski. Documented @reskilab Instagram 25 Mar 2025.</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left"><div class="act-date">2025</div><div class="act-dot teal"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-community">Keynote · YRSPP</span>
+      <div class="act-title">YRSPP — Young Researchers in Plant Photobiology</div>
+      <div class="act-body">Invited keynote. Biennial symposium for early-career plant photobiology researchers.</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left"><div class="act-date">29 Jul<br>2024</div><div class="act-dot teal"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-outreach">Invited seminar</span>
+      <div class="act-title">LIIGH Seminar — Querétaro, Mexico</div>
+      <div class="act-body">Laboratorio Internacional de Investigación sobre el Genoma Humano (UNAM). Organised by Dr María Avila Arcos. Latin American genomics community. 29 July 2024.</div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="act-left"><div class="act-date">2026</div><div class="act-dot gold"></div></div>
+    <div class="act-right">
+      <span class="act-tag tag-award">Prize nomination</span>
+      <div class="act-title">Förderpreis der Horst Wiehe-Stiftung 2026</div>
+      <div class="act-body">Self-nomination for the MSB 2025 paper (Urquiza-García, Molina, Halliday &amp; Millar).</div>
+    </div>
+  </div>
+</div>
+
+<!-- UPCOMING -->
 <div class="section" id="tab-upcoming">
   <div class="section-header">
     <span class="section-num">Upcoming —</span>
@@ -526,85 +642,58 @@ footer {
   </div>
 
   <div class="activity">
-    <div class="act-left">
-      <div class="act-date">Jul–Aug<br>2026</div>
-      <div class="act-dot future"></div>
-    </div>
+    <div class="act-left"><div class="act-date">Jul–Aug<br>2026</div><div class="act-dot future"></div></div>
     <div class="act-right">
       <span class="act-tag tag-future">Faculty · CSHL Asia</span>
       <div class="act-title">Cold Spring Harbor Asia Synthetic Biology Course</div>
-      <div class="act-body">
-        Invited faculty, Suzhou, 26 July – 9 August 2026. Organised by <strong>Junbiao Dai</strong> (Shenzhen — leading figure in plant synthetic genomics) and <strong>Daniel Schindler</strong> (Heidelberg — proposed reviewer for GreenBITs KTS application). Teaching Plant Synthetic Genomics at one of the most prestigious synthetic biology courses in the world — before the major papers are published. The invitation itself is a community judgment that the programme is at the frontier.
-      </div>
-      <div class="act-evidence">Suzhou, China · 26 July – 9 August 2026</div>
+      <div class="act-body">Invited faculty. Suzhou, 26 July – 9 August 2026. Organised by Junbiao Dai and Daniel Schindler. Faculty invitation before major papers are published signals community recognition at the frontier.</div>
     </div>
   </div>
 
   <div class="activity">
-    <div class="act-left">
-      <div class="act-date">2026<br>target</div>
-      <div class="act-dot future"></div>
-    </div>
+    <div class="act-left"><div class="act-date">2026</div><div class="act-dot future"></div></div>
     <div class="act-right">
       <span class="act-tag tag-future">Publication · in preparation</span>
-      <div class="act-title">Manuscript in preparation — 42 kb synthetic chromosome body</div>
-      <div class="act-body">
-        Manuscript in preparation for submission. First major corresponding-author paper in plant synthetic genomics. Will establish the assembly platform in the peer-reviewed record.
-      </div>
+      <div class="act-title">Manuscript in preparation — synthetic chromosome body in P. patens</div>
+      <div class="act-body">First major corresponding-author paper in plant synthetic genomics. Will establish the assembly platform in the peer-reviewed record.</div>
     </div>
   </div>
 
   <div class="activity">
-    <div class="act-left">
-      <div class="act-date">2027</div>
-      <div class="act-dot future"></div>
-    </div>
+    <div class="act-left"><div class="act-date">2027</div><div class="act-dot future"></div></div>
     <div class="act-right">
       <span class="act-tag tag-future">Grant · ERC</span>
       <div class="act-title">ERC Starting Grant application — 2027 call</div>
-      <div class="act-body">
-        The grant that will scale the programme — full synthetic neo-chromosome platform, centromere boot-up, clock modularity hypothesis — with the plant synthetic genomics paper as the cornerstone of the track record section.
-      </div>
+      <div class="act-body">Full synthetic chromosome platform presented as the programme of a field founder with verifiable priority from November 2022.</div>
     </div>
   </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-text">Uriel Urquiza-García · HHU Düsseldorf · Plant Synthetic Genomics · 2022–</div>
+  <div class="footer-text">Uriel Urquiza-García · HHU Düsseldorf · CEPLAS · Plant Synthetic Genomics · 2021–</div>
   <div class="footer-links">
-    <a class="footer-link" href="https://jurquiza.github.io">Website</a>
-    <a class="footer-link" href="evidence-timeline.html">Evidence record</a>
-    <a class="footer-link" href="https://scholar.google.com/citations?user=nOKvWX0AAAAJ">Scholar</a>
-    <a class="footer-link" href="https://orcid.org/0000-0002-7975-5013">ORCID</a>
+    <a class="footer-link" href="index.html">Home</a>
+    <a class="footer-link" href="field-origins.html">Origins</a>
+    <a class="footer-link" href="evidence-timeline.html">Evidence</a>
+    <a class="footer-link" href="https://doi.org/10.1101/2025.02.28.640145" target="_blank" rel="noopener">RepTiles</a>
+    <a class="footer-link" href="https://orcid.org/0000-0002-7975-5013" target="_blank" rel="noopener">ORCID</a>
   </div>
 </footer>
 
 </main>
 
 <script>
-// Tab switching
 const tabBtns = document.querySelectorAll('.tab-btn');
 const sections = document.querySelectorAll('.section');
-
 tabBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     const target = btn.dataset.tab;
-
     tabBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-
     sections.forEach(s => {
       s.classList.remove('active');
-      if (s.id === 'tab-' + target) {
-        s.classList.add('active');
-        // Re-trigger animations
-        s.querySelectorAll('.activity, .student-card').forEach(el => {
-          el.style.animation = 'none';
-          el.offsetHeight; // reflow
-          el.style.animation = '';
-        });
-      }
+      if (s.id === 'tab-' + target) s.classList.add('active');
     });
   });
 });
