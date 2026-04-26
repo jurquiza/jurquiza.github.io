@@ -10,51 +10,51 @@
 <link rel="canonical" href="https://jurquiza.github.io/activities-timeline.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  /* ── BACKGROUND ── */
-  --sand:        #f5f0e8;   /* page background */
-  --white:       #ffffff;   /* card / panel background */
-  --moss-wash:   #f4f7f2;   /* very light green tint */
+  /* ── Background ── */
+  --sand:        #fafaf8;
+  --white:       #ffffff;
+  --moss-wash:   #e8f0ec;
 
-  /* ── INK ── */
-  --ink:         #1a1a1a;   /* primary text */
-  --ink-light:   #4a4a4a;   /* secondary text */
-  --ink-faint:   #8a8a8a;   /* tertiary / labels */
-  --ink-ghost:   #b8b0a8;   /* very faint */
+  /* ── Text ── */
+  --ink:         #1a1a18;
+  --ink-light:   #555550;
+  --ink-faint:   #6a6a66;
+  --ink-ghost:   #b8b0a8;   /* decorative/borders only */
 
-  /* ── MOSS GREEN ── */
-  --moss:        #3a5a40;   /* primary brand */
-  --moss-light:  #4a7c59;   /* hover / mid */
-  --moss-pale:   #dde8d6;   /* pale green bg */
-  --moss-mid:    #4a7c59;   /* alias */
+  /* ── Moss green (matches index) ── */
+  --moss:        #2d6a4f;
+  --moss-light:  #3d8a6a;
+  --moss-pale:   #e8f0ec;
+  --moss-mid:    #3d8a6a;
 
-  /* ── GOLD ACCENT ── */
-  --accent:      #8b6914;   /* gold accent */
-  --accent-pale: #f9f3e6;   /* pale gold bg */
-  --accent-mid:  #a07820;   /* mid gold */
+  /* ── Accent gold ── */
+  --accent:      #7a5a10;
+  --accent-pale: #f9f3e6;
+  --accent-mid:  #8b6914;
 
-  /* ── SEMANTIC COLOURS ── */
+  /* ── Semantic ── */
   --blue:        #1a4a8a;
   --blue-pale:   #edf2fa;
   --teal:        #1a6a60;
   --teal-pale:   #e8f6f4;
   --red:         #8c2020;
   --red-pale:    #fdf0f0;
-  --future:      #6a6a6a;
+  --future:      #6a6a66;
 
-  /* ── RULES ── */
-  --rule:        rgba(58,90,64,0.10);
-  --rule-mid:    rgba(58,90,64,0.18);
+  /* ── Rules / borders ── */
+  --rule:        rgba(45,106,79,0.10);
+  --rule-mid:    rgba(45,106,79,0.18);
 
-  /* ── NIGHT (dark panels) ── */
-  --night:       #1a1a1a;
-  --night-mid:   #2a2a2a;
+  /* ── Night (dark panels) ── */
+  --night:       #1a1a18;
+  --night-mid:   #2a2a28;
   --night-text:  #ede8de;
-  --night-dim:   #7a7a7a;
+  --night-dim:   #8a8a8a;
 
-  /* ── TYPOGRAPHY ── */
+  /* ── Typography ── */
   --serif:  'Source Serif 4', Georgia, serif;
   --sans:   'DM Sans', system-ui, sans-serif;
 }
@@ -73,8 +73,8 @@ body {
 /* ── NAV ── */
 nav {
   position: sticky; top: 0; width: 100%; z-index: 100;
-  background: rgba(245,240,232,0.96);
-  border-bottom: 1px solid rgba(58,90,64,0.1);
+  background: rgba(250,250,248,0.94);
+  border-bottom: 1px solid #e8e8e4;
   box-shadow: 0 1px 8px rgba(0,0,0,0.05);
 }
 .nav-inner {
@@ -106,7 +106,7 @@ nav {
 .header-kicker {
   font-family: 'DM Sans', monospace; font-size: 10px;
   letter-spacing: 0.18em; text-transform: uppercase;
-  color: rgba(255,255,255,0.6); margin-bottom: 14px;
+  color: rgba(255,255,255,0.75); margin-bottom: 14px;
 }
 .header-title {
   font-family: 'Source Serif 4', Georgia, serif;
@@ -114,7 +114,7 @@ nav {
   line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 12px;
 }
 .header-title em { font-style: italic; color: #a8c8b0; }
-.header-sub { font-size: 15px; color: rgba(255,255,255,0.7); max-width: 560px; line-height: 1.6; }
+.header-sub { font-size: 15px; color: rgba(255,255,255,0.82); max-width: 560px; line-height: 1.6; }
 .header-counts { display: flex; gap: 28px; margin-top: 28px; flex-wrap: wrap; }
 .count-item { }
 .count-num {
@@ -123,13 +123,13 @@ nav {
 }
 .count-label {
   font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
-  color: rgba(255,255,255,0.4); margin-top: 4px;
+  color: rgba(255,255,255,0.65); margin-top: 4px;
 }
 
 /* ── TAB BAR ── */
 .tab-bar {
   position: sticky; top: 52px; z-index: 40;
-  background: rgba(245,240,232,0.96); backdrop-filter: blur(8px);
+  background: rgba(250,250,248,0.94); backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--rule);
   padding: 0 48px; display: flex; gap: 0; overflow-x: auto;
 }
@@ -312,7 +312,7 @@ footer {
     <div class="act-left"><div class="act-date">Mar<br>2024</div><div class="act-dot teal"></div></div>
     <div class="act-right">
       <span class="act-tag tag-talk">Invited seminar</span>
-      <div class="act-title">University of Edinburgh — Hetherington lab seminar series</div>
+      <div class="act-title">University of Edinburgh — plant evolution and development seminar series</div>
       <div class="act-body">Title: <em>"Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in Physcomitrium patens."</em> First international invited talk on the programme, given at the PhD alma mater where the scientific question was formed. 22 March 2024.</div>
     </div>
   </div>
@@ -368,7 +368,7 @@ footer {
     <div class="act-right">
       <span class="act-tag tag-future">Upcoming · Faculty</span>
       <div class="act-title">Cold Spring Harbor Asia Synthetic Biology Course — Invited Faculty</div>
-      <div class="act-body">Faculty invitation to CSHL Asia, Suzhou, 26 July – 9 August 2026. Organised by Junbiao Dai and Daniel Schindler. Faculty slot before major papers are published signals community recognition of the programme.</div>
+      <div class="act-body">Faculty invitation to CSHL Asia, Suzhou, 26 July – 9 August 2026. Organised by Junbiao Dai and Daniel Schindler. Faculty slot before major papers are published preceded the major publications from the programme.</div>
     </div>
   </div>
 
@@ -386,7 +386,7 @@ footer {
     <div class="act-right">
       <span class="act-tag tag-talk">Invited seminar · Edinburgh</span>
       <div class="act-title">"Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in Physcomitrium patens"</div>
-      <div class="act-body">University of Edinburgh, Hetherington lab. Virtual. 22 March 2024.</div>
+      <div class="act-body">University of Edinburgh, plant evolution and development group. Virtual. 22 March 2024.</div>
     </div>
   </div>
 
@@ -584,7 +584,7 @@ footer {
     <div class="act-right">
       <span class="act-tag tag-community">Edinburgh</span>
       <div class="act-title">Invited seminar — University of Edinburgh</div>
-      <div class="act-body">Hetherington lab plant evolution and development series. PhD alma mater. 22 March 2024.</div>
+      <div class="act-body">Plant evolution and development seminar series. PhD alma mater. 22 March 2024.</div>
     </div>
   </div>
 
@@ -646,7 +646,7 @@ footer {
     <div class="act-right">
       <span class="act-tag tag-future">Faculty · CSHL Asia</span>
       <div class="act-title">Cold Spring Harbor Asia Synthetic Biology Course</div>
-      <div class="act-body">Invited faculty. Suzhou, 26 July – 9 August 2026. Organised by Junbiao Dai and Daniel Schindler. Faculty invitation before major papers are published signals community recognition at the frontier.</div>
+      <div class="act-body">Invited faculty. Suzhou, 26 July – 9 August 2026. Organised by Junbiao Dai and Daniel Schindler. Faculty invitation before major papers are published signals external recognition relevant to current developments in the field.</div>
     </div>
   </div>
 

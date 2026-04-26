@@ -1,728 +1,739 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uriel Urquiza-García — Plant Synthetic Genomics</title>
-    <meta name="description" content="Group Leader in Plant Synthetic Genomics at Heinrich Heine University Düsseldorf and CEPLAS. Building synthetic neochromosomes in Physcomitrium patens.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-  /* ── BACKGROUND ── */
-  --sand:        #f5f0e8;   /* page background */
-  --white:       #ffffff;   /* card / panel background */
-  --moss-wash:   #f4f7f2;   /* very light green tint */
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uriel Urquiza-García — Plant Synthetic Genomics</title>
+<meta name="description" content="Group Leader in Plant Synthetic Genomics at Heinrich Heine University Düsseldorf. Building synthetic plant chromosomes in Physcomitrium patens.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafaf8;
+    --text: #1a1a18;
+    --text-secondary: #555550;
+    --accent: #2d6a4f;
+    --accent-light: #e8f0ec;
+    --accent-dark: #1b4332;
+    --border: #d4d4cf;
+    --border-light: #e8e8e4;
+    --card-bg: #ffffff;
+    --tag-bg: #f0f0ec;
+    --highlight: #d4a017;
+    --max-width: 820px;
+    --side-pad: 1.5rem;
+  }
 
-  /* ── INK ── */
-  --ink:         #1a1a1a;   /* primary text */
-  --ink-light:   #4a4a4a;   /* secondary text */
-  --ink-faint:   #8a8a8a;   /* tertiary / labels */
-  --ink-ghost:   #b8b0a8;   /* very faint */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  /* ── MOSS GREEN ── */
-  --moss:        #3a5a40;   /* primary brand */
-  --moss-light:  #4a7c59;   /* hover / mid */
-  --moss-pale:   #dde8d6;   /* pale green bg */
-  --moss-mid:    #4a7c59;   /* alias */
+  html { scroll-behavior: smooth; }
 
-  /* ── GOLD ACCENT ── */
-  --accent:      #8b6914;   /* gold accent */
-  --accent-pale: #f9f3e6;   /* pale gold bg */
-  --accent-mid:  #a07820;   /* mid gold */
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
 
-  /* ── SEMANTIC COLOURS ── */
-  --blue:        #1a4a8a;
-  --blue-pale:   #edf2fa;
-  --teal:        #1a6a60;
-  --teal-pale:   #e8f6f4;
-  --red:         #8c2020;
-  --red-pale:    #fdf0f0;
-  --future:      #6a6a6a;
+  /* ── Navigation ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(250,250,248,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-light);
+  }
 
-  /* ── RULES ── */
-  --rule:        rgba(58,90,64,0.10);
-  --rule-mid:    rgba(58,90,64,0.18);
+  nav .nav-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0.8rem var(--side-pad);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
 
-  /* ── NIGHT (dark panels) ── */
-  --night:       #1a1a1a;
-  --night-mid:   #2a2a2a;
-  --night-text:  #ede8de;
-  --night-dim:   #7a7a7a;
+  nav .nav-name {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
 
-  /* ── TYPOGRAPHY ── */
-  --serif:  'Source Serif 4', Georgia, serif;
-  --sans:   'DM Sans', system-ui, sans-serif;
-}
+  nav .nav-links {
+    display: flex;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+  nav .nav-links a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
 
-        html { scroll-behavior: smooth; }
+  nav .nav-links a:hover { color: var(--accent); }
 
-        body {
-            font-family: var(--sans);
-            color: var(--ink);
-            background: var(--sand);
-            line-height: 1.7;
-            font-size: 16px;
-            -webkit-font-smoothing: antialiased;
-        }
+  /* ── Layout ── */
+  main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--side-pad);
+  }
 
-        /* ── NAV ── */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-            background: rgba(245,240,232,0.96);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(58,90,64,0.08);
-            transition: box-shadow 0.3s;
-        }
-        nav.scrolled { box-shadow: 0 1px 20px rgba(0,0,0,0.06); }
-        .nav-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 60px;
-        }
-        .nav-name {
-            font-family: var(--serif);
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: var(--moss);
-            text-decoration: none;
-        }
-        .nav-links { display: flex; gap: 2rem; }
-        .nav-links a {
-            text-decoration: none;
-            color: var(--ink-light);
-            font-size: 0.88rem;
-            font-weight: 500;
-            letter-spacing: 0.02em;
-            transition: color 0.2s;
-        }
-        .nav-links a:hover { color: var(--moss); }
+  section { padding: 3.5rem 0; }
+  section + section { border-top: 1px solid var(--border-light); }
 
-        /* ── HERO ── */
-        .hero {
-            padding: 10rem 2rem 5rem;
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 280px;
-            gap: 4rem;
-            align-items: start;
-        }
-        .hero-text h1 {
-            font-family: var(--serif);
-            font-size: 2.8rem;
-            font-weight: 700;
-            line-height: 1.2;
-            color: var(--ink);
-            margin-bottom: 0.5rem;
-        }
-        .hero-subtitle {
-            font-size: 1.1rem;
-            color: var(--moss);
-            font-weight: 500;
-            margin-bottom: 2rem;
-            line-height: 1.5;
-        }
-        .hero-bio {
-            font-size: 1.05rem;
-            color: var(--ink-light);
-            line-height: 1.8;
-            max-width: 600px;
-        }
-        .hero-bio em { font-style: italic; }
-        .hero-links {
-            margin-top: 2rem;
-            display: flex;
-            gap: 1.2rem;
-            flex-wrap: wrap;
-        }
-        .hero-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            text-decoration: none;
-            font-size: 0.88rem;
-            font-weight: 600;
-            color: var(--moss);
-            padding: 0.5rem 1rem;
-            border: 1.5px solid var(--moss);
-            border-radius: 6px;
-            transition: all 0.2s;
-        }
-        .hero-links a:hover {
-            background: var(--moss);
-            color: var(--white);
-        }
-        .hero-photo {
-            position: relative;
-        }
-        .hero-photo img {
-            width: 260px;
-            height: 260px;
-            border-radius: 12px;
-            object-fit: cover;
-            filter: grayscale(10%);
-            border: 3px solid var(--moss-pale);
-        }
-        .photo-placeholder {
-            width: 260px;
-            height: 260px;
-            border-radius: 12px;
-            background: var(--moss-pale);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--moss);
-            font-size: 0.85rem;
-            font-weight: 500;
-            border: 3px solid var(--moss-pale);
-            text-align: center;
-            padding: 1rem;
-        }
+  /* ── Hero ── */
+  .hero {
+    padding: 4rem 0 3rem;
+    display: grid;
+    grid-template-columns: 1fr 160px;
+    gap: 2.5rem;
+    align-items: start;
+  }
 
-        /* ── SECTIONS ── */
-        section {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-        section + section { padding-top: 2rem; }
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.3rem;
+  }
 
-        .section-title {
-            font-family: var(--serif);
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: var(--ink);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--moss-pale);
-        }
+  .hero .subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.2rem;
+  }
 
-        /* ── DIVIDER ── */
-        .divider {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        .divider hr {
-            border: none;
-            height: 1px;
-            background: var(--moss-pale);
-        }
+  .hero .intro {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text);
+  }
 
-        /* ── RESEARCH ── */
-        .research-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        .research-card {
-            background: var(--moss-wash);
-            border-radius: 10px;
-            padding: 2rem;
-            border-left: 3px solid var(--moss);
-        }
-        .research-card h3 {
-            font-family: var(--serif);
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: var(--moss);
-            margin-bottom: 0.8rem;
-        }
-        .research-card p {
-            font-size: 0.95rem;
-            color: var(--ink-light);
-            line-height: 1.7;
-        }
+  .hero .links {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
 
-        /* ── FUNDING ── */
-        .funding-list { list-style: none; }
-        .funding-item {
-            padding: 1.2rem 0;
-            border-bottom: 1px solid rgba(58,90,64,0.1);
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 1rem;
-            align-items: start;
-        }
-        .funding-item:last-child { border-bottom: none; }
-        .funding-name {
-            font-weight: 600;
-            font-size: 1rem;
-            color: var(--ink);
-        }
-        .funding-detail {
-            font-size: 0.92rem;
-            color: var(--ink-light);
-            margin-top: 0.3rem;
-        }
-        .funding-role {
-            font-size: 0.82rem;
-            font-weight: 600;
-            color: var(--moss);
-            background: var(--moss-pale);
-            padding: 0.25rem 0.7rem;
-            border-radius: 4px;
-            white-space: nowrap;
-        }
+  .hero .links a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-light);
+    transition: border-color 0.2s;
+  }
 
-        /* ── PUBLICATIONS ── */
-        .pub-list { list-style: none; }
-        .pub-item {
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(58,90,64,0.08);
-        }
-        .pub-item:last-child { border-bottom: none; }
-        .pub-title {
-            font-weight: 600;
-            font-size: 0.98rem;
-            color: var(--ink);
-            line-height: 1.5;
-        }
-        .pub-authors {
-            font-size: 0.88rem;
-            color: var(--ink-faint);
-            margin-top: 0.25rem;
-        }
-        .pub-journal {
-            font-size: 0.88rem;
-            color: var(--moss);
-            font-weight: 500;
-            margin-top: 0.2rem;
-        }
-        .pub-note {
-            font-size: 0.85rem;
-            color: var(--ink-light);
-            font-style: italic;
-        }
+  .hero .links a:hover { border-color: var(--accent); }
 
-        /* ── GROUP ── */
-        .group-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 1.2rem;
-        }
-        .group-member {
-            background: var(--moss-wash);
-            border-radius: 8px;
-            padding: 1.2rem 1.5rem;
-        }
-        .group-member-name {
-            font-weight: 600;
-            font-size: 0.95rem;
-            color: var(--ink);
-        }
-        .group-member-role {
-            font-size: 0.85rem;
-            color: var(--moss);
-            margin-top: 0.2rem;
-        }
+  .hero .photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 8px;
+    object-fit: cover;
+    filter: grayscale(15%);
+  }
 
-        /* ── SUPERVISION ── */
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .stat-box {
-            text-align: center;
-            padding: 1.5rem 1rem;
-            background: var(--moss-wash);
-            border-radius: 10px;
-        }
-        .stat-number {
-            font-family: var(--serif);
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--moss);
-            line-height: 1;
-        }
-        .stat-label {
-            font-size: 0.82rem;
-            color: var(--ink-light);
-            margin-top: 0.4rem;
-            font-weight: 500;
-        }
+  /* ── News banner ── */
+  .news-banner {
+    background: var(--accent-light);
+    border: 1px solid #c5d9ce;
+    border-radius: 6px;
+    padding: 1rem 1.3rem;
+    margin-bottom: 0.5rem;
+  }
 
-        /* ── TEACHING ── */
-        .teaching-content p {
-            font-size: 0.98rem;
-            color: var(--ink-light);
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
+  .news-banner .news-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-dark);
+    margin-bottom: 0.3rem;
+  }
 
-        /* ── CONTACT ── */
-        .contact-section {
-            background: var(--moss-wash);
-            border-radius: 12px;
-            padding: 3rem;
-            text-align: center;
-            margin-top: 2rem;
-        }
-        .contact-section h2 {
-            font-family: var(--serif);
-            font-size: 1.4rem;
-            color: var(--ink);
-            margin-bottom: 1rem;
-        }
-        .contact-info {
-            font-size: 0.98rem;
-            color: var(--ink-light);
-            line-height: 2;
-        }
-        .contact-info a {
-            color: var(--moss);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .contact-info a:hover { text-decoration: underline; }
+  .news-banner p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--accent-dark);
+  }
 
-        /* ── FOOTER ── */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.82rem;
-            color: var(--ink-faint);
-            border-top: 1px solid var(--moss-pale);
-            margin-top: 3rem;
-        }
+  .news-banner a {
+    color: var(--accent-dark);
+    font-weight: 600;
+  }
 
-        /* ── RESPONSIVE ── */
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                padding-top: 7rem;
-                gap: 2rem;
-            }
-            .hero-photo { order: -1; }
-            .hero-photo img, .photo-placeholder { width: 180px; height: 180px; }
-            .hero-text h1 { font-size: 2rem; }
-            .research-content { grid-template-columns: 1fr; }
-            .stats-row { grid-template-columns: repeat(2, 1fr); }
-            .nav-links { gap: 1rem; }
-            .nav-links a { font-size: 0.8rem; }
-            .funding-item { grid-template-columns: 1fr; }
-        }
+  /* ── Section headers ── */
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    margin-bottom: 1.2rem;
+  }
 
-        @media (max-width: 480px) {
-            .nav-links { display: none; }
-            .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: #fff; border-bottom: 1px solid rgba(58,90,64,0.1); padding: 0.5rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.08); z-index: 200; }
-            .nav-links.open a { padding: 0.65rem 1.5rem; font-size: 0.9rem; border-bottom: 1px solid rgba(58,90,64,0.06); }
-            .nav-hamburger { display: flex; flex-direction: column; justify-content: center; gap: 5px; cursor: pointer; padding: 8px; }
-            .nav-hamburger span { display: block; width: 22px; height: 2px; background: #3a5a40; border-radius: 2px; transition: all 0.2s; }
-            .hero-text h1 { font-size: 1.7rem; }
-        }
-        .nav-hamburger { background: none; border: none; outline: none; }
-        @media (min-width: 481px) {
-            .nav-hamburger { display: none; }
-        }
-    </style>
+  h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--text);
+  }
+
+  /* ── Research cards ── */
+  .research-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .research-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 1.5rem 1.6rem;
+  }
+
+  .research-card h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .research-card p {
+    font-size: 0.93rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  .research-card .tag {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    background: var(--tag-bg);
+    color: var(--text-secondary);
+    padding: 0.15rem 0.55rem;
+    border-radius: 3px;
+    margin-right: 0.4rem;
+    margin-top: 0.6rem;
+  }
+
+  /* ── Technical detail block ── */
+  .tech-detail {
+    background: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    padding: 1.5rem 1.6rem;
+    margin-top: 1.5rem;
+  }
+
+  .tech-detail h3 {
+    color: var(--accent-dark);
+  }
+
+  .tech-detail p, .tech-detail li {
+    font-size: 0.93rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  .tech-detail ul {
+    list-style: none;
+    margin-top: 0.6rem;
+    padding-left: 0;
+  }
+
+  .tech-detail ul li {
+    padding-left: 1.2rem;
+    position: relative;
+    margin-bottom: 0.3rem;
+  }
+
+  .tech-detail ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  .mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85em;
+    background: var(--tag-bg);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+  }
+
+  /* ── Publications ── */
+  .pub-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .pub-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .pub-list li:last-child { border-bottom: none; }
+
+  .pub-title {
+    font-weight: 600;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+  }
+
+  .pub-authors {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.15rem;
+  }
+
+  .pub-venue {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* ── Funding ── */
+  .funding-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .funding-item:last-child { border-bottom: none; }
+
+  .funding-item h3 { margin-bottom: 0.2rem; }
+
+  .funding-item p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .funding-role {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin-top: 0.3rem;
+  }
+
+  /* ── Group ── */
+  .collab-note {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-light);
+  }
+
+  /* ── Teaching stats ── */
+  .stats-row {
+    display: flex;
+    gap: 2.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: left;
+  }
+
+  .stat-num {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    line-height: 1.2;
+  }
+
+  .stat-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+  }
+
+  /* ── Trajectory ── */
+  .trajectory p {
+    margin-bottom: 1rem;
+  }
+
+  .field-origin-note {
+    background: var(--tag-bg);
+    border-radius: 6px;
+    padding: 1.2rem 1.4rem;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .field-origin-note a {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-light);
+  }
+
+  .field-origin-note a:hover { border-color: var(--accent); }
+
+  /* ── Contact ── */
+  .contact-block {
+    font-size: 0.93rem;
+    line-height: 1.8;
+  }
+
+  .contact-block a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-light);
+  }
+
+  .contact-block a:hover { border-color: var(--accent); }
+
+  /* ── Footer ── */
+  footer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem var(--side-pad);
+    border-top: 1px solid var(--border-light);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin-left: 1rem;
+  }
+
+  footer a:hover { color: var(--accent); }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .hero .photo {
+      width: 120px;
+      height: 120px;
+      order: -1;
+    }
+
+    .hero h1 { font-size: 1.6rem; }
+
+    .stats-row { gap: 1.5rem; }
+
+    nav .nav-links { gap: 0.9rem; }
+
+    nav .nav-links a { font-size: 0.78rem; }
+  }
+</style>
 </head>
 <body>
 
-<nav id="navbar" style="position:relative;">
-    <div class="nav-inner">
-        <a href="#" class="nav-name">Uriel Urquiza-García</a>
-        <div class="nav-links" id="navLinks">
-            <a href="#research">Research</a>
-            <a href="#funding">Funding</a>
-            <a href="#publications">Publications</a>
-            <a href="#group">Group</a>
-            <a href="#teaching">Teaching</a>
-            <a href="#origins">Origins</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <button class="nav-hamburger" id="hamburger" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
-            <span></span><span></span><span></span>
-        </button>
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-name">U. Urquiza-García</a>
+    <div class="nav-links">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#funding">Funding</a>
+      <a href="#group">Group</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#trajectory">Trajectory</a>
+      <a href="#contact">Contact</a>
+      <a href="field-origins.html" style="color:var(--accent);">Origins ↗</a>
     </div>
+  </div>
 </nav>
 
-<!-- ════════════════════ HERO ════════════════════ -->
-<header class="hero">
-    <div class="hero-text">
-        <h1>Uriel Urquiza-García</h1>
-        <p class="hero-subtitle">
-            Group Leader, Plant Synthetic Genomics<br>
-            Heinrich Heine University Düsseldorf · CEPLAS
-        </p>
-        <p class="hero-bio">
-            I lead the Plant Synthetic Genomics group at HHU Düsseldorf and the Cluster of Excellence on Plant Sciences (CEPLAS). My programme develops the genetic and cellular methods required for synthetic plant chromosomes to function in living cells — acquiring telomeres, recruiting centromere activity, replicating and segregating. I use the circadian clock as a quantitative test system to ask whether a complex gene regulatory network can be reconstructed on a synthetic neochromosome in <em>Physcomitrium patens</em>.
-        </p>
-        <div class="hero-links">
-            <a href="https://scholar.google.com/citations?user=nOKvWX0AAAAJ" target="_blank">Google Scholar</a>
-            <a href="https://orcid.org/0000-0002-7975-5013" target="_blank">ORCID</a>
-            <a href="https://www.synthetic-biology.hhu.de/en/research/urquiza-group" target="_blank">Lab Page</a>
-            <a href="https://www.linkedin.com/in/uriel-urquiza-garcia-85833637/" target="_blank">LinkedIn</a>
-            <a href="https://x.com/uurquiza" target="_blank">X / Twitter</a>
-        </div>
-    </div>
-    <div class="hero-photo">
-        <img src="photo.jpg" alt="Uriel Urquiza-García">
-    </div>
-</header>
+<main>
 
-<div class="divider"><hr></div>
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div>
+      <h1>Uriel Urquiza-García</h1>
+      <div class="subtitle">Group Leader, Plant Synthetic Genomics · Heinrich Heine University Düsseldorf · CEPLAS</div>
+      <p class="intro">
+        I build synthetic plant chromosomes — DNA molecules that never existed before — and test whether they can function as autonomous, heritable units inside living cells. The central question is whether a complex gene regulatory network, the plant circadian clock, can be modularised and reconstructed on a synthetic neochromosome in <em>Physcomitrium patens</em>. Answering this requires solving the full stack of chromosome engineering: telomere acquisition, centromere boot-up, replication, and faithful segregation.
+      </p>
+      <div class="links">
+        <a href="https://scholar.google.com/citations?user=nOKvWX0AAAAJ">Google Scholar</a>
+        <a href="https://orcid.org/0000-0002-7975-5013">ORCID</a>
+        <a href="https://www.synthetic-biology.hhu.de/en/research/urquiza-group">Lab Page</a>
+        <a href="https://www.linkedin.com/in/uriel-urquiza-garcia-85833637/">LinkedIn</a>
+        <a href="https://x.com/uurquiza">X / Twitter</a>
+      </div>
+    </div>
+    <img src="https://jurquiza.github.io/photo.jpg" alt="Uriel Urquiza-García" class="photo">
+  </section>
 
-<!-- ════════════════════ RESEARCH ════════════════════ -->
-<section id="research">
-    <h2 class="section-title">Research</h2>
-    <p style="font-size: 1rem; color: var(--ink-light); line-height: 1.8; margin-bottom: 2rem; max-width: 800px;">
-        My research establishes plant synthetic genomics as a constructive discipline. We build not only large synthetic DNA molecules, but the biological programmes required for synthetic plant chromosomes to boot up inside living cells. The central biological question is whether complex gene regulatory networks depend on genomic context, tested through the relocation of the plant circadian clock to a synthetic neochromosome.
+  <!-- ── Latest ── -->
+  <div class="news-banner">
+    <div class="news-label">Latest — April 2026</div>
+    <p>
+      A 42 kb synthetic chromosome body — three RepTiles fragments assembled directly in <em>P. patens</em> without yeast intermediary — is in antibiotic selection with ~50 fluorescent colonies. Oxford Nanopore sequencing for junction confirmation is underway. Manuscript in preparation.
     </p>
-    <div class="research-content">
-        <div class="research-card">
-            <h3>Synthetic Neochromosomes</h3>
-            <p>Designing, assembling and booting up synthetic chromosomes in <em>Physcomitrium patens</em>. We develop methods for telomere seeding, neocentromere activation, and heritable chromosome maintenance using optogenetic control and liquid–liquid phase separation.</p>
-        </div>
-        <div class="research-card">
-            <h3>Circadian Clock Relocation</h3>
-            <p>Testing whether the plant circadian clock — a complex gene regulatory network scattered across the genome — can be modularised and reconstructed on a synthetic neochromosome. This is the highest-risk, highest-reward component of the programme.</p>
-        </div>
-        <div class="research-card">
-            <h3>Biodesign Automation</h3>
-            <p>RepTiles-guided DNA design, Golden Braid assembly, and transformation-associated recombination for scalable synthetic genomics. Building the instruction set for chromosome activation from modular parts.</p>
-        </div>
-        <div class="research-card">
-            <h3>Plant Optogenetics & CRISPR</h3>
-            <p>Light-controlled gene expression and multiplexed genome editing in plants. Integrating optogenetic systems with synthetic chromosome platforms for programmable control of biological functions.</p>
-        </div>
+  </div>
+
+  <!-- ── Research ── -->
+  <section id="research">
+    <h2>Research</h2>
+    <p>
+      The programme establishes plant synthetic genomics as a constructive discipline. We do not recode existing chromosomes — we build new ones from scratch and ask whether they can boot up inside a plant cell. The organising biological question, whether the circadian clock depends on its native genomic context or is modular and portable, was conceived during my PhD and is now testable because the synthetic chromosome platform makes it so.
+    </p>
+
+    <div class="research-grid">
+      <div class="research-card">
+        <h3>Synthetic neochromosome assembly</h3>
+        <p>
+          We assemble large synthetic DNA directly in <em>P. patens</em> using an iterative integration system based on alternating selectable markers, allowing successive rounds of assembly without marker exhaustion. The current 42 kb construct was assembled as three fragments in a single transformation, demonstrating that the moss HDR machinery can handle multi-fragment knock-ins at scale.
+        </p>
+        <span class="tag">RepTiles</span>
+        <span class="tag">HDR</span>
+        <span class="tag">P. patens</span>
+      </div>
+
+      <div class="research-card">
+        <h3>Centromere boot-up</h3>
+        <p>
+          A chromosome without a centromere is just a DNA fragment — it cannot segregate. We are developing an inducible centromere nucleation strategy — using programmable protein recruitment and light-controlled dose titration — to seed <em>de novo</em> kinetochore activity on synthetic DNA that has never carried a centromere. The approach is unpublished and currently under development.
+        </p>
+        <span class="tag">CENH3</span>
+        <span class="tag">neocentromere</span>
+        <span class="tag">optogenetics</span>
+        
+      </div>
+
+      <div class="research-card">
+        <h3>Chromosome liberation &amp; maintenance</h3>
+        <p>
+          Once the neochromosome body carries functional centromere and telomere elements, it must be excised and maintained as an episomal unit. The liberation strategy uses nuclease cutting at flanking sites, enzymatic exposure of pre-seeded telomeric ends, and a counter-selection step to identify successfully liberated cells. Replication origin strategy and segregation fidelity measurement remain active areas of development.
+        </p>
+        <span class="tag">telomere seeding</span>
+        <span class="tag">chromosome liberation</span>
+        <span class="tag">counter-selection</span>
+      </div>
+
+      <div class="research-card">
+        <h3>Circadian clock relocation</h3>
+        <p>
+          The highest-risk, highest-reward component of the programme. The plant circadian clock is a gene regulatory network scattered across the genome — at least 20 genes on multiple chromosomes, interacting through transcriptional feedback loops. We will reconstruct it on the synthetic neochromosome and ask: does it tick? If it does, the clock is modular with respect to genomic context. If it doesn't, we learn which dependencies are hardwired into chromosomal architecture. The quantitative readout system — NanoLUC-based absolute protein quantification, developed in my MSB 2025 paper — is already built and validated.
+        </p>
+        <span class="tag">clock modularity</span>
+        <span class="tag">NanoLUC</span>
+        <span class="tag">gene regulatory network</span>
+        <span class="tag">JTF grant</span>
+      </div>
+
+      <div class="research-card">
+        <h3>Biodesign automation &amp; plant optogenetics</h3>
+        <p>
+          RepTiles provides automated hierarchical assembly design for generating large synthetic DNA from community-standard Golden Braid parts. PolyGEN enables multiplexed CRISPR using polycistronic tRNA-gRNA (PTG) arrays. A plant optogenetic system enables light-controlled gene expression in stable transgenic plants. These tools are integrated into the synthetic chromosome platform for programmable control of biological functions.
+        </p>
+        <span class="tag">RepTiles</span>
+        <span class="tag">Golden Braid</span>
+        <span class="tag">PolyGEN</span>
+        <span class="tag">plant optogenetics</span>
+      </div>
     </div>
-</section>
 
-<div class="divider"><hr></div>
+    <div class="tech-detail">
+      <h3>Why <em>Physcomitrium patens</em>?</h3>
+      <p>
+        The choice of chassis came from direct experimental failure. After two years of attempting yeast-based TAR cloning for large plant DNA assemblies, I recognised that the standard intermediary approach was a bottleneck, not a solution. <em>P. patens</em> has the highest native homologous recombination efficiency of any land plant, is haploid (simplifying genotyping), and regenerates from single cells — enabling clonal analysis of engineered lines in weeks rather than months. This insight preceded the broader community's recognition of moss as a synthetic genomics chassis and was arrived at independently, from first principles.
+      </p>
+    </div>
+  </section>
 
-<!-- ════════════════════ FUNDING ════════════════════ -->
-<section id="funding">
-    <h2 class="section-title">Funding</h2>
-    <ul class="funding-list">
-        <li class="funding-item">
-            <div>
-                <div class="funding-name">John Templeton Foundation (Grant ID 63576)</div>
-                <div class="funding-detail">Synthetic plant chromosomal platforms to test modularisation and reconstruction of the plant circadian clock outside its native genomic context.</div>
-            </div>
-            <span class="funding-role">Principal Investigator</span>
-        </li>
-        <li class="funding-item">
-            <div>
-                <div class="funding-name">CEPLAS Seed Fund</div>
-                <div class="funding-detail">Establishing the plant synthetic genomics research line within the Cluster of Excellence on Plant Sciences.</div>
-            </div>
-            <span class="funding-role">Principal Investigator</span>
-        </li>
-        <li class="funding-item">
-            <div>
-                <div class="funding-name">HHU Strategic Research Fund (HHU-SFF)</div>
-                <div class="funding-detail">Expansion towards biomedical peptide production and neochromosome technology.</div>
-            </div>
-            <span class="funding-role">Principal Investigator</span>
-        </li>
-        <li class="funding-item">
-            <div>
-                <div class="funding-name">CEPLAS Collaborative Research Support</div>
-                <div class="funding-detail">Collaboration with Dr Emily Wheeler on artificial origins of replication, and publication support.</div>
-            </div>
-            <span class="funding-role">Principal Investigator</span>
-        </li>
-    </ul>
-</section>
-
-<div class="divider"><hr></div>
-
-<!-- ════════════════════ PUBLICATIONS ════════════════════ -->
-<section id="publications">
-    <h2 class="section-title">Selected Publications</h2>
+  <!-- ── Publications ── -->
+  <section id="publications">
+    <h2>Selected publications</h2>
     <ul class="pub-list">
-        <li class="pub-item">
-            <div class="pub-title">Abundant clock proteins point to missing molecular regulation in the plant circadian clock</div>
-            <div class="pub-authors">Urquiza-García U, Molina N, Halliday KJ, Millar AJ</div>
-            <div class="pub-journal">Molecular Systems Biology (2025)</div>
-        </li>
-        <li class="pub-item">
-            <div class="pub-title">Gearing up Golden Braid assembly for plant synthetic genomics with RepTiles</div>
-            <div class="pub-authors">Petrova V, Andrejic D, Finkenrath T, Grewer J, Zurbriggen MD, Urquiza-García U</div>
-            <div class="pub-journal">bioRxiv (2025) — preprint</div>
-        </li>
-        <li class="pub-item">
-            <div class="pub-title">Cryptochrome 1 promotes photomorphogenesis in <em>Arabidopsis</em> by displacing substrates from the COP1 ubiquitin ligase</div>
-            <div class="pub-authors">Trimborn L, Kuttig F, Ponnu J, Yu P, Korsching KR, Lederer P, Urquiza-García U, Zurbriggen MD, Hoecker U</div>
-            <div class="pub-journal">The Plant Journal (2025)</div>
-        </li>
-        <li class="pub-item">
-            <div class="pub-title">Testing the inferred transcription rates of a dynamic, gene network model in absolute units</div>
-            <div class="pub-authors">Urquiza-García U, Millar AJ</div>
-            <div class="pub-journal">in silico Plants (2021)</div>
-        </li>
-        <li class="pub-item">
-            <div class="pub-title">Expanding the bioluminescent reporter toolkit for plant science with NanoLUC</div>
-            <div class="pub-authors">Urquiza-García U, Millar AJ</div>
-            <div class="pub-journal">Plant Methods (2019)</div>
-        </li>
-        <li class="pub-item">
-            <div class="pub-title">Better research by efficient sharing: evaluation of free management platforms for synthetic biology designs</div>
-            <div class="pub-authors">Urquiza-García U, Zieliński T, Millar AJ</div>
-            <div class="pub-journal">Synthetic Biology (2019)</div>
-        </li>
+      <li>
+        <div class="pub-title">Abundant clock proteins point to missing molecular regulation in the plant circadian clock</div>
+        <div class="pub-authors">Urquiza-García U, Molina N, Halliday KJ, Millar AJ</div>
+        <div class="pub-venue">Molecular Systems Biology (2025)</div>
+      </li>
+      <li>
+        <div class="pub-title">Gearing up Golden Braid assembly for plant synthetic genomics with RepTiles</div>
+        <div class="pub-authors">Petrova V, Andrejic D, Finkenrath T, Grewer J, Zurbriggen MD, Urquiza-García U</div>
+        <div class="pub-venue">bioRxiv (2025) — preprint · <a href="https://doi.org/10.1101/2025.02.28.640145" style="color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-light)">doi</a></div>
+      </li>
+      <li>
+        <div class="pub-title">Cryptochrome 1 promotes photomorphogenesis in <em>Arabidopsis</em> by displacing substrates from the COP1 ubiquitin ligase</div>
+        <div class="pub-authors">Trimborn L, Kuttig F, Ponnu J, Yu P, Korsching KR, Lederer P, Urquiza-García U, Zurbriggen MD, Hoecker U</div>
+        <div class="pub-venue">The Plant Journal (2025)</div>
+      </li>
+      <li>
+        <div class="pub-title">Testing the inferred transcription rates of a dynamic, gene network model in absolute units</div>
+        <div class="pub-authors">Urquiza-García U, Millar AJ</div>
+        <div class="pub-venue">in silico Plants (2021)</div>
+      </li>
+      <li>
+        <div class="pub-title">Expanding the bioluminescent reporter toolkit for plant science with NanoLUC</div>
+        <div class="pub-authors">Urquiza-García U, Millar AJ</div>
+        <div class="pub-venue">Plant Methods (2019)</div>
+      </li>
+      <li>
+        <div class="pub-title">Better research by efficient sharing: evaluation of free management platforms for synthetic biology designs</div>
+        <div class="pub-authors">Urquiza-García U, Zieliński T, Millar AJ</div>
+        <div class="pub-venue">Synthetic Biology (2019)</div>
+      </li>
     </ul>
-    <p style="margin-top: 1.5rem; font-size: 0.92rem; color: var(--ink-faint);">
-        Full list on <a href="https://scholar.google.com/citations?user=nOKvWX0AAAAJ" target="_blank" style="color: var(--moss); text-decoration: none; font-weight: 500;">Google Scholar</a>
+    <p style="margin-top:0.8rem;font-size:0.88rem;color:var(--text-secondary);">
+      Full list on <a href="https://scholar.google.com/citations?user=nOKvWX0AAAAJ" style="color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-light)">Google Scholar</a>.
     </p>
-</section>
+  </section>
 
-<div class="divider"><hr></div>
+  <!-- ── Funding ── -->
+  <section id="funding">
+    <h2>Funding</h2>
 
-<!-- ════════════════════ GROUP ════════════════════ -->
-<section id="group">
-    <h2 class="section-title">Group</h2>
-    <div class="group-grid">
-        <div class="group-member">
-            <div class="group-member-name">Dr Uriel Urquiza-García</div>
-            <div class="group-member-role">Group Leader</div>
-        </div>
-        <div class="group-member">
-            <div class="group-member-name"><!-- Name --></div>
-            <div class="group-member-role">Technician</div>
-        </div>
-        <div class="group-member">
-            <div class="group-member-name"><!-- Name --></div>
-            <div class="group-member-role">MSc Student</div>
-        </div>
-        <div class="group-member">
-            <div class="group-member-name"><!-- Name --></div>
-            <div class="group-member-role">MSc Student</div>
-        </div>
-        <div class="group-member">
-            <div class="group-member-name">Dr Emily Wheeler</div>
-            <div class="group-member-role">Collaborator — Artificial Origins of Replication</div>
-        </div>
+    <div class="funding-item">
+      <h3>John Templeton Foundation — "Bottling Time"</h3>
+      <p>Grant ID 63576. Reconstructing a moss's inner clock through synthetic genomics. Testing whether the circadian clock is modular and genetically portable — whether its function depends on native genomic architecture or can be reconstituted on a synthetic neochromosome.</p>
+      <div class="funding-role">Principal Investigator</div>
     </div>
-    <p style="margin-top: 1.5rem; font-size: 0.92rem; color: var(--ink-faint);">
-        Key collaborators: Dr André Marques (MPI Plant Breeding Research / CEPLAS) · Prof Björn Usadel (FZ Jülich / HHU / CEPLAS) · Prof Matias Zurbriggen (HHU)
+
+    <div class="funding-item">
+      <h3>HHU Strategic Research Fund (SFF)</h3>
+      <p>Expansion of the neochromosome technology platform and biomedical peptide production applications.</p>
+      <div class="funding-role">Principal Investigator</div>
+    </div>
+
+    <div class="funding-item">
+      <h3>CEPLAS Seed Fund</h3>
+      <p>Establishing the plant synthetic genomics research line within the Cluster of Excellence on Plant Sciences. Awarded November 2022 — the founding grant of the programme.</p>
+      <div class="funding-role">Principal Investigator</div>
+    </div>
+
+    <div class="funding-item">
+      <h3>CEPLAS Collaborative Research Support</h3>
+      <p>Collaboration with Dr Emily Wheeler on artificial origins of replication, and publication support.</p>
+      <div class="funding-role">Principal Investigator</div>
+    </div>
+  </section>
+
+  <!-- ── Group ── -->
+  <section id="group">
+    <h2>Group</h2>
+    <p>
+      <strong>Dr Uriel Urquiza-García</strong> — Group Leader<br>
+      Technician<br>
+      MSc Student<br>
+      MSc Student
     </p>
-</section>
+    <p class="collab-note">
+      <strong>Key collaborators:</strong>
+      Dr André Marques (MPI Plant Breeding Research / CEPLAS — chromosome biology) ·
+      Prof Björn Usadel (FZ Jülich / HHU / CEPLAS — computational plant biology, embedded in JTF grant) ·
+      Prof Matias Zurbriggen (HHU — synthetic biology) ·
+      Dr Emily Wheeler (artificial origins of replication)
+    </p>
+  </section>
 
-<div class="divider"><hr></div>
-
-<!-- ════════════════════ TEACHING ════════════════════ -->
-<section id="teaching">
-    <h2 class="section-title">Teaching & Supervision</h2>
+  <!-- ── Teaching ── -->
+  <section id="teaching">
+    <h2>Teaching &amp; supervision</h2>
 
     <div class="stats-row">
-        <div class="stat-box">
-            <div class="stat-number">22</div>
-            <div class="stat-label">BSc & MSc theses supervised</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-number">10+</div>
-            <div class="stat-label">Internships & lab visits hosted</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-number">9</div>
-            <div class="stat-label">BSc graduates in Synthetic Genomics</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-number">1</div>
-            <div class="stat-label">PhD Thesis Advisory Committee</div>
-        </div>
+      <div class="stat">
+        <div class="stat-num">22</div>
+        <div class="stat-label">BSc &amp; MSc theses supervised</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Internships &amp; lab visits hosted</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1</div>
+        <div class="stat-label">PhD Thesis Advisory Committee</div>
+      </div>
     </div>
 
-    <div class="teaching-content">
-        <p>
-            I teach an MSc course M2209 in Synthetic Biology and Biotechology at Heinrich Heine University Düsseldorf. I have supervised 22 BSc and MSc theses spanning circadian biology, optogenetics, DNA assembly and chromosome engineering. I have also hosted more than 10 PhD, MSc and BSc internships and lab visits, and serve on a PhD thesis advisory committee.
-        </p>
-        <p>
-            A central aim of the programme is to train a new generation of plant synthetic genomics researchers in Germany — students with hands-on experience in chromosome engineering, quantitative biology and biodesign automation.
-        </p>
-    </div>
-</section>
-
-<div class="divider"><hr></div>
-
-<!-- ════════════════════ TRAJECTORY ════════════════════ -->
-<section id="trajectory">
-    <h2 class="section-title">Trajectory</h2>
-    <div class="teaching-content">
-        <p>
-            I trained at the National Autonomous University of Mexico (UNAM) in the Genomic Sciences programme, where I participated in iGEM and won a travel grant for an oral presentation at the Synthetic Biology Conference at Stanford University. I completed my MSc and PhD at the University of Edinburgh on competitive international scholarships, working on quantitative models of the plant circadian clock with Andrew Millar at SynthSys.
-        </p>
-        <p>
-            Since 2023, I have led the Plant Synthetic Genomics group at HHU Düsseldorf, embedded in the Cluster of Excellence on Plant Sciences (CEPLAS) and the Institute of Synthetic Biology. The programme has been built through a deliberate escalation of competitive support — from CEPLAS seed funding, through the HHU Strategic Research Fund, to international competitive funding from the John Templeton Foundation — and is now preparing applications for new funding cycles including competitive funding at the European level.
-        </p>
-    </div>
-</section>
-
-<!-- ════════════════════ FIELD ORIGINS ════════════════════ -->
-<section id="origins">
-    <h2 class="section-title">Field Origins</h2>
-    <p style="font-size: 1rem; color: var(--ink-light); line-height: 1.8; margin-bottom: 2rem; max-width: 800px;">
-        Plant Synthetic Genomics as a named research programme in Europe can be traced to this group. The CEPLAS Seed Fund, awarded on 25 November 2022, is the earliest documented institutional use of the term "Plant Synthetic Genomics" as a funded programme — predating the UK ARIA Synthetic Plants programme (£62.4M) by 22 months. The following pages document this record with primary sources.
+    <p>
+      I teach MSc course M2209 in Synthetic Biology and Biotechnology at HHU Düsseldorf. Student theses span two pillars: molecular control (optogenetics, CRISPR, programmable gene regulation) and chromosome engineering (DNA assembly, centromere targeting, telomere strategy). Seven BSc theses in the synthetic genomics pillar collectively address every essential structural component of the plant artificial chromosome — three of these students are co-authors on the RepTiles preprint, with a BSc student (V. Petrova) as first author.
     </p>
-    <div class="research-content">
-        <a href="field-origins.html" style="text-decoration:none;">
-            <div class="research-card" style="cursor:pointer;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(58,90,64,0.15)'" onmouseout="this.style.boxShadow=''">
-                <h3>Historical Record</h3>
-                <p>A factual chronological account of when, where, and by whom Plant Synthetic Genomics was established in Europe — documented with verifiable primary sources before ARIA emerged.</p>
-                <p style="margin-top:1rem;font-size:0.85rem;font-weight:600;color:var(--moss);">Read the record →</p>
-            </div>
-        </a>
-        <a href="evidence-timeline.html" style="text-decoration:none;">
-            <div class="research-card" style="cursor:pointer;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(58,90,64,0.15)'" onmouseout="this.style.boxShadow=''">
-                <h3>Evidence Timeline</h3>
-                <p>Primary source documents: the CEPLAS seed fund application (Nov 2022), JTF grant correspondence, HHU Rektorat letters, VW Stiftung application, and the Jiao/Dai email exchange (Jan 2024).</p>
-                <p style="margin-top:1rem;font-size:0.85rem;font-weight:600;color:var(--moss);">View evidence →</p>
-            </div>
-        </a>
-        <a href="activities-timeline.html" style="text-decoration:none;">
-            <div class="research-card" style="cursor:pointer;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(58,90,64,0.15)'" onmouseout="this.style.boxShadow=''">
-                <h3>Activities & Training</h3>
-                <p>Talks, student theses (16 supervised, 2021–2025), conference presentations, and community engagement activities constituting the field-building record of the programme.</p>
-                <p style="margin-top:1rem;font-size:0.85rem;font-weight:600;color:var(--moss);">View activities →</p>
-            </div>
-        </a>
-        <div class="research-card" style="background:var(--moss);border-left:3px solid var(--accent);">
-            <h3 style="color:#fff;">25 November 2022</h3>
-            <p style="color:rgba(255,255,255,0.85);">Founding date of Plant Synthetic Genomics as an institutionally recognised, funded research programme in Europe — 22 months before ARIA opened its Synthetic Plants call.</p>
-            <p style="margin-top:1rem;font-size:0.85rem;font-weight:600;color:var(--moss-pale);">HHU Düsseldorf · CEPLAS</p>
-        </div>
-    </div>
-</section>
+    <p style="margin-top:0.8rem;">
+      A central aim is to train the first generation of plant synthetic genomics researchers in Germany — students with hands-on experience in chromosome engineering, quantitative biology, and biodesign automation.
+    </p>
+  </section>
 
-<div class="divider"><hr></div>
+  <!-- ── Trajectory ── -->
+  <section id="trajectory">
+    <h2>Trajectory</h2>
+    <p>
+      I trained at the National Autonomous University of Mexico (UNAM) in the Genomic Sciences programme, where I participated in iGEM 2009 and won a travel grant for an oral presentation at the Synthetic Biology Conference at Stanford. I completed my MSc and PhD at the University of Edinburgh on competitive international scholarships, working on quantitative models of the plant circadian clock with Andrew Millar at SynthSys. The question that now organises the programme — whether the clock is modular with respect to genomic context — crystallised during the PhD, but answering it required a synthetic chromosome. That requirement drove everything that followed.
+    </p>
+    <p>
+      My postdoctoral work with Karen Halliday at Edinburgh produced the MSB 2025 paper on absolute protein quantification of clock transcription factors — the first such measurement in any plant system — which provides the quantitative readout infrastructure now embedded in the JTF experimental logic. The NanoLUC approach, the ODE model refactoring, and the sequence-to-affinity pipeline all trace back to this period.
+    </p>
+    <p>
+      Since 2023, I have led the Plant Synthetic Genomics group at HHU Düsseldorf, embedded in CEPLAS and the Institute of Synthetic Biology. The programme was built through a deliberate escalation of competitive support — from CEPLAS seed funding (November 2022), through the HHU Strategic Research Fund, to international competitive funding from the John Templeton Foundation — and is now preparing applications for competitive funding at the European level.
+    </p>
 
-<!-- ════════════════════ CONTACT ════════════════════ -->
-<section id="contact">
-    <div class="contact-section">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <strong>Dr Uriel Urquiza-García</strong><br>
-            Institute of Synthetic Biology<br>
-            Heinrich Heine University Düsseldorf<br>
-            Building 26.24, Room 00.068<br>
-            Düsseldorf, Germany<br><br>
-            Email: <a href="/cdn-cgi/l/email-protection#11646378747d3f64636064786b70517979643f7574"><span class="__cf_email__" data-cfemail="94e1e6fdf1f8bae1e6e5e1fdeef5d4fcfce1baf0f1">[email&#160;protected]</span></a><br><br>
-            <a href="https://www.synthetic-biology.hhu.de/en/research/urquiza-group" target="_blank" rel="noopener" style="color:var(--moss);font-weight:500;">HHU Group Page →</a><br>
-            <a href="https://www.ceplas.eu/en/research/dr-uriel-urquiza" target="_blank" rel="noopener" style="color:var(--moss);font-weight:500;">CEPLAS Profile →</a><br>
-            <a href="https://orcid.org/0000-0002-7975-5013" target="_blank" rel="noopener" style="color:var(--moss);font-weight:500;">ORCID →</a>
-        </div>
+    <div class="field-origin-note">
+      <strong>A note on chronology.</strong> Plant Synthetic Genomics as a named, funded research programme in Europe was established at HHU Düsseldorf on 25 November 2022, with the award of the CEPLAS Seed Fund. The UK ARIA Synthetic Plants call opened in September 2024. A <a href="field-origins.html">chronological record</a> with primary source documents is available, including an <a href="evidence-timeline.html">evidence timeline</a> and a record of <a href="activities-timeline.html">field-building activities</a>.
     </div>
-</section>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-block">
+      <strong>Dr Uriel Urquiza-García</strong><br>
+      Institute of Synthetic Biology<br>
+      Heinrich Heine University Düsseldorf<br>
+      Building 26.24, Room 00.068<br>
+      Düsseldorf, Germany<br><br>
+      <a href="https://www.synthetic-biology.hhu.de/en/research/urquiza-group">HHU Group Page →</a><br>
+      <a href="https://www.ceplas.eu/en/research/dr-uriel-urquiza">CEPLAS Profile →</a><br>
+      <a href="https://orcid.org/0000-0002-7975-5013">ORCID →</a>
+    </div>
+  </section>
+
+</main>
 
 <footer>
-    © 2026 Uriel Urquiza-García · Plant Synthetic Genomics ·
-    <a href="https://www.synthetic-biology.hhu.de/en/research/urquiza-group" target="_blank" rel="noopener" style="color:var(--moss-light);text-decoration:none;">HHU Düsseldorf</a> ·
-    <a href="https://www.ceplas.eu/en/research/dr-uriel-urquiza" target="_blank" rel="noopener" style="color:var(--moss-light);text-decoration:none;">CEPLAS</a>
+  <span>© 2026 Uriel Urquiza-García · Plant Synthetic Genomics</span>
+  <span>
+    <a href="https://www.synthetic-biology.hhu.de/en/research/urquiza-group">HHU</a>
+    <a href="https://www.ceplas.eu/en/research/dr-uriel-urquiza">CEPLAS</a>
+    <a href="https://scholar.google.com/citations?user=nOKvWX0AAAAJ">Scholar</a>
+  </span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.
+</body>
+</html>

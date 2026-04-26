@@ -21,51 +21,51 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  /* ── BACKGROUND ── */
-  --sand:        #f5f0e8;   /* page background */
-  --white:       #ffffff;   /* card / panel background */
-  --moss-wash:   #f4f7f2;   /* very light green tint */
+  /* ── Background ── */
+  --sand:        #fafaf8;
+  --white:       #ffffff;
+  --moss-wash:   #e8f0ec;
 
-  /* ── INK ── */
-  --ink:         #1a1a1a;   /* primary text */
-  --ink-light:   #4a4a4a;   /* secondary text */
-  --ink-faint:   #8a8a8a;   /* tertiary / labels */
-  --ink-ghost:   #b8b0a8;   /* very faint */
+  /* ── Text ── */
+  --ink:         #1a1a18;
+  --ink-light:   #555550;
+  --ink-faint:   #6a6a66;
+  --ink-ghost:   #b8b0a8;   /* decorative/borders only */
 
-  /* ── MOSS GREEN ── */
-  --moss:        #3a5a40;   /* primary brand */
-  --moss-light:  #4a7c59;   /* hover / mid */
-  --moss-pale:   #dde8d6;   /* pale green bg */
-  --moss-mid:    #4a7c59;   /* alias */
+  /* ── Moss green (matches index) ── */
+  --moss:        #2d6a4f;
+  --moss-light:  #3d8a6a;
+  --moss-pale:   #e8f0ec;
+  --moss-mid:    #3d8a6a;
 
-  /* ── GOLD ACCENT ── */
-  --accent:      #8b6914;   /* gold accent */
-  --accent-pale: #f9f3e6;   /* pale gold bg */
-  --accent-mid:  #a07820;   /* mid gold */
+  /* ── Accent gold ── */
+  --accent:      #7a5a10;
+  --accent-pale: #f9f3e6;
+  --accent-mid:  #8b6914;
 
-  /* ── SEMANTIC COLOURS ── */
+  /* ── Semantic ── */
   --blue:        #1a4a8a;
   --blue-pale:   #edf2fa;
   --teal:        #1a6a60;
   --teal-pale:   #e8f6f4;
   --red:         #8c2020;
   --red-pale:    #fdf0f0;
-  --future:      #6a6a6a;
+  --future:      #6a6a66;
 
-  /* ── RULES ── */
-  --rule:        rgba(58,90,64,0.10);
-  --rule-mid:    rgba(58,90,64,0.18);
+  /* ── Rules / borders ── */
+  --rule:        rgba(45,106,79,0.10);
+  --rule-mid:    rgba(45,106,79,0.18);
 
-  /* ── NIGHT (dark panels) ── */
-  --night:       #1a1a1a;
-  --night-mid:   #2a2a2a;
+  /* ── Night (dark panels) ── */
+  --night:       #1a1a18;
+  --night-mid:   #2a2a28;
   --night-text:  #ede8de;
-  --night-dim:   #7a7a7a;
+  --night-dim:   #8a8a8a;
 
-  /* ── TYPOGRAPHY ── */
+  /* ── Typography ── */
   --serif:  'Source Serif 4', Georgia, serif;
   --sans:   'DM Sans', system-ui, sans-serif;
 }
@@ -75,7 +75,7 @@ html { scroll-behavior: smooth; }
 
 body {
   background: #ffffff;
-  color: #1a1a1a;
+  color: #1a1a18;
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
   min-height: 100vh;
@@ -385,7 +385,7 @@ body::after {
   color: var(--ink-light);
 }
 
-.card-desc strong { color: #1a1a1a; font-weight: 500; }
+.card-desc strong { color: #1a1a18; font-weight: 500; }
 .card-desc em { color: var(--moss); font-style: italic; }
 
 /* ── DOCUMENT EVIDENCE ── */
@@ -441,7 +441,7 @@ body::after {
 .evidence-title {
   font-size: 12px;
   font-weight: 500;
-  color: #1a1a1a;
+  color: #1a1a18;
   line-height: 1.3;
   margin-bottom: 2px;
 }
@@ -528,7 +528,7 @@ body::after {
   line-height: 1.6;
 }
 
-.comp-what strong { color: #1a1a1a; }
+.comp-what strong { color: #1a1a18; }
 .comp-what em { color: #e05540; font-style: normal; font-weight: 500; }
 
 .comp-item.you-card {
@@ -563,7 +563,7 @@ body::after {
   font-style: italic;
   font-size: clamp(16px, 2.2vw, 20px);
   line-height: 1.55;
-  color: #1a1a1a;
+  color: #1a1a18;
 }
 
 .summary-text strong { font-style: normal; color: var(--accent); }
@@ -648,12 +648,12 @@ footer {
 
 <nav style="position:sticky;top:0;width:100%;z-index:100;background:rgba(255,255,255,0.97);border-bottom:1px solid rgba(58,90,64,0.1);box-shadow:0 1px 8px rgba(0,0,0,0.06);">
   <div style="max-width:1100px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;height:52px;gap:0.5rem;">
-    <a href="index.html" style="font-family:'Source Serif 4',Georgia,serif;font-weight:600;font-size:0.95rem;color:#3a5a40;text-decoration:none;white-space:nowrap;flex-shrink:0;">U. Urquiza-García</a>
+    <a href="index.html" style="font-family:'Source Serif 4',Georgia,serif;font-weight:600;font-size:0.95rem;color:#2d6a4f;text-decoration:none;white-space:nowrap;flex-shrink:0;">U. Urquiza-García</a>
     <div style="display:flex;gap:0;align-items:center;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex-shrink:1;">
-      <a href="index.html" style="text-decoration:none;color:#4a4a4a;font-size:0.78rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;padding:0 0.65rem;white-space:nowrap;">Home</a>
-      <a href="field-origins.html" style="text-decoration:none;color:#3a5a40;font-size:0.78rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;padding:0 0.65rem;white-space:nowrap;">Origins</a>
-      <a href="evidence-timeline.html" style="text-decoration:none;color:#4a4a4a;font-size:0.78rem;font-weight:700;font-family:'DM Sans',system-ui,sans-serif;padding:0 0.65rem;white-space:nowrap;border-bottom:2px solid #3a5a40;padding-bottom:2px;color:#3a5a40;">Evidence</a>
-      <a href="activities-timeline.html" style="text-decoration:none;color:#4a4a4a;font-size:0.78rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;padding:0 0.65rem;white-space:nowrap;">Activities</a>
+      <a href="index.html" style="text-decoration:none;color:#555550;font-size:0.78rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;padding:0 0.65rem;white-space:nowrap;">Home</a>
+      <a href="field-origins.html" style="text-decoration:none;color:#2d6a4f;font-size:0.78rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;padding:0 0.65rem;white-space:nowrap;">Origins</a>
+      <a href="evidence-timeline.html" style="text-decoration:none;color:#555550;font-size:0.78rem;font-weight:700;font-family:'DM Sans',system-ui,sans-serif;padding:0 0.65rem;white-space:nowrap;border-bottom:2px solid #2d6a4f;padding-bottom:2px;color:#2d6a4f;">Evidence</a>
+      <a href="activities-timeline.html" style="text-decoration:none;color:#555550;font-size:0.78rem;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;padding:0 0.65rem;white-space:nowrap;">Activities</a>
     </div>
   </div>
 </nav>
@@ -932,7 +932,7 @@ footer {
           </div>
         </div>
         <div class="context-note">
-          JTF Life Science grants are peer-reviewed by external scientists. Full proposal invitation signals that the pre-proposal passed scientific credibility review. The programme officer personally engaged confirms the grant was being actively managed — not just processed.
+          JTF Life Science grants are peer-reviewed by external scientists. Full proposal invitation reflects the pre-proposal passed scientific credibility review. The programme officer personally engaged confirms the grant was being actively managed — not just processed.
         </div>
       </div>
     </div>
@@ -994,11 +994,11 @@ footer {
       <div class="card-body">
         <div class="card-title">New funding cycles in preparation — European-level competitive grants</div>
         <div class="card-desc">
-          Applications for new funding cycles are being prepared in coordination with the HHU grants office and CEPLAS. The programme's track record — three independent funding sources since November 2022, the RepTiles preprint, 16 supervised students, and community recognition including the CSHL Asia faculty invitation — positions the programme for competitive funding at the European level. Key elements of the case:<br><br>
-          <strong>Verifiable priority:</strong> CEPLAS seed fund November 2022, 22 months before ARIA.<br>
-          <strong>Independent funding stack:</strong> CEPLAS + JTF + HHU SFF — three sources, three independent judgments.<br>
-          <strong>Community recognition:</strong> CSHL Asia faculty invitation, JTF competitive selection, HHU institutional ratification.<br>
-          <strong>Technical distinction:</strong> No Gibson assembly, no yeast intermediary, community-standard parts throughout, original inducible centromere formation strategy, original synthetic telomere strategy.<br>
+          Applications for new funding cycles are being prepared in coordination with the HHU grants office and CEPLAS. The programme's track record includes three independent funding sources since November 2022, the RepTiles preprint, 16 supervised students, and external recognition including the CSHL Asia faculty invitation. Key elements of the track record:<br><br>
+          <strong>Founding date:</strong> CEPLAS seed fund November 2022. ARIA call opened September 2024.<br>
+          <strong>Independent funding:</strong> CEPLAS + JTF + HHU SFF — three sources, three independent assessments.<br>
+          <strong>External recognition:</strong> CSHL Asia faculty invitation, JTF competitive selection, HHU institutional ratification.<br>
+          <strong>Technical approach:</strong> No Gibson assembly, no yeast intermediary, community-standard parts throughout, original inducible centromere formation strategy, original synthetic telomere strategy.<br>
           <strong>Biological question:</strong> Clock modularity hypothesis predating platform by a decade — the question that made the platform necessary.
         </div>
         <div class="context-note">
@@ -1024,7 +1024,7 @@ footer {
       <div class="card-body">
         <div class="card-title">HHU Strategic Research Fund — Plant Synthetic Genomics</div>
         <div class="card-desc">
-          Heinrich Heine University Strategic Research Fund awarded in support of Plant Synthetic Genomics. Third independent institutional body to fund the programme — alongside CEPLAS (2022) and JTF (2025). Demonstrates convergent institutional validation from three independent sources, strengthening the case for the next phase of competitive funding.
+          Heinrich Heine University Strategic Research Fund awarded in support of Plant Synthetic Genomics. Third independent institutional body to fund the programme — alongside CEPLAS (2022) and JTF (2025). Demonstrates convergent institutional validation from three independent sources, representing three independent institutional assessments of the programme.
         </div>
       </div>
     </div>
@@ -1081,10 +1081,10 @@ footer {
       <div class="card-body">
         <div class="card-title">42 kb three-fragment knock-in — ~50 colonies in antibiotic selection</div>
         <div class="card-desc">
-          42 kb synthetic chromosome body assembled <strong>directly in <em>P. patens</em> without yeast intermediary</strong> — the key technical distinction from all ARIA-funded approaches. Fluorescent marker colonies confirmed in antibiotic selection. Sequencing confirmation of correct integration imminent. <strong>Manuscript in preparation.</strong>
+          42 kb synthetic chromosome body assembled <strong>directly in <em>P. patens</em> without yeast intermediary</strong> — a technical distinction from yeast-based assembly approaches used by other groups. Fluorescent marker colonies confirmed in antibiotic selection. Sequencing confirmation of correct integration imminent. <strong>Manuscript in preparation.</strong>
         </div>
         <div class="context-note">
-          The Manchester synPAC consortium (£8.5M) uses yeast assembly to build synthetic chromosomes for transfer to potato. This experiment was assembled <strong>directly in moss</strong> without yeast intermediary — a technically distinct approach that no ARIA-funded group has demonstrated.
+          The Manchester synPAC consortium (£8.5M) uses yeast assembly to build synthetic chromosomes for transfer to potato. This experiment was assembled <strong>directly in moss</strong> without yeast intermediary — a technically distinct approach from yeast-based assembly.
         </div>
       </div>
     </div>
@@ -1118,12 +1118,12 @@ footer {
               <div class="evidence-title">KTS Application — GreenBITs</div>
               <div class="evidence-meta">Klaus Tschira Stiftung · Pioneering Research · PI: Dr Uriel Urquiza-García, HHU Düsseldorf</div>
               <div class="evidence-meta">Budget: €492,546 · Duration: 36 months · Status: Not awarded</div>
-              <div class="evidence-meta">Proposed reviewers: Prof. Daniel Schindler (Heidelberg) · Prof. Kelly Dawe (Georgia) · Prof. Ian Henderson (Cambridge) · Prof. Ralf Reski (Freiburg)</div>
+              <div class="evidence-meta">Proposed reviewers: specialists in synthetic chromosome biology, plant centromere biology, and synthetic genomics from Germany, USA, and Europe</div>
             </div>
           </div>
         </div>
         <div class="context-note">
-          <strong>Why this matters regardless of outcome:</strong> GreenBITs identifies <em>synthetic epigenomics</em> as the next layer of the plant synthetic chromosome programme — asking not just whether DNA can be inserted but whether its chromatin state can be pre-programmed before entry into the cell. WP3 directly addresses the most critical unknown in the centromere boot-up strategy: does pre-methylation of the synthetic centromere body increase CENH3 seeding efficiency? No other group in plant synthetic genomics is working at this layer. The reviewer list — Schindler, Dawe, Henderson, Reski — represents the four most relevant specialists globally.
+          <strong>Why this matters regardless of outcome:</strong> GreenBITs identifies <em>synthetic epigenomics</em> as the next layer of the plant synthetic chromosome programme — asking not just whether DNA can be inserted but whether its chromatin state can be pre-programmed before entry into the cell. WP3 directly addresses the most critical unknown in the centromere boot-up strategy: does pre-methylation of the synthetic centromere body increase CENH3 seeding efficiency? This layer of the programme is not addressed by other current approaches in plant synthetic genomics. The proposed reviewers represent leading specialists in the relevant fields.
         </div>
       </div>
     </div>
@@ -1139,13 +1139,13 @@ footer {
   <div class="card-right">
     <div class="card-inner gold-card">
       <div class="card-top">
-        <span class="card-tag tag-founding">Community recognition</span>
+        <span class="card-tag tag-founding">External recognition</span>
         <span class="card-evidence-badge">Faculty invitation</span>
       </div>
       <div class="card-body">
         <div class="card-title">Cold Spring Harbor Asia Synthetic Biology Course — invited faculty</div>
         <div class="card-desc">
-          Invited as <strong>faculty</strong> (not participant) to the CSHL Asia Synthetic Biology Course, Suzhou, 26 July – 9 August 2026. Organised by Junbiao Dai and Daniel Schindler. CSHL courses are highly curated; faculty slots represent a judgment by course organisers that the invitee is working at the frontier. Being invited before the major papers are published signals that the community is tracking based on trajectory, not just output — which is the criterion that matters for competitive funding at European level.
+          Invited as <strong>faculty</strong> (not participant) to the CSHL Asia Synthetic Biology Course, Suzhou, 26 July – 9 August 2026. Organised by Junbiao Dai and Daniel Schindler. CSHL courses are highly curated; faculty slots at CSHL courses are extended to researchers whose work is considered relevant to the field. This invitation preceded the major publications from the programme.
         </div>
       </div>
     </div>
@@ -1168,7 +1168,7 @@ footer {
         <div class="card-title">Manuscript in preparation + European-level funding in preparation</div>
         <div class="card-desc">
           <strong>Manuscript in preparation:</strong> First major plant synthetic genomics paper as corresponding author. 42 kb assembly without yeast intermediary. Will establish the assembly platform in the peer-reviewed record.<br><br>
-          <strong>New funding cycles in preparation:</strong> The programme is actively preparing applications for competitive funding at the European level, coordinated with the HHU grants office and CEPLAS. Three independent funding sources secured since November 2022. The synthetic chromosome body paper, once published, will be the cornerstone of the track record for the next funding phase.
+          <strong>New funding cycles in preparation:</strong> The programme is actively preparing applications for competitive funding at the European level, coordinated with the HHU grants office and CEPLAS. Three independent funding sources since November 2022. The synthetic chromosome body paper, once published, will strengthen the track record for the next funding phase.
         </div>
       </div>
     </div>
@@ -1184,7 +1184,7 @@ footer {
       <div class="comp-what"><strong>Nat Plants Jan 2024.</strong> Replaced 155 kb of chr18 short arm with redesigned synthetic sequence in P. patens — 55.8% reduction. Yeast TAR assembly. GenoDesigner platform. Goal: synthesise entire P. patens genome within 10 years. <em>Recoding paradigm (Sc2.0). Not a neochromosome — rewrites existing chromosome, does not create one. No centromere seeding strategy. Biological question vague: "explore the potential of creating artificial genomes for various applications." 10-year horizon with no specific falsifiable hypothesis.</em></div>
     </div>
     <div class="comp-item">
-      <div class="comp-who">Jake Harris · Cambridge · ARIA £6.6M (Jun 2025)</div>
+      <div class="comp-who">Cambridge team · ARIA £6.6M · Jun 2025</div>
       <div class="comp-what"><strong>"From Prototype to Production."</strong> Nuclear synthetic chromosome technology in crops. Potato focus (tetraploid, low HDR, months per cycle). <em>Framing implies transfer from non-plant prototype — not ground-up plant synthetic genomics. Three-year ARIA Phase One deadline in wrong chassis. No biological question stated. Crop improvement framing only. Potato biology makes the experiment fundamentally harder than P. patens.</em></div>
     </div>
     <div class="comp-item">
@@ -1193,11 +1193,11 @@ footer {
     </div>
     <div class="comp-item">
       <div class="comp-who">ARIA chloroplast teams ×6</div>
-      <div class="comp-what">Dunkelmann/MPI-MP (SyncSol), Purton/UCL (Synplastome 2.0), Kelly+Licausi/Oxford (OPTIMiSE), Sarkisyan/Syntato, Karas/Western, plus Cambridge chloroplast strand. <em>Plastid genome — small, prokaryotic-like, fundamentally different problem from nuclear chromosome engineering. Not competitors in this space.</em></div>
+      <div class="comp-what">Six teams across UK and international institutions working on synthetic plastid genomes in crop plants. <em>Plastid genome — small, prokaryotic-like, fundamentally different problem from nuclear chromosome engineering. Not competitors in this space.</em></div>
     </div>
     <div class="comp-item you-card">
       <div class="comp-who">Urquiza-García · HHU Düsseldorf / CEPLAS · Founded 25 Nov 2022</div>
-      <div class="comp-what"><strong>De novo synthetic neochromosome in P. patens — a chromosome that never existed before.</strong> Community-standard assembly throughout, no Gibson assembly, no yeast intermediary, no recoding. <strong>Original inducible centromere formation strategy</strong> — unpublished, no equivalent globally. Original synthetic telomere formation strategy — unpublished. <strong>Clock modularity hypothesis</strong> — specific, falsifiable biological question predating platform by a decade. Founded <strong>November 2022</strong>: 14 months before SynMoss published, 31 months before ARIA announced, 43 months before Cambridge and Manchester received funding. P. patens native HDR enables rapid iteration — weeks not months. 16 students trained across two pillars. 7 theses covering every essential chromosome component. <strong>42 kb knock-in in selection April 2026 — most advanced direct in-plant synthetic assembly without yeast intermediary.</strong></div>
+      <div class="comp-what"><strong>De novo synthetic neochromosome in P. patens — a chromosome that never existed before.</strong> Community-standard assembly throughout, no Gibson assembly, no yeast intermediary, no recoding. <strong>Original inducible centromere formation strategy</strong> — unpublished. Original synthetic telomere formation strategy — unpublished. <strong>Clock modularity hypothesis</strong> — specific, falsifiable biological question predating platform by a decade. Founded <strong>November 2022</strong>. SynMoss published January 2024. ARIA call opened September 2024. Cambridge and Manchester awards June 2025. P. patens native HDR enables rapid iteration — weeks not months. 16 students trained across two pillars. 7 theses covering every essential chromosome component. <strong>42 kb knock-in in selection April 2026 — direct in-plant synthetic assembly without yeast intermediary.</strong></div>
     </div>
   </div>
 </div>
@@ -1206,7 +1206,7 @@ footer {
 <div class="summary-box">
   <div class="summary-label">Evidentiary conclusion</div>
   <div class="summary-text">
-    The primary source record establishes that Plant Synthetic Genomics as a named, funded, institutionally recognised research programme was initiated at HHU Düsseldorf on <strong>25 November 2022</strong> — 22 months before ARIA validated the field with £62.4M. Three grants have been awarded from independent sources (CEPLAS, JTF, HHU SFF). Two further applications — VW Stiftung (€1.3M, programmable neocentromeres) and Klaus Tschira Stiftung (€492K, synthetic epigenomics/GreenBITs) — were not awarded but serve as timestamps: they prove that the frontier problems of the field were being identified and formally articulated here before any other group had framed them. GreenBITs in particular demonstrates that the programme had already extended into <strong>synthetic epigenomics</strong> — pre-patterning the chromatin state of synthetic DNA before integration — a layer no other plant synthetic genomics group is currently working at.
+    The primary source record establishes that Plant Synthetic Genomics as a named, funded, institutionally recognised research programme was initiated at HHU Düsseldorf on <strong>25 November 2022</strong> — before the UK Synthetic Plants programme (£62.4M) was announced. Three grants have been awarded from independent sources (CEPLAS, JTF, HHU SFF). Two further applications — VW Stiftung (€1.3M, programmable neocentromeres) and Klaus Tschira Stiftung (€492K, synthetic epigenomics/GreenBITs) — were not awarded but serve as timestamps: they prove threlevant to current developments in the field problems of the field were being identified and formally articulated here before the field had been named elsewhere had framed them. GreenBITs in particular demonstrates that the programme had already extended into <strong>synthetic epigenomics</strong> — pre-patterning the chromatin state of synthetic DNA before integration — a layer no other plant synthetic genomics group is currently working at.
   </div>
 </div>
 
