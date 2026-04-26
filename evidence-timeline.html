@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Plant Synthetic Genomics — Evidence Record | Uriel Urquiza-García</title>
 <meta name="description" content="Primary source evidence for the founding of Plant Synthetic Genomics as a research field by Dr Uriel Urquiza-García, HHU Düsseldorf, November 2022.">
-<meta name="keywords" content="Plant Synthetic Genomics, Uriel Urquiza-Garcia, synthetic chromosome, Physcomitrium patens, RepTiles, neocentromere, JTF Bottling Time, CEPLAS, HHU Düsseldorf">
+<meta name="keywords" content="Plant Synthetic Genomics, Uriel Urquiza-Garcia, synthetic chromosome, Physcomitrium patens, RepTiles, JTF Bottling Time, CEPLAS, HHU Düsseldorf">
 <meta name="author" content="Uriel Urquiza-García">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://jurquiza.github.io/evidence-timeline.html">
@@ -24,48 +24,46 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  /* ── Background ── */
-  --sand:        #fafaf8;
-  --white:       #ffffff;
-  --moss-wash:   #e8f0ec;
+  --bg:            #fafaf8;
+  --card-bg:       #ffffff;
+  --moss-wash:     #e8f0ec;
 
-  /* ── Text ── */
-  --ink:         #1a1a18;
-  --ink-light:   #555550;
-  --ink-faint:   #6a6a66;
-  --ink-ghost:   #b8b0a8;   /* decorative/borders only */
+  --text:          #1a1a18;
+  --text-secondary:#555550;
+  --text-faint:    #6a6a66;
+  --text-ghost:    #b8b0a8;
 
-  /* ── Moss green (matches index) ── */
-  --moss:        #2d6a4f;
-  --moss-light:  #3d8a6a;
-  --moss-pale:   #e8f0ec;
-  --moss-mid:    #3d8a6a;
+  --accent:        #2d6a4f;
+  --accent-light:  #e8f0ec;
+  --accent-dark:   #1b4332;
+  --accent-mid:    #3d8a6a;
 
-  /* ── Accent gold ── */
-  --accent:      #7a5a10;
-  --accent-pale: #f9f3e6;
-  --accent-mid:  #8b6914;
+  --gold:          #7a5a10;
+  --gold-pale:     #f9f3e6;
+  --gold-mid:      #8b6914;
 
-  /* ── Semantic ── */
-  --blue:        #1a4a8a;
-  --blue-pale:   #edf2fa;
-  --teal:        #1a6a60;
-  --teal-pale:   #e8f6f4;
-  --red:         #8c2020;
-  --red-pale:    #fdf0f0;
-  --future:      #6a6a66;
+  --border:        #d4d4cf;
+  --border-light:  #e8e8e4;
+  --rule:          rgba(45,106,79,0.10);
+  --rule-mid:      rgba(45,106,79,0.18);
 
-  /* ── Rules / borders ── */
-  --rule:        rgba(45,106,79,0.10);
-  --rule-mid:    rgba(45,106,79,0.18);
+  --blue:          #1a4a8a;
+  --blue-pale:     #edf2fa;
+  --teal:          #1a6a60;
+  --teal-pale:     #e8f6f4;
+  --red:           #8c2020;
+  --red-pale:      #fdf0f0;
+  --purple:        #5a2878;
+  --purple-pale:   #f4edfb;
+  --future:        #6a6a66;
 
-  /* ── Night (dark panels) ── */
-  --night:       #1a1a18;
-  --night-mid:   #2a2a28;
-  --night-text:  #ede8de;
-  --night-dim:   #8a8a8a;
+  --night:         #1a1a18;
+  --night-mid:     #2a2a28;
+  --night-text:    #ede8de;
+  --night-dim:     #8a8a8a;
 
-  /* ── Typography ── */
+  --title-brown:   #6b3a18;
+
   --serif:  'Source Serif 4', Georgia, serif;
   --sans:   'DM Sans', system-ui, sans-serif;
 }
@@ -74,7 +72,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: #ffffff;
+  background: var(--bg);
   color: #1a1a18;
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
@@ -99,7 +97,7 @@ body::after {
   position: relative;
   padding: 56px 48px 48px;
   border-bottom: 1px solid var(--rule);
-  background: linear-gradient(to bottom, var(--night-mid), var(--ink));
+  background: linear-gradient(to bottom, var(--night-mid), var(--text));
   z-index: 1;
 }
 
@@ -116,7 +114,7 @@ body::after {
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--moss);
+  color: var(--gold);
   margin-bottom: 16px;
 }
 
@@ -133,12 +131,12 @@ body::after {
 .header-title em {
   font-style: italic;
   font-weight: 300;
-  color: var(--moss);
+  color: var(--gold);
 }
 
 .header-subtitle {
   font-size: 15px;
-  color: var(--ink-light);
+  color: var(--text-secondary);
   max-width: 540px;
   margin-top: 14px;
   line-height: 1.65;
@@ -152,7 +150,7 @@ body::after {
 }
 
 .stat {
-  border-left: 2px solid var(--moss-pale);
+  border-left: 2px solid var(--accent-light);
   padding-left: 14px;
 }
 
@@ -160,7 +158,7 @@ body::after {
   font-family: 'Source Serif 4', serif;
   font-size: 22px;
   font-weight: 600;
-  color: var(--moss);
+  color: var(--gold);
   line-height: 1;
 }
 
@@ -169,7 +167,7 @@ body::after {
   font-size: 9px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ink-light);
+  color: var(--text-secondary);
   margin-top: 4px;
 }
 
@@ -193,7 +191,7 @@ body::after {
   font-size: 9px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--ink-faint);
+  color: var(--text-faint);
   margin-right: 4px;
 }
 
@@ -205,19 +203,19 @@ body::after {
   padding: 5px 12px;
   border: 1px solid var(--rule);
   background: transparent;
-  color: var(--ink-light);
+  color: var(--text-secondary);
   cursor: pointer;
   border-radius: 2px;
   transition: all 0.2s;
 }
 
 .filter-btn:hover, .filter-btn.active {
-  border-color: var(--moss);
-  color: var(--moss);
+  border-color: var(--gold);
+  color: var(--gold);
   background: var(--rule);
 }
 
-.filter-btn[data-filter="funding"].active { border-color: var(--accent); color: var(--accent); background: var(--accent-pale); }
+.filter-btn[data-filter="funding"].active { border-color: var(--gold); color: var(--gold); background: var(--gold-pale); }
 .filter-btn[data-filter="publication"].active { border-color: var(--blue); color: var(--blue); background: var(--blue-pale); }
 .filter-btn[data-filter="field"].active { border-color: var(--red); color: var(--red); background: var(--red-pale); }
 .filter-btn[data-filter="experiment"].active { border-color: var(--purple); color: var(--purple); background: rgba(90,40,120,0.08); }
@@ -237,7 +235,7 @@ body::after {
   font-family: 'Source Serif 4', serif;
   font-size: clamp(48px, 8vw, 80px);
   font-weight: 900;
-  color: var(--ink-faint);
+  color: var(--text-faint);
   letter-spacing: -0.04em;
   line-height: 1;
   margin-bottom: -8px;
@@ -281,7 +279,7 @@ body::after {
   font-size: 10px;
   font-weight: 400;
   letter-spacing: 0.1em;
-  color: var(--ink-light);
+  color: var(--text-secondary);
   text-transform: uppercase;
   line-height: 1.4;
 }
@@ -294,13 +292,13 @@ body::after {
   height: 14px;
   border-radius: 50%;
   background: var(--moss-wash);
-  border: 2px solid var(--moss);
+  border: 2px solid var(--gold);
   z-index: 2;
   transition: transform 0.2s;
 }
 
-.card-dot.gold { border-color: var(--accent); background: var(--accent); }
-.card-dot.founding { border-color: var(--accent); background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+.card-dot.gold { border-color: var(--gold); background: var(--gold); }
+.card-dot.founding { border-color: var(--gold); background: var(--gold); box-shadow: 0 0 12px var(--gold); }
 .card-dot.blue { border-color: var(--blue); }
 .card-dot.red { border-color: var(--red); }
 .card-dot.purple { border-color: var(--purple); }
@@ -323,9 +321,9 @@ body::after {
   box-shadow: 0 4px 24px rgba(0,0,0,0.3);
 }
 
-.card-inner.moss-card:hover { border-color: var(--moss-pale); box-shadow: 0 4px 24px var(--rule); }
-.card-inner.gold-card { border-color: var(--accent-pale); }
-.card-inner.gold-card:hover { border-color: var(--accent); box-shadow: 0 4px 32px var(--accent-pale); }
+.card-inner.moss-card:hover { border-color: var(--accent-light); box-shadow: 0 4px 24px var(--rule); }
+.card-inner.gold-card { border-color: var(--gold-pale); }
+.card-inner.gold-card:hover { border-color: var(--gold); box-shadow: 0 4px 32px var(--gold-pale); }
 .card-inner.red-card:hover { border-color: #7a2020; box-shadow: 0 4px 24px var(--red-pale); }
 .card-inner.blue-card:hover { border-color: #1a5276; box-shadow: 0 4px 24px var(--blue-pale); }
 .card-inner.purple-card:hover { border-color: #4a2060; box-shadow: 0 4px 24px rgba(90,40,120,0.08); }
@@ -350,19 +348,19 @@ body::after {
   flex-shrink: 0;
 }
 
-.tag-founding { background: rgba(201,168,76,0.15); color: var(--accent); border: 1px solid var(--accent-pale); }
-.tag-funding { background: rgba(74,143,95,0.12); color: var(--moss); border: 1px solid var(--moss-pale); }
+.tag-founding { background: rgba(201,168,76,0.15); color: var(--gold); border: 1px solid var(--gold-pale); }
+.tag-funding { background: rgba(74,143,95,0.12); color: var(--gold); border: 1px solid var(--accent-light); }
 .tag-publication { background: rgba(46,134,193,0.12); color: var(--blue); border: 1px solid #1a3a5a; }
 .tag-field { background: rgba(192,57,43,0.1); color: #e05540; border: 1px solid #5a2020; }
 .tag-experiment { background: rgba(125,60,152,0.12); color: #a060c0; border: 1px solid #4a2060; }
-.tag-future { background: rgba(64,64,72,0.3); color: var(--ink-light); border: 1px solid var(--rule); }
+.tag-future { background: rgba(64,64,72,0.3); color: var(--text-secondary); border: 1px solid var(--rule); }
 .tag-attempted { background: rgba(120,120,140,0.15); color: #9090a8; border: 1px solid rgba(120,120,140,0.3); }
 
 .card-evidence-badge {
   font-family: 'DM Mono', monospace;
   font-size: 9px;
   letter-spacing: 0.1em;
-  color: var(--ink-faint);
+  color: var(--text-faint);
   text-transform: uppercase;
 }
 
@@ -374,7 +372,7 @@ body::after {
   font-family: 'Source Serif 4', serif;
   font-size: 17px;
   font-weight: 600;
-  color: #fff;
+  color: var(--title-brown);
   line-height: 1.3;
   margin-bottom: 8px;
 }
@@ -382,11 +380,11 @@ body::after {
 .card-desc {
   font-size: 13px;
   line-height: 1.7;
-  color: var(--ink-light);
+  color: var(--text-secondary);
 }
 
 .card-desc strong { color: #1a1a18; font-weight: 500; }
-.card-desc em { color: var(--moss); font-style: italic; }
+.card-desc em { color: var(--gold); font-style: italic; }
 
 /* ── DOCUMENT EVIDENCE ── */
 .card-evidence {
@@ -402,7 +400,7 @@ body::after {
   font-size: 9px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ink-faint);
+  color: var(--text-faint);
   margin-bottom: 10px;
 }
 
@@ -449,16 +447,16 @@ body::after {
 .evidence-meta {
   font-family: 'DM Mono', monospace;
   font-size: 10px;
-  color: var(--ink-faint);
+  color: var(--text-faint);
   line-height: 1.4;
 }
 
 .evidence-link {
   font-family: 'DM Mono', monospace;
   font-size: 10px;
-  color: var(--moss);
+  color: var(--gold);
   text-decoration: none;
-  border-bottom: 1px solid var(--moss-pale);
+  border-bottom: 1px solid var(--accent-light);
   margin-top: 3px;
   display: inline-block;
   transition: opacity 0.2s;
@@ -471,13 +469,13 @@ body::after {
   margin-top: 10px;
   padding: 10px 14px;
   background: rgba(201,168,76,0.06);
-  border-left: 2px solid var(--accent-pale);
+  border-left: 2px solid var(--gold-pale);
   font-size: 12px;
   color: #8a7a50;
   line-height: 1.6;
 }
 
-.context-note strong { color: var(--accent); }
+.context-note strong { color: var(--gold); }
 
 /* ── COMPETITIVE LANDSCAPE ── */
 .competitive-section {
@@ -518,13 +516,13 @@ body::after {
   font-size: 9px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink-faint);
+  color: var(--text-faint);
   margin-bottom: 6px;
 }
 
 .comp-what {
   font-size: 12px;
-  color: var(--ink-light);
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -532,19 +530,19 @@ body::after {
 .comp-what em { color: #e05540; font-style: normal; font-weight: 500; }
 
 .comp-item.you-card {
-  border-color: var(--moss-pale);
+  border-color: var(--accent-light);
   background: var(--rule);
   grid-column: 1 / -1;
 }
 
-.comp-item.you-card .comp-what strong { color: var(--moss); }
+.comp-item.you-card .comp-what strong { color: var(--gold); }
 
 /* ── SUMMARY BOX ── */
 .summary-box {
   margin-top: 52px;
   padding: 32px 36px;
-  border: 1px solid var(--accent-pale);
-  background: var(--accent-pale);
+  border: 1px solid var(--gold-pale);
+  background: var(--gold-pale);
   opacity: 0;
   animation: fadeUp 0.8s ease forwards 2.2s;
 }
@@ -554,7 +552,7 @@ body::after {
   font-size: 9px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--gold);
   margin-bottom: 14px;
 }
 
@@ -566,7 +564,7 @@ body::after {
   color: #1a1a18;
 }
 
-.summary-text strong { font-style: normal; color: var(--accent); }
+.summary-text strong { font-style: normal; color: var(--gold); }
 
 /* ── FOOTER ── */
 footer {
@@ -586,7 +584,7 @@ footer {
   font-family: 'DM Mono', monospace;
   font-size: 10px;
   letter-spacing: 0.1em;
-  color: var(--ink-faint);
+  color: var(--text-faint);
 }
 
 .footer-links { display: flex; gap: 20px; }
@@ -595,7 +593,7 @@ footer {
   font-family: 'DM Mono', monospace;
   font-size: 10px;
   letter-spacing: 0.08em;
-  color: var(--moss);
+  color: var(--gold);
   text-decoration: none;
   text-transform: uppercase;
   transition: opacity 0.2s;
@@ -640,7 +638,7 @@ footer {
   .card-body { padding: 12px 14px 14px; }
   .card-evidence { padding: 10px 12px; }
   .evidence-item { flex-direction: column; gap: 6px; }
-  .card-title { font-size: 15px; }
+  .card-title { font-size: 15px; color: var(--title-brown); }
 
 </style>
 </head>
@@ -702,8 +700,9 @@ footer {
 <!-- MAIN -->
 <main class="page">
 
-<div class="year-marker">2022</div>
 
+
+<div class="year-marker">2022</div>
 <!-- CARD 1: CEPLAS Seed Fund submitted -->
 <div class="evidence-card" data-categories="founding funding">
   <div class="card-left">
@@ -719,7 +718,7 @@ footer {
       <div class="card-body">
         <div class="card-title">CEPLAS Seed Fund submitted — "Plant Synthetic Genomics" named</div>
         <div class="card-desc">
-          Application submitted to the CEPLAS Steering Committee. Title: <strong>"Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in <em>Physcomitrium patens</em>."</strong> Three work packages: (1) tool validation in moss, (2) centromere characterisation by ChIP-seq and long-read sequencing, (3) neochromosome assembly, delivery and functional characterisation. Budget: <strong>€23,602</strong>. This is the earliest verifiable use of "Plant Synthetic Genomics" as a named, funded research programme.
+          Application submitted to the CEPLAS Steering Committee. Title: <strong>"Laying the foundations for plant synthetic genomics by creating a Plant Artificial Chromosome in <em>Physcomitrium patens</em>."</strong> Three work packages: (1) tool validation in moss, (2) characterisation of chromosomal elements required for artificial chromosome construction, (3) neochromosome assembly, delivery and functional characterisation. Budget: <strong>€23,602</strong>. This is the earliest verifiable use of "Plant Synthetic Genomics" as a named, funded research programme.
         </div>
         <div class="card-evidence">
           <div class="evidence-header">📄 Primary source documents</div>
@@ -774,6 +773,10 @@ footer {
 
 <div class="year-marker" style="animation-delay:0.3s">2023 — 2024</div>
 
+
+
+
+
 <!-- CARD 3: Platform development -->
 <div class="evidence-card" data-categories="experiment">
   <div class="card-left">
@@ -787,15 +790,17 @@ footer {
         <span class="card-evidence-badge">Ongoing</span>
       </div>
       <div class="card-body">
-        <div class="card-title">Two years of platform development — assembly platform, centromere strategy, integration system</div>
+        <div class="card-title">Two years of platform development — assembly platform, integration system, chromosome engineering strategy</div>
         <div class="card-desc">
           <strong>Assembly methodology:</strong> RepTiles developed as a community-standard assembly platform for plant synthetic genomics. Direct synthesis without Gibson assembly. Iterative integration system for progressive large-DNA insertion into the plant genome developed and validated.<br><br>
-          <strong>Centromere strategy:</strong> Original inducible CENH3 seeding strategy developed — using programmable targeting and light-controlled dose control. Preliminary evidence for centromere protein recruitment at synthetic loci in <em>P. patens</em> nuclei. Synthetic telomere formation strategy designed. Both unpublished and without equivalent in any other group.
+          <strong>Chromosome engineering strategy:</strong> Original approaches for both centromere formation and telomere stabilisation on synthetic DNA developed — both unpublished and currently under development.
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
 
 <!-- CARD 4: VW Stiftung -->
 <div class="evidence-card" data-categories="funding">
@@ -812,7 +817,7 @@ footer {
       <div class="card-body">
         <div class="card-title">Volkswagen Stiftung — Pioneering Research Exploration</div>
         <div class="card-desc">
-          Pre-proposal submitted with co-applicant <strong>Dr André Marques</strong> (MPI Plant Breeding Research, Department of Chromosome Biology, Cologne). Application No. S144719. Title: <strong>"Engineering of Programmable Neocentromeres for Higher Eukaryotes."</strong> Budget: <strong>€1,299,400 over 48 months.</strong> Programme: Pioneering Research Exploration ("Unknowns Unknowns"). The holocentric chromosome angle — Marques' expertise — provides the evolutionary comparison for centromere specification requirements across eukaryotic diversity. Application not awarded but establishes the neocentromere problem as independently fundable at pioneering research scale, with the right cytogenetics collaborator, on the same day ARIA opened its call.
+          Pre-proposal submitted with co-applicant <strong>Dr André Marques</strong> (MPI Plant Breeding Research, Department of Chromosome Biology, Cologne). Application No. S144719. Title: <strong>"Engineering of Programmable Neocentromeres for Higher Eukaryotes."</strong> Budget: <strong>€1,299,400 over 48 months.</strong> Programme: Pioneering Research Exploration ("Unknowns Unknowns"). The holocentric chromosome angle — Marques' expertise — provides the evolutionary comparison for centromere specification requirements across eukaryotic diversity. Application not awarded. Submitted 3 September 2024 — the same day ARIA opened its Synthetic Plants call.
         </div>
         <div class="card-evidence">
           <div class="evidence-header">📄 Primary source</div>
@@ -827,7 +832,7 @@ footer {
           </div>
         </div>
         <div class="context-note">
-          Submitted the <strong>same month</strong> ARIA opened its Synthetic Plants call. Demonstrates independent identification of programmable neocentromeres as a frontier problem, with the right collaborator, before ARIA validated the space with £62.4M.
+          Submitted the <strong>same month</strong> ARIA opened its Synthetic Plants call. Establishes a timestamp: this problem was being formally articulated and developed in Düsseldorf before ARIA opened its call.
         </div>
       </div>
     </div>
@@ -869,43 +874,14 @@ footer {
 
 <div class="year-marker" style="animation-delay:0.5s">2025</div>
 
-<!-- CARD 6: MSB paper -->
-<div class="evidence-card" data-categories="publication">
-  <div class="card-left">
-    <div class="card-date">2025<br>MSB</div>
-    <div class="card-dot blue"></div>
-  </div>
-  <div class="card-right">
-    <div class="card-inner blue-card">
-      <div class="card-top">
-        <span class="card-tag tag-publication">Publication</span>
-        <span class="card-evidence-badge">Peer-reviewed</span>
-      </div>
-      <div class="card-body">
-        <div class="card-title">Molecular Systems Biology 2025 — absolute clock protein quantification</div>
-        <div class="card-desc">
-          Urquiza-García U, Molina N, Halliday KJ & Millar AJ. <em>Molecular Systems Biology</em> (2025). <strong>First absolute quantification of transcription factor proteins in any plant system.</strong> NanoLUC translational fusions, ODE models in absolute units, sequence-to-affinity pipeline. Provides the quantitative readout infrastructure embedded into the JTF experimental logic — the measurement system built before the experiment it was designed to read.
-        </div>
-        <div class="card-evidence">
-          <div class="evidence-header">🔗 Published record</div>
-          <div class="evidence-item">
-            <div class="evidence-icon icon-pub">📰</div>
-            <div class="evidence-content">
-              <div class="evidence-title">Abundant clock proteins point to missing molecular regulation in the plant circadian clock</div>
-              <div class="evidence-meta">Molecular Systems Biology · 2025</div>
-              <a class="evidence-link" href="https://doi.org/10.1038/s44320-025-00086-5" target="_blank" rel="noopener">doi.org/10.1038/s44320-025-00086-5 →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+
+
 
 <!-- CARD 7a: JTF Full Proposal Invitation -->
 <div class="evidence-card" data-categories="funding">
   <div class="card-left">
-    <div class="card-date">2024<br>JTF<br>invite</div>
+    <div class="card-date">2025<br>JTF<br>proposal</div>
     <div class="card-dot gold"></div>
   </div>
   <div class="card-right">
@@ -939,92 +915,39 @@ footer {
   </div>
 </div>
 
-<!-- CARD 7b: JTF Award -->
-<div class="evidence-card" data-categories="funding">
+<!-- CARD 10b: GreenBITs KTS — not awarded -->
+<div class="evidence-card" data-categories="funding attempted">
   <div class="card-left">
-    <div class="card-date">2025<br>JTF</div>
-    <div class="card-dot gold"></div>
-  </div>
-  <div class="card-right">
-    <div class="card-inner gold-card">
-      <div class="card-top">
-        <span class="card-tag tag-founding">★ Major grant awarded</span>
-        <span class="card-evidence-badge">Primary source · Awarded</span>
-      </div>
-      <div class="card-body">
-        <div class="card-title">John Templeton Foundation — "Bottling Time" — awarded</div>
-        <div class="card-desc">
-          Grant ID 63576. Title: <strong>"Bottling Time: Reconstructing a Moss's Inner Clock Through Synthetic Genomics."</strong> Hypothesis: <em>The circadian clock is a modular and genetically portable system whose function does not depend on its native genomic architecture or chromosomal context.</em> Four work packages: (1) systematic clock dissection in P. patens, (2) stepwise clock relocation to protoneochromosome locus, (3) centromere activation and clock neochromosome excision, (4) episomal TAR-assembled clock variants. JTF does not fund incremental science — award signals external, independent judgment that the question is genuinely foundational. This grant unifies the Edinburgh clock quantification lineage and the Düsseldorf synthetic chromosome lineage into a single programme.
-        </div>
-        <div class="card-evidence">
-          <div class="evidence-header">📄 Primary sources</div>
-          <div class="evidence-item">
-            <div class="evidence-icon icon-award">🏆</div>
-            <div class="evidence-content">
-              <div class="evidence-title">JTF Grant ID 63576 — Award</div>
-              <div class="evidence-meta">John Templeton Foundation · Life Science Programme · Awarded 2025</div>
-            </div>
-          </div>
-          <div class="evidence-item">
-            <div class="evidence-icon icon-letter">📬</div>
-            <div class="evidence-content">
-              <div class="evidence-title">HHU Rektorat Congratulatory Letter — Zuwendungsbescheid F-2025/2948</div>
-              <div class="evidence-meta">Signed: Prof. Dr. Dr. Dr. Andrea Icks, Prorektorin für Forschung und Transfer · 2 February 2026</div>
-              <div class="evidence-meta">Address line: <strong>"Synthetic Biology – Plant Synthetic Genomics"</strong> — institutional ratification of field name</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CARD 7c: Funding preparation -->
-<div class="evidence-card" data-categories="funding">
-  <div class="card-left">
-    <div class="card-date">2026<br>Funding<br>prep</div>
+    <div class="card-date">2025<br>KTS</div>
     <div class="card-dot future"></div>
   </div>
   <div class="card-right">
     <div class="card-inner">
       <div class="card-top">
-        <span class="card-tag tag-future">In preparation</span>
-        <span class="card-evidence-badge">in preparation</span>
+        <span class="card-tag tag-attempted">Application · Not awarded</span>
+        <span class="card-evidence-badge">Primary source · KTS</span>
       </div>
       <div class="card-body">
-        <div class="card-title">New funding cycles in preparation — European-level competitive grants</div>
+        <div class="card-title">Klaus Tschira Stiftung — GreenBITs: Synthetic Epigenomics in <em>P. patens</em></div>
         <div class="card-desc">
-          Applications for new funding cycles are being prepared in coordination with the HHU grants office and CEPLAS. The programme's track record includes three independent funding sources since November 2022, the RepTiles preprint, 16 supervised students, and external recognition including the CSHL Asia faculty invitation. Key elements of the track record:<br><br>
-          <strong>Founding date:</strong> CEPLAS seed fund November 2022. ARIA call opened September 2024.<br>
-          <strong>Independent funding:</strong> CEPLAS + JTF + HHU SFF — three sources, three independent assessments.<br>
-          <strong>External recognition:</strong> CSHL Asia faculty invitation, JTF competitive selection, HHU institutional ratification.<br>
-          <strong>Technical approach:</strong> No Gibson assembly, no yeast intermediary, community-standard parts throughout, original inducible centromere formation strategy, original synthetic telomere strategy.<br>
-          <strong>Biological question:</strong> Clock modularity hypothesis predating platform by a decade — the question that made the platform necessary.
+          Application to Klaus Tschira Stiftung. Title: <strong>"GreenBITs: Programmable Epigenetic Pre-patterning and Loading of Large DNA in the Moss <em>Physcomitrium patens</em>."</strong> PI: Uriel Urquiza-García. Budget: <strong>€492,546 over 36 months</strong> (June 2026 – May 2029). Not awarded.<br><br>
+          Four work packages: <strong>WP1</strong> — Write, integrate, read: in vitro enzymatic methylation on synthetic DNA, persistence monitored across clonal and sexual propagation. <strong>WP2</strong> — Programmable typesetting and design rules: epi-BITs on random DNA and synthetic promoters, ML design rules. <strong>WP3</strong> — Centromere formation: tests whether pre-programmed chromatin state on synthetic DNA influences chromosome identity establishment. <strong>WP4</strong> — EpiCAD: open-source software and standards for biodesign automation of methylation states.<br><br>
+          <strong>Future vision:</strong> Epigenetic Design & Deployment Platform — computational design tools, a foundry for enzymatic epigenetic writing at chromosome scale, and a parts registry annotated with epigenetic response data.
+        </div>
+        <div class="card-evidence">
+          <div class="evidence-header">📄 Primary source · Proposed reviewers</div>
+          <div class="evidence-item">
+            <div class="evidence-icon icon-grant">📝</div>
+            <div class="evidence-content">
+              <div class="evidence-title">KTS Application — GreenBITs</div>
+              <div class="evidence-meta">Klaus Tschira Stiftung · Pioneering Research · PI: Dr Uriel Urquiza-García, HHU Düsseldorf</div>
+              <div class="evidence-meta">Budget: €492,546 · Duration: 36 months · Status: Not awarded</div>
+              <div class="evidence-meta">Proposed reviewers: specialists in synthetic chromosome biology, plant centromere biology, and synthetic genomics from Germany, USA, and Europe</div>
+            </div>
+          </div>
         </div>
         <div class="context-note">
-          The synthetic chromosome body paper, once published, will transform the application from a vision with preliminary data to a vision with a demonstrated platform — the single most important near-term milestone for the next funding phase.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CARD 8: HHU SFF -->
-<div class="evidence-card" data-categories="funding">
-  <div class="card-left">
-    <div class="card-date">2025<br>HHU</div>
-    <div class="card-dot"></div>
-  </div>
-  <div class="card-right">
-    <div class="card-inner moss-card">
-      <div class="card-top">
-        <span class="card-tag tag-funding">Institutional funding</span>
-        <span class="card-evidence-badge">Awarded</span>
-      </div>
-      <div class="card-body">
-        <div class="card-title">HHU Strategic Research Fund — Plant Synthetic Genomics</div>
-        <div class="card-desc">
-          Heinrich Heine University Strategic Research Fund awarded in support of Plant Synthetic Genomics. Third independent institutional body to fund the programme — alongside CEPLAS (2022) and JTF (2025). Demonstrates convergent institutional validation from three independent sources, representing three independent institutional assessments of the programme.
+          <strong>Why this matters regardless of outcome:</strong> GreenBITs identifies <em>synthetic epigenomics</em> as the next layer of the plant synthetic chromosome programme — asking not just whether DNA can be inserted but whether its chromatin state can be pre-programmed before entry into the cell. WP3 addresses a key question: does the chromatin state of synthetic DNA influence chromosome identity establishment? This layer of the programme is not addressed by other current approaches in plant synthetic genomics. The proposed reviewers represent leading specialists in the relevant fields.
         </div>
       </div>
     </div>
@@ -1034,7 +957,7 @@ footer {
 <!-- CARD 9: RepTiles -->
 <div class="evidence-card" data-categories="publication">
   <div class="card-left">
-    <div class="card-date">Feb<br>2025</div>
+    <div class="card-date">2 Mar<br>2025</div>
     <div class="card-dot blue"></div>
   </div>
   <div class="card-right">
@@ -1066,6 +989,105 @@ footer {
 
 <div class="year-marker" style="animation-delay:0.8s">2026</div>
 
+<!-- CARD 6: MSB paper -->
+<div class="evidence-card" data-categories="publication">
+  <div class="card-left">
+    <div class="card-date">2 Apr<br>2025</div>
+    <div class="card-dot blue"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner blue-card">
+      <div class="card-top">
+        <span class="card-tag tag-publication">Publication</span>
+        <span class="card-evidence-badge">Peer-reviewed</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Molecular Systems Biology 2025 — absolute clock protein quantification</div>
+        <div class="card-desc">
+          Urquiza-García U, Molina N, Halliday KJ & Millar AJ. <em>Molecular Systems Biology</em> (2025). <strong>First absolute quantification of transcription factor proteins in any plant system.</strong> NanoLUC translational fusions, ODE models in absolute units, sequence-to-affinity pipeline. Provides the quantitative readout infrastructure embedded into the JTF experimental logic — the measurement system built before the experiment it was designed to read.
+        </div>
+        <div class="card-evidence">
+          <div class="evidence-header">🔗 Published record</div>
+          <div class="evidence-item">
+            <div class="evidence-icon icon-pub">📰</div>
+            <div class="evidence-content">
+              <div class="evidence-title">Abundant clock proteins point to missing molecular regulation in the plant circadian clock</div>
+              <div class="evidence-meta">Molecular Systems Biology · Vol. 21, No. 4 · 2 April 2025</div>
+              <a class="evidence-link" href="https://doi.org/10.1038/s44320-025-00086-5" target="_blank" rel="noopener">doi.org/10.1038/s44320-025-00086-5 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 8: HHU SFF -->
+<div class="evidence-card" data-categories="funding">
+  <div class="card-left">
+    <div class="card-date">31 Jul<br>2025</div>
+    <div class="card-dot"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner moss-card">
+      <div class="card-top">
+        <span class="card-tag tag-funding">Institutional funding</span>
+        <span class="card-evidence-badge">Awarded</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">HHU Strategic Research Fund — Plant Synthetic Genomics</div>
+        <div class="card-desc">
+          Heinrich Heine University Strategic Research Fund awarded to the Plant Synthetic Genomics programme. Presentation to SFF committee (Beirat): 21 July 2025. Rektorat decision (718. Sitzung): 31 July 2025. Award notification: 8 August 2025. Third independent institutional body to fund the programme alongside CEPLAS (2022) and JTF (2025–26).
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 7b: JTF Award -->
+<div class="evidence-card" data-categories="funding">
+  <div class="card-left">
+    <div class="card-date">16 Oct<br>2025</div>
+    <div class="card-dot gold"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner gold-card">
+      <div class="card-top">
+        <span class="card-tag tag-founding">★ Major grant awarded</span>
+        <span class="card-evidence-badge">Primary source · Awarded</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">John Templeton Foundation — "Bottling Time" — awarded</div>
+        <div class="card-desc">
+          Grant ID 63576. Title: <strong>"Bottling Time: Reconstructing a Moss's Inner Clock Through Synthetic Genomics."</strong> Hypothesis: <em>The circadian clock is a modular and genetically portable system whose function does not depend on its native genomic architecture or chromosomal context.</em> Four work packages addressing: clock gene quantification in <em>P. patens</em>, stepwise clock relocation to a synthetic locus, synthetic chromosome formation and excision, and episomal clock reconstitution as an independent test. JTF does not fund incremental science — award signals external, independent judgment that the question is genuinely foundational. This grant unifies the Edinburgh clock quantification lineage and the Düsseldorf synthetic chromosome lineage into a single programme.
+        </div>
+        <div class="card-evidence">
+          <div class="evidence-header">📄 Primary sources</div>
+          <div class="evidence-item">
+            <div class="evidence-icon icon-award">🏆</div>
+            <div class="evidence-content">
+              <div class="evidence-title">JTF Grant ID 63576 — Award</div>
+              <div class="evidence-meta">JTF approval: 16 October 2025 · Legal negotiations: Oct 2025 – Jan 2026 · Final signature: late January 2026</div>
+            </div>
+          </div>
+          <div class="evidence-item">
+            <div class="evidence-icon icon-letter">📬</div>
+            <div class="evidence-content">
+              <div class="evidence-title">HHU Rektorat Congratulatory Letter — Zuwendungsbescheid F-2025/2948</div>
+              <div class="evidence-meta">Signed: Prof. Dr. Dr. Dr. Andrea Icks, Prorektorin für Forschung und Transfer · 2 February 2026</div>
+              <div class="evidence-meta">Address line: <strong>"Synthetic Biology – Plant Synthetic Genomics"</strong> — institutional ratification of field name</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 <!-- CARD 10: 42kb experiment -->
 <div class="evidence-card" data-categories="experiment">
   <div class="card-left">
@@ -1091,61 +1113,30 @@ footer {
   </div>
 </div>
 
-<!-- CARD 10b: GreenBITs KTS — not awarded -->
-<div class="evidence-card" data-categories="funding attempted">
+<!-- CARD 7c: Funding preparation -->
+<div class="evidence-card" data-categories="funding">
   <div class="card-left">
-    <div class="card-date">2026<br>KTS</div>
+    <div class="card-date">2026</div>
     <div class="card-dot future"></div>
   </div>
   <div class="card-right">
     <div class="card-inner">
       <div class="card-top">
-        <span class="card-tag tag-attempted">Application · Not awarded</span>
-        <span class="card-evidence-badge">Primary source · KTS</span>
+        <span class="card-tag tag-future">In preparation</span>
+        <span class="card-evidence-badge">in preparation</span>
       </div>
       <div class="card-body">
-        <div class="card-title">Klaus Tschira Stiftung — GreenBITs: Synthetic Epigenomics in <em>P. patens</em></div>
+        <div class="card-title">New funding cycles in preparation — European-level competitive grants</div>
         <div class="card-desc">
-          Application to Klaus Tschira Stiftung. Title: <strong>"GreenBITs: Programmable Epigenetic Pre-patterning and Loading of Large DNA in the Moss <em>Physcomitrium patens</em>."</strong> PI: Uriel Urquiza-García. Budget: <strong>€492,546 over 36 months</strong> (June 2026 – May 2029). Not awarded.<br><br>
-          Four work packages: <strong>WP1</strong> — Write, integrate, read: in vitro enzymatic methylation on synthetic DNA, persistence monitored across clonal and sexual propagation. <strong>WP2</strong> — Programmable typesetting and design rules: epi-BITs on random DNA and synthetic promoters, ML design rules. <strong>WP3</strong> — Centromere formation: tests whether pre-programmed methylation state modulates inducible centromere formation on synthetic DNA. <strong>WP4</strong> — EpiCAD: open-source software and standards for biodesign automation of methylation states.<br><br>
-          <strong>Future vision:</strong> Epigenetic Design & Deployment Platform — computational design tools, a foundry for enzymatic epigenetic writing at chromosome scale, and a parts registry annotated with epigenetic response data.
-        </div>
-        <div class="card-evidence">
-          <div class="evidence-header">📄 Primary source · Proposed reviewers</div>
-          <div class="evidence-item">
-            <div class="evidence-icon icon-grant">📝</div>
-            <div class="evidence-content">
-              <div class="evidence-title">KTS Application — GreenBITs</div>
-              <div class="evidence-meta">Klaus Tschira Stiftung · Pioneering Research · PI: Dr Uriel Urquiza-García, HHU Düsseldorf</div>
-              <div class="evidence-meta">Budget: €492,546 · Duration: 36 months · Status: Not awarded</div>
-              <div class="evidence-meta">Proposed reviewers: specialists in synthetic chromosome biology, plant centromere biology, and synthetic genomics from Germany, USA, and Europe</div>
-            </div>
-          </div>
+          Applications for new funding cycles are being prepared in coordination with the HHU grants office and CEPLAS. The programme's track record includes three independent funding sources since November 2022, the RepTiles preprint, 16 supervised students, and external recognition including the CSHL Asia faculty invitation. Key elements of the track record:<br><br>
+          <strong>Founding date:</strong> CEPLAS seed fund November 2022. ARIA call opened September 2024.<br>
+          <strong>Independent funding:</strong> CEPLAS + JTF + HHU SFF — three sources, three independent assessments.<br>
+          <strong>External recognition:</strong> CSHL Asia faculty invitation, JTF competitive selection, HHU institutional ratification.<br>
+          <strong>Technical approach:</strong> No Gibson assembly, no yeast intermediary, community-standard parts throughout. Original chromosome engineering strategies for centromere formation and telomere stabilisation — both unpublished.<br>
+          <strong>Biological question:</strong> Clock modularity hypothesis predating platform by a decade — the question that made the platform necessary.
         </div>
         <div class="context-note">
-          <strong>Why this matters regardless of outcome:</strong> GreenBITs identifies <em>synthetic epigenomics</em> as the next layer of the plant synthetic chromosome programme — asking not just whether DNA can be inserted but whether its chromatin state can be pre-programmed before entry into the cell. WP3 directly addresses the most critical unknown in the centromere boot-up strategy: does pre-methylation of the synthetic centromere body increase CENH3 seeding efficiency? This layer of the programme is not addressed by other current approaches in plant synthetic genomics. The proposed reviewers represent leading specialists in the relevant fields.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CARD 11: CSHL Asia -->
-<div class="evidence-card" data-categories="founding">
-  <div class="card-left">
-    <div class="card-date">Jul–Aug<br>2026</div>
-    <div class="card-dot gold"></div>
-  </div>
-  <div class="card-right">
-    <div class="card-inner gold-card">
-      <div class="card-top">
-        <span class="card-tag tag-founding">External recognition</span>
-        <span class="card-evidence-badge">Faculty invitation</span>
-      </div>
-      <div class="card-body">
-        <div class="card-title">Cold Spring Harbor Asia Synthetic Biology Course — invited faculty</div>
-        <div class="card-desc">
-          Invited as <strong>faculty</strong> (not participant) to the CSHL Asia Synthetic Biology Course, Suzhou, 26 July – 9 August 2026. Organised by Junbiao Dai and Daniel Schindler. CSHL courses are highly curated; faculty slots at CSHL courses are extended to researchers whose work is considered relevant to the field. This invitation preceded the major publications from the programme.
+          The synthetic chromosome body paper, once published, will transform the application from a vision with preliminary data to a vision with a demonstrated platform — the single most important near-term milestone for the next funding phase.
         </div>
       </div>
     </div>
@@ -1175,13 +1166,35 @@ footer {
   </div>
 </div>
 
+<!-- CARD 11: CSHL Asia -->
+<div class="evidence-card" data-categories="founding">
+  <div class="card-left">
+    <div class="card-date">26 Jul<br>2026</div>
+    <div class="card-dot gold"></div>
+  </div>
+  <div class="card-right">
+    <div class="card-inner gold-card">
+      <div class="card-top">
+        <span class="card-tag tag-founding">External recognition</span>
+        <span class="card-evidence-badge">Faculty invitation</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Cold Spring Harbor Asia Synthetic Biology Course — invited faculty</div>
+        <div class="card-desc">
+          Invited as <strong>faculty</strong> (not participant) to the CSHL Asia Synthetic Biology Course, Suzhou, 26 July – 9 August 2026. Organised by Junbiao Dai and Daniel Schindler. CSHL courses are highly curated; faculty slots at CSHL courses are extended to researchers whose work is considered relevant to the field. This invitation preceded the major publications from the programme.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- COMPETITIVE LANDSCAPE -->
 <div class="competitive-section">
   <div class="comp-label">Competitive landscape — plant synthetic genomics, nuclear chromosomes · April 2026</div>
   <div class="comp-grid">
     <div class="comp-item">
       <div class="comp-who">SynMoss · Dai Group · Shenzhen/Beijing</div>
-      <div class="comp-what"><strong>Nat Plants Jan 2024.</strong> Replaced 155 kb of chr18 short arm with redesigned synthetic sequence in P. patens — 55.8% reduction. Yeast TAR assembly. GenoDesigner platform. Goal: synthesise entire P. patens genome within 10 years. <em>Recoding paradigm (Sc2.0). Not a neochromosome — rewrites existing chromosome, does not create one. No centromere seeding strategy. Biological question vague: "explore the potential of creating artificial genomes for various applications." 10-year horizon with no specific falsifiable hypothesis.</em></div>
+      <div class="comp-what"><strong>Nat Plants Jan 2024.</strong> Replaced 155 kb of chr18 short arm with redesigned synthetic sequence in P. patens — 55.8% reduction. Yeast TAR assembly. GenoDesigner platform. Goal: synthesise entire P. patens genome within 10 years. <em>Recoding paradigm (Sc2.0). Not a neochromosome — rewrites existing chromosome, does not create one. No published strategy for de novo chromosome identity. Biological question vague: "explore the potential of creating artificial genomes for various applications." 10-year horizon with no specific falsifiable hypothesis.</em></div>
     </div>
     <div class="comp-item">
       <div class="comp-who">Cambridge team · ARIA £6.6M · Jun 2025</div>
@@ -1189,7 +1202,7 @@ footer {
     </div>
     <div class="comp-item">
       <div class="comp-who">James + Cai · Manchester / JIC / Earlham · ARIA £8.5M (Jun 2025)</div>
-      <div class="comp-what"><strong>synPACs</strong> — yeast (Gibson) assembly → transfer to potato. <em>Potato tetraploidy and low HDR efficiency mean each integration cycle takes months. Three-year ARIA mandate incompatible with the iteration speed the experiment requires. No published centromere strategy. No community-standard foundation. Cai's expertise is yeast synthetic genomics — plant chromatin and epigenetic centromeres are a different problem entirely.</em></div>
+      <div class="comp-what"><strong>synPACs</strong> — yeast (Gibson) assembly → transfer to potato. <em>Potato tetraploidy and low HDR efficiency mean each integration cycle takes months. Three-year ARIA mandate incompatible with the iteration speed the experiment requires. No published strategy for chromosome identity establishment. No community-standard foundation.</em></div>
     </div>
     <div class="comp-item">
       <div class="comp-who">ARIA chloroplast teams ×6</div>
@@ -1197,7 +1210,7 @@ footer {
     </div>
     <div class="comp-item you-card">
       <div class="comp-who">Urquiza-García · HHU Düsseldorf / CEPLAS · Founded 25 Nov 2022</div>
-      <div class="comp-what"><strong>De novo synthetic neochromosome in P. patens — a chromosome that never existed before.</strong> Community-standard assembly throughout, no Gibson assembly, no yeast intermediary, no recoding. <strong>Original inducible centromere formation strategy</strong> — unpublished. Original synthetic telomere formation strategy — unpublished. <strong>Clock modularity hypothesis</strong> — specific, falsifiable biological question predating platform by a decade. Founded <strong>November 2022</strong>. SynMoss published January 2024. ARIA call opened September 2024. Cambridge and Manchester awards June 2025. P. patens native HDR enables rapid iteration — weeks not months. 16 students trained across two pillars. 7 theses covering every essential chromosome component. <strong>42 kb knock-in in selection April 2026 — direct in-plant synthetic assembly without yeast intermediary.</strong></div>
+      <div class="comp-what"><strong>De novo synthetic neochromosome in P. patens — a chromosome that never existed before.</strong> Community-standard assembly throughout, no Gibson assembly, no yeast intermediary, no recoding. Original chromosome engineering strategies for centromere formation and telomere stabilisation — unpublished. <strong>Clock modularity hypothesis</strong> — specific, falsifiable biological question predating platform by a decade. Founded <strong>November 2022</strong>. SynMoss published January 2024. ARIA call opened September 2024. Cambridge and Manchester awards June 2025. P. patens native HDR enables rapid iteration — weeks not months. 16 students trained across two pillars. 7 theses covering every essential chromosome component. <strong>42 kb knock-in in selection April 2026 — direct in-plant synthetic assembly without yeast intermediary.</strong></div>
     </div>
   </div>
 </div>
@@ -1206,7 +1219,7 @@ footer {
 <div class="summary-box">
   <div class="summary-label">Evidentiary conclusion</div>
   <div class="summary-text">
-    The primary source record establishes that Plant Synthetic Genomics as a named, funded, institutionally recognised research programme was initiated at HHU Düsseldorf on <strong>25 November 2022</strong> — before the UK Synthetic Plants programme (£62.4M) was announced. Three grants have been awarded from independent sources (CEPLAS, JTF, HHU SFF). Two further applications — VW Stiftung (€1.3M, programmable neocentromeres) and Klaus Tschira Stiftung (€492K, synthetic epigenomics/GreenBITs) — were not awarded but serve as timestamps: they prove threlevant to current developments in the field problems of the field were being identified and formally articulated here before the field had been named elsewhere had framed them. GreenBITs in particular demonstrates that the programme had already extended into <strong>synthetic epigenomics</strong> — pre-patterning the chromatin state of synthetic DNA before integration — a layer no other plant synthetic genomics group is currently working at.
+    The primary source documents in this record establish that Plant Synthetic Genomics as a named, funded research programme was initiated at HHU Düsseldorf on <strong>25 November 2022</strong> — before the UK Synthetic Plants programme (£62.4M) was announced. Three grants have been awarded by independent sources: CEPLAS (2022), HHU Strategic Research Fund (2025), and the John Templeton Foundation (2025–26). Two further applications — VW Stiftung (€1.3M) and Klaus Tschira Stiftung (€492K, GreenBITs) — were submitted but not awarded. They serve as dated records that these research directions were being formally developed and submitted for competitive review before the broader field had organised around them.
   </div>
 </div>
 
