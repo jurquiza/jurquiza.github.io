@@ -406,6 +406,78 @@ body {
   .conclusion { padding: 32px 24px; }
   .site-footer { padding: 16px 24px; }
   .masthead-meta { gap: 20px; }
+
+  /* ── RESPONSIVE TABLES — card layout on mobile ── */
+  .chron-table,
+  .student-table,
+  .comp-table { font-size: 13px; }
+
+  /* Hide table header on mobile */
+  .chron-table thead,
+  .student-table thead,
+  .comp-table thead { display: none; }
+
+  /* Each row becomes a card */
+  .chron-table tr,
+  .student-table tr,
+  .comp-table tr {
+    display: block;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    margin-bottom: 10px;
+    padding: 12px 14px;
+    background: #fff;
+  }
+
+  .chron-table tr.highlight {
+    background: var(--gold-pale);
+    border-color: rgba(139,105,20,0.2);
+  }
+
+  .chron-table tr.this-programme,
+  .comp-table tr.this-programme {
+    background: var(--moss-wash);
+    border-color: rgba(58,90,64,0.2);
+  }
+
+  /* Hide the source/evidence column on mobile — keeps it clean */
+  .chron-table td:last-child,
+  .student-table td:last-child,
+  .comp-table td:last-child { display: none; }
+
+  /* Each cell becomes block */
+  .chron-table td,
+  .student-table td,
+  .comp-table td {
+    display: block;
+    padding: 3px 0;
+    border-bottom: none;
+  }
+
+  /* Date becomes a small label above the content */
+  .chron-table td.date-col {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--moss);
+    margin-bottom: 4px;
+    white-space: normal;
+  }
+
+  .chron-table tr.highlight td.date-col { color: var(--gold); }
+
+  /* Student table — date as label */
+  .student-table td.date-col {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: var(--moss);
+    margin-bottom: 3px;
+  }
+
+  /* Competitor table rows */
+  .comp-table tr { margin-bottom: 10px; }
 }
 </style>
 </head>
